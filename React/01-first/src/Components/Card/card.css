@@ -1,0 +1,9 @@
+.card{
+    width: 400px;
+    height: 300px;
+    border: 2px solid gray;
+    box-shadow: 0px 0px 2px 2px ba;
+}
+h1{
+    color: red;
+}

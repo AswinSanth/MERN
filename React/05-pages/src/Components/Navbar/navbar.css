@@ -1,0 +1,27 @@
+
+*{
+    margin: 0;
+    padding: 0 ;
+}
+
+.navibar{
+    
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(53, 231, 255);
+}
+
+.items{
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.menu{
+    margin-left: 10px;
+}

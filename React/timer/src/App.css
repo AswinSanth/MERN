@@ -1,0 +1,20 @@
+.container {
+  width: 250px;
+  height: 150px;
+  margin: 30px auto;
+
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.head {
+  text-align: center;
+}
+button {
+  margin: 10px;
+  text-align: center;
+  border: none;
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+}

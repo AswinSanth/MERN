@@ -1,0 +1,26 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid gray;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+  }
+  

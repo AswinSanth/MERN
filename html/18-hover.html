@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        background-color: green;
+        width: fit-content;
+        cursor: pointer;
+        padding: 20px;
+        transition: 1s;
+      }
+      h1:hover {
+        background-color: red;
+        color: blue;
+        /* transform: translate(400px,300px); */
+        transform:skew(80deg,190deg);
+
+      }
+      button {
+        width: fit-content;
+        padding: 20px;
+        font-size: 17px;
+        border: none;
+        border-radius: 5px;
+        background-color:red;
+        color: green;
+        cursor: pointer;
+
+      }
+      button:active {
+        background-color: aqua;
+        /* transform: rotate(90deg); */
+        /* transform:scale(0.9); */
+        color: yellow;
+        transform:skew(80deg,190deg);
+        transition: 2s;
+
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <button>Click</button>
+  </body>
+</html>

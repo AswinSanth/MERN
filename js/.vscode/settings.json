@@ -1,0 +1,10 @@
+{
+    "editor.quickSuggestions": {
+        "other": "off"
+    },
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": "off"
+        }
+    }
+}

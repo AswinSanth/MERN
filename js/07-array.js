@@ -1,0 +1,12 @@
+var fruits=['apple','orange','kiwi','mango'];
+var arr=['apple', false ,25 , ['mango', 35] ];
+// console.log(arr[3]); 
+//fruits.push('banana');
+//fruits.pop();
+//fruits[1]='banana';
+//console.log(fruits.includes('apple')); 
+//fruits.splice(1,1);
+//arr[3].splice(1,1);
+fruits.splice(1,1,'pineapple');
+console.log(fruits); 
+console.log(arr);

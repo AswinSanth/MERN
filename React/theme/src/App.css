@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s ease, color 0.3s ease; /* smooth switch */
+  font-family: Arial, sans-serif;
+}
+
+/* Light Theme */
+.light {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Dark Theme */
+.dark {
+  background: #121212;
+  color: #ffffff;
+}
+
+.container {
+  padding: 20px;
+}

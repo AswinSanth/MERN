@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            width: 50px;
+            height: 50px;
+           background-color: blue;
+        }
+        .box{
+            /* min-width: 500px; */
+            max-width: 500px;
+         background-color: red;
+         height: 50px;
+        }
+        @media(width<800px){
+            .main{
+            background-color:red ;
+            display:none;
+            border:2px solid black;
+            opacity:0.2;
+        }
+        }
+        @media (width<500px) {
+        .main{
+        display: block;
+        background-color: aquamarine;
+        opacity:1 ;
+        }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        
+    </div>
+    <h1>hello</h1>
+    <div class="box">
+
+    </div>
+</body>
+</html>

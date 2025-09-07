@@ -1,0 +1,79 @@
+h2{
+    text-align: center;
+}
+.matching{
+    display: flex;
+   flex-direction: column;
+   
+
+}
+.box{
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+   display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(30, 255, 0);
+    margin-bottom: 50px;
+}
+
+.objects{
+    display: flex;
+    gap:70px;
+}
+.shapes{
+    display: flex;
+    gap:20px;
+}
+
+.objects .circle{ 
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(204, 73, 73);
+
+}
+.objects .triangle{ 
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 100px solid rgb(0, 0, 0);
+
+
+}
+
+.objects .square{ 
+    width: 100px;
+    height: 100px;
+    border-radius: 1px solid black;
+     background-color: rgb(124, 40, 40);
+    
+
+}
+
+
+
+
+.circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+.triangle{
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 100px solid rgb(255, 255, 255);
+
+}
+.square{
+   width: 100px;
+   height: 100px;
+   border-radius: 1px solid black;
+    background-color: rgb(255, 255, 255);
+}

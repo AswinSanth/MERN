@@ -1,0 +1,14 @@
+.btn {
+  width: fit-content;
+  height: 30px;
+  background-color: rgb(27, 189, 243);
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 10px auto;
+  margin: 5px;
+  
+}
+
+.btn:active{
+  transform:scale(0.9)
+}

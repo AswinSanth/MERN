@@ -1,0 +1,11 @@
+.box{
+    width: fit-content;
+    border:4px solid black;
+}
+.oddBtn{
+    background-color: blue;
+    font-size: large;
+}
+.evenBtn{
+    font-size: large;
+}
