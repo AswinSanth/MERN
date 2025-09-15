@@ -1,9 +1,11 @@
 const express = require('express');
+const uniqid = require('uniqid');
+
 const app = express();
 
 app.use(express.json());
 
-const users = [{ name: 'akhil', age: 21, place: 'ernakulam' }];
+const users = [{ name: 'akhil', age: 21, place: 'ernakulam', id: uniqid() }];
 const products = ['apple', 'orange', 'mango'];
 
 app.get('/', (req, res) => {
@@ -27,15 +29,14 @@ app.post('/products', (req, res) => {
 
 app.delete('/products/:id', (req, res) => {
   const { id } = req.params;
-   products.splice(id, 1);
+  products.splice(id, 1);
   res.json(products[id]);
   res.json({ message: 'product deleted' });
 });
 app.patch('/products/:id', (req, res) => {
   const { id } = req.params;
-  const{body}=req;
-  products.splice(id, 1,body.data);
-;
+  const { body } = req;
+  products.splice(id, 1, body.data);
   res.json({ message: 'product updated' });
 });
 
@@ -57,6 +58,7 @@ app.post('/users', (req, res) => {
   // }
 
   const { name, age, place } = req.body;
+
   if (!name) {
     return res.status(400).json({ message: 'name is reqired' });
   } else if (!age) {
@@ -66,7 +68,26 @@ app.post('/users', (req, res) => {
     return res.status(400).json({ message: 'place  is reqired' });
   }
   users.push(req.body);
+  req.body.id = uniqid();
   return res.status(201).json({ message: 'user added succesfully' });
+});
+
+app.delete('/users/:id', (req, res) => {
+  const { id } = req.params;
+  users.splice(id, 1);
+  res.json({ message: 'user deleted' });
+});
+
+app.patch('/users/:id', (req, res) => {
+  const { id } = req.params;
+  const { name, age, place } = req.body;
+
+  const user=users.filter(us=>us.id===id)
+
+    user.name = name;
+    user.age = age;
+    user.place = place;
+  res.json({ message: 'user updated' });
 });
 
 app.listen(8000, () => {
