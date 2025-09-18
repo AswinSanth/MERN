@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.datas {
+  height: 250px;
+  width: 250px;
+  /* display:flex;
+    flex-wrap: wrap; */
+
+  margin: 20px;
+}
+.products {
+  display: flex;
+  flex-direction: column;
+
+  border: 5px solid black;
+  object-fit: contain;
+
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.datas img {
+  width: 100px;
+  height: 100px;
+}
