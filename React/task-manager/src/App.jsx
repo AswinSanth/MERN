@@ -212,7 +212,7 @@ const App = () => {
             onDragOver={e => e.preventDefault()}
             onDrop={() => {
               setInput(prev =>
-                prev.map(task =>
+                prev.map(task =>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
                   task.id === dragId ? { ...task, status: item } : task
                 )
               );
