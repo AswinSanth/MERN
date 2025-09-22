@@ -1,8 +1,10 @@
 const express = require('express');
 const uniqid = require('uniqid');
+const cors = require('cors');
 const fs = require('fs');
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 app.get('/product', (req, res) => {
   fs.readFile('data.json', 'utf-8', (err, data) => {
