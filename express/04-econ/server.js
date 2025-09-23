@@ -1,10 +1,13 @@
 const express = require('express');
 const uniqid = require('uniqid');
 const cors = require('cors');
+const multer = require('multer');
 const fs = require('fs');
 const app = express();
 
 app.use(cors());
+
+app.use(express.static('public'));
 app.use(express.json());
 app.get('/product', (req, res) => {
   fs.readFile('data.json', 'utf-8', (err, data) => {
@@ -73,6 +76,25 @@ app.patch('/product/:id', (req, res) => {
     fs.writeFile('data.json', jsonData, 'utf-8', err => {
       res.status(201).json({ product: 'product Updated' });
     });
+  });
+});
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'public/images');
+  },
+  filename: (req, file, cb) => {
+    cb(null, `${uniqid()}-${file.originalname}`);
+  },
+});
+const upload = multer({ storage: storage });
+app.post('/upload-image', upload.single('img'), (req, res) => {
+ 
+  const link = req.file.filename;
+  console.log(link);
+  res.status(201).json({
+    message: 'image Uploaded',
+    url: `http://localhost:8000/images/${link}`,
   });
 });
 

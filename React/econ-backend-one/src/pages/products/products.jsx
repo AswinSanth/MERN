@@ -3,10 +3,13 @@ import './products.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
 const Products = () => {
   const nav = useNavigate();
-  const [addProduct, setAddProduct] = useState({ Products: '', price: '' });
+  const [addProduct, setAddProduct] = useState({
+    Products: '',
+    price: '',
+    image: '',
+  });
 
   const getData = async () => {
     const response = await axios.post(
@@ -20,6 +23,16 @@ const Products = () => {
     setAddProduct({ ...addProduct, [key]: e.target.value });
   };
 
+  const onFile = async e => {
+    const formData = new FormData();
+    formData.append('img', e.target.files[0]);
+
+    const response = await axios.post(
+      'http://localhost:8000/upload-image',
+      formData
+    );
+    setAddProduct({ ...addProduct, image: response.data.url });
+  };
   return (
     <div className="get-products">
       <div className="input-section">
@@ -27,7 +40,7 @@ const Products = () => {
         <input
           type="text"
           onChange={e => {
-            onChange(e, 'Product');
+            onChange(e, 'Products');
           }}
         />
       </div>
@@ -39,6 +52,10 @@ const Products = () => {
             onChange(e, 'price');
           }}
         />
+      </div>
+      <div className="input-section">
+        <label>FileUpload</label>
+        <input type="file" onChange={onFile} />
       </div>
       <button onClick={() => getData()}>Add Products</button>
     </div>

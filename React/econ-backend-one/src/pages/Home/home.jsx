@@ -1,6 +1,6 @@
 import axios from 'axios';
 import './home.css';
-import { Delete, Pencil, Trash2 } from 'lucide-react';
+import { Pencil, Trash2 } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
@@ -9,8 +9,8 @@ import 'react-toastify/dist/ReactToastify.css';
 const Home = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
-  const [editIconPressed, setEditIconPressed] = useState(false);
-
+  // const [editIconPressed, setEditIconPressed] = useState(false);
+  const [deleted, setDeleted] = useState(false);
   const productId = useRef(null);
   const getProducts = async () => {
     try {
@@ -31,19 +31,11 @@ const Home = () => {
       await axios.delete(`http://localhost:8000/product/${id}`);
       getProducts();
       toast.success('Product Deleted');
-      setEditIconPressed(false);
+      setDeleted(false);
     } catch (err) {
       toast.error('Failed to delete product:', err);
     }
   };
-  // const onPatch = async id => {
-  //   try {
-  //     await axios.patch(`http://localhost:8000/product/${id}`);
-  //     getProducts();
-  //   } catch (err) {
-  //     console.error('Failed to delete product:', err);
-  //   }
-  // };
 
   return (
     <div className="Home">
@@ -52,35 +44,45 @@ const Home = () => {
         autoClose={5000}
         hideProgressBar={false}
       />
-      <Link to="/products">Add Products</Link>
       <div
-        className="modal"
-        style={{ display: editIconPressed ? 'block' : 'none' }}
+        className="cover"
+        onClick={() => {
+          setDeleted(false);
+        }}
+        style={{ display: deleted ? 'block' : 'none' }}
+      ></div>
+      <Link to="/products">Add Products</Link>
+   
+      <div
+        className="delete-modal"
+        style={{ display: deleted ? 'block' : 'none' }}
       >
-        <label>Do You Want to delete?</label>
-        <div className="modal-content">
-          <div className="btns">
-            <button onClick={() => onDelete(productId.current)}>Confirm</button>
-            <button onClick={() => setEditIconPressed(false)}>Cancel</button>
-          </div>
+        <h2>Do You Want to Delete</h2>
+        <div className="deletebuttons">
+          <button onClick={() => onDelete(productId.current)}>Confrim</button>
+          <button onClick={() => setDeleted(false)}>Cancel</button>
         </div>
       </div>
+
       <div className="Home-main">
         {products.map(item => (
           <div className="product-card">
-            <h1>{item.Product}</h1>
+            <img src={item.image} alt="images" className="product-image" />
+            <h1>{item.Products}</h1>
             <h2>{item.price}</h2>
-            <Pencil
-              onClick={() => {
-                navigate();
-              }}
-            />
-            <Trash2
-              onClick={() => {
-                productId.current = item.id;
-                setEditIconPressed(true);
-              }}
-            />
+            <div className="card-actions">
+              <Pencil
+                onClick={() => {
+                  navigate();
+                }}
+              />
+              <Trash2
+                onClick={() => {
+                  productId.current = item.id;
+                  setDeleted(true);
+                }}
+              />
+            </div>
           </div>
         ))}
       </div>

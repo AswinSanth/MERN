@@ -12,7 +12,7 @@ margin: 50px auto;
   flex-direction: column;
 }
 
-button{
+.input-section button{
     margin: 50px 140px;
     background-color: aqua;
     width: 100px;
@@ -21,6 +21,6 @@ button{
     
     cursor: pointer;
 }
-button:hover{
+.input-section   button:hover{
     background-color: green;
 }
