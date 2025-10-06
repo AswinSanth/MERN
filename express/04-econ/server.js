@@ -23,8 +23,8 @@ app.get('/product/:id', (req, res) => {
     const arData = convertData.filter(item => {
       return item.id == id;
     });
-    return res.status(200).json(arData);
-  });
+    return res.status(200).json(arData[0]);
+  }); 
 });
 
 app.post('/product', (req, res) => {
@@ -60,7 +60,7 @@ app.delete('/product/:id', (req, res) => {
 app.patch('/product/:id', (req, res) => {
   const { id } = req.params;
 
-  const { Product, price } = req.body;
+  const { Product, price,image } = req.body;
 
   fs.readFile('data.json', 'utf-8', (err, data) => {
     const arData = JSON.parse(data);
@@ -69,6 +69,7 @@ app.patch('/product/:id', (req, res) => {
       if (i.id == id) {
         if (Product) i.Product = Product;
         if (price) i.price = price;
+        if (image) i.image = image;
       }
     }
 

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import './products.css';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const Products = () => {
   const nav = useNavigate();
@@ -12,11 +12,19 @@ const Products = () => {
   });
 
   const getData = async () => {
-    const response = await axios.post(
-      'http://localhost:8000/product',
-      addProduct
-    );
-    nav('/');
+    if (id) {
+      const response = await axios.patch(
+        `http://localhost:8000/product/${id}`,
+        addProduct
+      );
+      nav('/');
+    } else {
+      const response = await axios.post(
+        'http://localhost:8000/product',
+        addProduct
+      );
+      nav('/');
+    }
   };
 
   const onChange = (e, key) => {
@@ -33,8 +41,26 @@ const Products = () => {
     );
     setAddProduct({ ...addProduct, image: response.data.url });
   };
+
+  const { id } = useParams();
+
+  const getProductById = async () => {
+    try {
+      const response = await axios.get(`http://localhost:8000/product/${id}`);
+      console.log(response.data);
+      setAddProduct(response.data);
+
+      console.log(addProduct);
+    } catch (error) {
+      console.error('Failed to fetch product', error);
+    }
+  };
+  useEffect(() => {
+    getProductById();
+  }, []);
   return (
     <div className="get-products">
+      <h1>{id ? 'Edit Product' : 'AddProucts'}</h1>
       <div className="input-section">
         <label>Product</label>
         <input
@@ -42,8 +68,10 @@ const Products = () => {
           onChange={e => {
             onChange(e, 'Products');
           }}
+          value={addProduct.Products}
         />
       </div>
+
       <div className="input-section">
         <label>price</label>
         <input
@@ -51,13 +79,17 @@ const Products = () => {
           onChange={e => {
             onChange(e, 'price');
           }}
+          value={addProduct.price}
         />
       </div>
       <div className="input-section">
         <label>FileUpload</label>
         <input type="file" onChange={onFile} />
+        <img className="editimg" src={addProduct.image} alt="product" />
       </div>
-      <button onClick={() => getData()}>Add Products</button>
+      <button className="addbtn" onClick={() => getData()}>
+        {id ? 'Update Product' : 'Add Products'}
+      </button>
     </div>
   );
 };

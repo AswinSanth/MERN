@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Home = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
-  // const [editIconPressed, setEditIconPressed] = useState(false);
+
   const [deleted, setDeleted] = useState(false);
   const productId = useRef(null);
   const getProducts = async () => {
@@ -51,7 +51,8 @@ const Home = () => {
         }}
         style={{ display: deleted ? 'block' : 'none' }}
       ></div>
-      <Link to="/products">Add Products</Link>
+      
+      <button className='addButton'><Link  to="/products">Add Products</Link></button>
    
       <div
         className="delete-modal"
@@ -68,12 +69,12 @@ const Home = () => {
         {products.map(item => (
           <div className="product-card">
             <img src={item.image} alt="images" className="product-image" />
-            <h1>{item.Products}</h1>
-            <h2>{item.price}</h2>
+            <h4>Product Name:{item.Products}</h4>
+            <h4>Price:{item.price}</h4>
             <div className="card-actions">
               <Pencil
                 onClick={() => {
-                  navigate();
+                  navigate(`/Edit/${item.id}`);
                 }}
               />
               <Trash2
