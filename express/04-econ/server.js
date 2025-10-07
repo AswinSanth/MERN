@@ -24,7 +24,7 @@ app.get('/product/:id', (req, res) => {
       return item.id == id;
     });
     return res.status(200).json(arData[0]);
-  }); 
+  });
 });
 
 app.post('/product', (req, res) => {
@@ -48,6 +48,14 @@ app.delete('/product/:id', (req, res) => {
       return item.id == id;
     });
 
+    const imageArr = arData[index].image.split('/');
+    const actualImg = imageArr[imageArr.length - 1];
+
+    fs.unlink(`public/images/${actualImg}`,
+      err => {
+        console.log(err);
+      });
+
     arData.splice(index, 1);
     const jsonData = JSON.stringify(arData);
 
@@ -60,7 +68,7 @@ app.delete('/product/:id', (req, res) => {
 app.patch('/product/:id', (req, res) => {
   const { id } = req.params;
 
-  const { Product, price,image } = req.body;
+  const { Product, price, image } = req.body;
 
   fs.readFile('data.json', 'utf-8', (err, data) => {
     const arData = JSON.parse(data);
@@ -90,7 +98,6 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 app.post('/upload-image', upload.single('img'), (req, res) => {
- 
   const link = req.file.filename;
   console.log(link);
   res.status(201).json({

@@ -85,7 +85,7 @@ const Products = () => {
       <div className="input-section">
         <label>FileUpload</label>
         <input type="file" onChange={onFile} />
-        <img className="editimg" src={addProduct.image} alt="product" />
+        <img className="editimg" src={addProduct.image}  />
       </div>
       <button className="addbtn" onClick={() => getData()}>
         {id ? 'Update Product' : 'Add Products'}
