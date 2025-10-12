@@ -1,6 +1,9 @@
 import './login.css';
-
+import axios from "axios"
 const Login = () => {
+  // const getUser=async()=>{
+  //   const response=await axios.
+  // }
   return (
     <div className="signuppage">
       <div className="head">
@@ -8,15 +11,15 @@ const Login = () => {
       </div>
 
       <div className="inputfields">
-        <laebel>Email: </laebel>
+        <label>Email: </label>
         <input type="email" />
       </div>
       <div className="inputfields">
-        <laebel>Password: </laebel>
+        <label>Password: </label>
         <input type="text" />
       </div>
       <div className="inputfields">
-        <laebel>Confrim Password: </laebel>
+        <label>Confrim Password: </label>
         <input type="text" />
       </div>
 

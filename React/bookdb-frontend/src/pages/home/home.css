@@ -1,0 +1,103 @@
+
+.homePage {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f7f3; /* A soft, book-page off-white */
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+/* The main content box with a soft shadow */
+.box {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the box */
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    padding: 2rem 2.5rem;
+}
+
+/* Header section containing the main title */
+.headpage {
+    text-align: left;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headpage h1 {
+    font-size: 2.25rem; /* Slightly adjusted font size */
+    font-weight: 700;
+    color: #1f2937; /* Darker grey for high contrast */
+}
+
+/* Grid container for all the book cards */
+.cards {
+    display: grid;
+    /* Creates a responsive grid that fits as many cards as possible */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem; /* Space between cards */
+}
+
+/* Individual book card styling */
+.book-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Space between text elements inside the card */
+    box-shadow: 0 4px 6px -1px rgba(16, 15, 15, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.book-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.book-card p {
+    font-size: 0.9rem;
+    color: #6b7280; /* Softer grey for descriptions */
+    line-height: 1.6;
+}
+
+/* Styling for the price text */
+.book-card p:last-child {
+    margin-top: auto; /* Pushes the price to the bottom */
+    padding-top: 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #374151; /* Dark grey for price */
+}
+
+/* Optional: Add a button style if you plan to add a button to your React component */
+.add-Btn {
+    margin-top: 1rem;
+    width: 15%;
+    height:40px;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #6d28d9; /* The primary purple color */
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-Btn:hover {
+    background-color: #5b21b6; /* Darker purple on hover */
+}
+.card-actions{
+    display: flex;
+    gap: 60px;
+    
+}
+
