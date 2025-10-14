@@ -1,9 +1,10 @@
 const express = require('express');
+const CheckToken = require('../middleware/checkToken');
 
 const Book = require('../db/models/book-schema');
 const router = express.Router();
 
-router.get('/book', async (req, res) => {
+router.get('/book', CheckToken(["admin","user"]), async (req, res) => {
   try {
     const dbResponse = await Book.find();
     return res.status(200).json(dbResponse);
@@ -11,7 +12,7 @@ router.get('/book', async (req, res) => {
     return res.status(500).json({ message: e.message, error: true });
   }
 });
-router.post('/book', async (req, res) => {
+router.post('/book',  async (req, res) => {
   try {
     const { body } = req;
     const dbResponse = await Book.create(body);
@@ -22,18 +23,17 @@ router.post('/book', async (req, res) => {
   }
 });
 
-router.get('/book/:id', async (req, res) => {
+router.get('/book/:id', CheckToken, async (req, res) => {
   try {
     const { id } = req.params;
     const dbResponse = await Book.findById(id);
     return res.status(200).json(dbResponse);
-  } catch(e) {
-    
+  } catch (e) {
     return res.status(500).json({ message: e.message, error: true });
   }
 });
 
-router.delete('/book/:id', async (req, res) => {
+router.delete('/book/:id', CheckToken, async (req, res) => {
   try {
     const { id } = req.params;
     await Book.findByIdAndDelete(id);
@@ -43,7 +43,7 @@ router.delete('/book/:id', async (req, res) => {
   }
 });
 
-router.patch('/book/:id', async (req, res) => {
+router.patch('/book/:id', CheckToken, async (req, res) => {
   try {
     const { id } = req.params;
     const { body } = req;

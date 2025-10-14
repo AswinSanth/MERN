@@ -47,7 +47,9 @@ router
       }
       const secretKey = 'bsbdfjsufikjsfuhuisjhsfjksfjgfdjdfjhgsd';
 
-      const token = jwt.sign({ id: user._id }, secretKey, { expiresIn: '7d' });
+      const token = jwt.sign({ id: user._id, role: user.role }, secretKey, {
+        expiresIn: '7d',
+      });
 
       return res.status(200).json({ message: 'loggged In', token });
     } catch (e) {

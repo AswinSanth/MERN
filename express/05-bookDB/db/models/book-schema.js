@@ -11,11 +11,8 @@ const bookSchema = Schema({
     trim: true,
   },
   author: {
-    type: String,
-    // select: false,
-    // enum: ['arun', 'blake', 'andrew'],
-
-    uppercase: true,
+    type: Schema.Types.ObjectId,
+    ref: 'authors',
   },
   price: { type: Number, min: 200, max: 2000 },
 });

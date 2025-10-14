@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
 import axios from 'axios';
 const EditBook = () => {
- 
   const { id } = useParams();
   const navigate = useNavigate();
   const [addBook, setAddBook] = useState({
@@ -15,7 +14,10 @@ const EditBook = () => {
   const getBooks = async () => {
     if (!id) {
       try {
-        const response = await axios.post('http://localhost:8000/book', addBook);
+        const response = await axios.post(
+          'http://localhost:8000/book',
+          addBook
+        );
         navigate('/');
       } catch (e) {
         console.error('Error fetching books:', e);
@@ -37,8 +39,6 @@ const EditBook = () => {
       const response = await axios.get(`http://localhost:8000/book/${id}`);
       console.log(response.data);
       setAddBook(response.data);
-
-     
     } catch (error) {
       console.error('Failed to fetch product', error);
     }
@@ -47,7 +47,7 @@ const EditBook = () => {
   useEffect(() => {
     getBooksById(), [];
   });
-  const onChange = (e,key) => {
+  const onChange = (e, key) => {
     setAddBook({ ...addBook, [key]: e.target.value });
   };
   return (
@@ -94,7 +94,7 @@ const EditBook = () => {
         />
       </div>
       <button className="addbtn" onClick={() => getBooks()}>
-        {id ? 'Update Product' : 'Add Products'}
+        {id ? 'Update Book ' : 'Add Book'}
       </button>
     </div>
   );
