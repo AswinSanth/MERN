@@ -56,6 +56,49 @@ router
       console.log(e);
       return res.status(500).json({ message: e.mesage, error: true });
     }
+  })
+  .patch('/user/:id/address', async (req, res) => {
+    try {
+      const { body } = req;
+      const { id } = req.params;
+
+      const user = await User.findById(id);
+      user.address.push(body);
+      await user.save();
+      return res.status(200).json({ message: 'new Address added' });
+    } catch (e) {
+      return res.status(500).json({ message: e.mesage, error: true });
+    }
+  })
+  .patch('/user/:userId/address/:addressId', async (req, res) => {
+    try {
+      const { houseName, city, pincode } = req.body;
+      const { userId, addressId } = req.params;
+      const user = await User.findById(userId);
+      let address = await user.address.id(addressId);
+      if (houseName) address.houseName = houseName;
+      if (city) address.city = city;
+      if (pincode) address.pincode = pincode;
+      await user.save();
+      return res.status(200).json({ message: 'new Address updated' });
+    } catch (e) {
+      console.log(e.message);
+      return res.status(500).json({ message: e.mesage, error: true });
+    }
+  })
+  .delete('/user/:userId/address/:addressId', async (req, res) => {
+    try {
+      const { houseName, city, pincode } = req.body;
+      const { userId, addressId } = req.params;
+      const user = await User.findById(userId);
+      let address = await user.address.id(addressId);
+      address.deleteOne();
+      await user.save();
+      return res.status(200).json({ message: 'Address deleted' });
+    } catch (e) {
+      console.log(e.message);
+      return res.status(500).json({ message: e.mesage, error: true });
+    }
   });
 
 module.exports = router;

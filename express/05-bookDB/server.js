@@ -13,6 +13,8 @@ const userRoutes = require('./routes/user-routes');
 app.use(userRoutes);
 const authorRoutes = require('./routes/author-routes');
 app.use(authorRoutes);
+const commentRoutes = require('./routes/comment-routes');
+app.use(commentRoutes);
 
 app.listen(8000, () => {
   console.log('app is running');
