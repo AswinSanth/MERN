@@ -15,6 +15,10 @@ const authorRoutes = require('./routes/author-routes');
 app.use(authorRoutes);
 const commentRoutes = require('./routes/comment-routes');
 app.use(commentRoutes);
+const imageRoutes = require('./routes/image-routes');
+app.use(imageRoutes);
+const orderRoutes = require('./routes/order-routes');
+app.use(orderRoutes);
 
 app.listen(8000, () => {
   console.log('app is running');

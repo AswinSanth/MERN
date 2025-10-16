@@ -15,6 +15,10 @@ const bookSchema = Schema({
     ref: 'authors',
   },
   price: { type: Number, min: 200, max: 2000 },
+  image: {
+    type: String,
+    default: "http://localhost:8000/images/1j6s9nkygmgsz8szb-no-image.png"
+  },
 });
 
 const Book = model('books', bookSchema);
