@@ -3,6 +3,73 @@ const bcrypt = require('bcrypt');
 const User = require('../db/models/user-schema');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
+const nodemailer = require('nodemailer');
+
+router.post('/user/forget', async (req, res) => {
+  try {
+    const { email } = req.body;
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(400).json({ message: 'email incorect' });
+    }
+    const token = jwt.sign(
+      { id: user._id, role: user.role },
+      process.env.SECRET_KEY_RESET,
+      {
+        expiresIn: '1h',
+      }
+    );
+    console.log(token);
+    let transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'programlearn8@gmail.com',
+        pass: 'xvxb nwyo rxkt gewz',
+      },
+    });
+
+    let mailOptions = {
+      from: 'programlearn8@gmail.com',
+      to: email,
+      subject: 'Reset Password',
+      text: `hi
+  plaese reset password with this ${token}`,
+    };
+    transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        console.log(error);
+        throw error;
+      }
+      res.status(200).json({ message: token });
+      res.status(200).json({ message: 'email Sent' });
+    });
+  } catch (e) {
+    console.log(e);
+    return res.status(500).json({ message: e.mesage, error: true });
+  }
+});
+router.post('/user/reset-password', async (req, res) => {
+  try {
+    const { password, confrimPassword, email, token } = req.body;
+    const decoded = jwt.verify(token, process.env.SECRET_KEY_RESET);
+    const user = await User.findOne({ email });
+    console.log(user._id,decoded.id);
+    if (user._id != decoded.id) {
+      return res.status(400).json({ message: 'Invalid token' });
+    }
+
+    if (password != confrimPassword) {
+      return res.status(400).json({ message: ' passsword dosent match' });
+    }
+    const hashedPassword = await bcrypt.hash(password, 2);
+    const dbResponse = await User.findByIdAndUpdate(user._id, {
+      password: hashedPassword,
+    });
+    return res.status(200).json({ message: 'password reseted ' });
+  } catch {
+    return res.status(500).json({ message: e.mesage, error: true });
+  }
+});
 
 router
   .get('/user', async (req, res) => {
@@ -43,13 +110,16 @@ router
       }
       const isMactching = await bcrypt.compare(password, user.password);
       if (!isMactching) {
-        return res.status(400).json({ mesage: 'Email or password Incorrect' });
+        return res.status(400).json({ message: 'Email or password Incorrect' });
       }
-      const secretKey = 'bsbdfjsufikjsfuhuisjhsfjksfjgfdjdfjhgsd';
 
-      const token = jwt.sign({ id: user._id, role: user.role }, secretKey, {
-        expiresIn: '7d',
-      });
+      const token = jwt.sign(
+        { id: user._id, role: user.role },
+        process.env.SECRET_KEY,
+        {
+          expiresIn: '7d',
+        }
+      );
 
       return res.status(200).json({ message: 'loggged In', token });
     } catch (e) {
@@ -83,7 +153,7 @@ router
       return res.status(200).json({ message: 'new Address updated' });
     } catch (e) {
       console.log(e.message);
-      return res.status(500).json({ message: e.mesage, error: true });
+      return res.status(500).json({ message: e.message, error: true });
     }
   })
   .delete('/user/:userId/address/:addressId', async (req, res) => {

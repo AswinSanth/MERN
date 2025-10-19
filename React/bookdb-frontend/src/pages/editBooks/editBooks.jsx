@@ -11,24 +11,23 @@ const EditBook = () => {
     price: '',
     author: '',
   });
-  const getBooks = async () => {
-    if (!id) {
+  const handlesubmit = async () => {
+    if (id) {
       try {
-        const response = await axios.post(
-          'http://localhost:8000/book',
-          addBook
-        );
-        navigate('/');
+        console.log(addBook);
+        await axios.patch(`http://localhost:8000/book/${id}`, addBook);
+        navigate('/Home');
       } catch (e) {
         console.error('Error fetching books:', e);
       }
     } else {
       try {
-        const response = await axios.patch(
-          `http://localhost:8000/book/${id}`,
+        console.log(addBook);
+        const response = await axios.post(
+          'http://localhost:8000/book',
           addBook
         );
-        navigate('/');
+        navigate('/Home');
       } catch (e) {
         console.error('Error fetching books:', e);
       }
@@ -45,11 +44,13 @@ const EditBook = () => {
   };
 
   useEffect(() => {
-    getBooksById(), [];
-  });
-  const onChange = (e, key) => {
-    setAddBook({ ...addBook, [key]: e.target.value });
+    if (id) getBooksById();
+  }, []);
+  const onChange = e => {
+    const { name, value } = e.target;
+    setAddBook(prevData => ({ ...prevData, [name]: value }));
   };
+
   return (
     <div className="edit">
       <h1>{!id ? 'AddBook ' : 'Edit Dook Details'}</h1>
@@ -93,7 +94,7 @@ const EditBook = () => {
           }}
         />
       </div>
-      <button className="addbtn" onClick={() => getBooks()}>
+      <button className="addbtn" onClick={handlesubmit}>
         {id ? 'Update Book ' : 'Add Book'}
       </button>
     </div>

@@ -1,11 +1,11 @@
 const express = require('express');
 const CheckToken = require('../middleware/checkToken');
-const multer  = require('multer')
-const uniqid=require("uniqid")
+const multer = require('multer');
+const uniqid = require('uniqid');
 const Book = require('../db/models/book-schema');
 const router = express.Router();
 
-// router.use(express.static('public'));
+router.use(express.static('public'));
 
 // const storage = multer.diskStorage({
 //   destination: (req, file, cb) => {
@@ -30,11 +30,32 @@ const router = express.Router();
 //   }
 //   });
 
+// router.get('/book', CheckToken(['admin', 'user']), async (req, res) => {
+//   try {
+//     const dbResponse = await Book.find().populate('author');
+//     return res.status(200).json(dbResponse);
+//   } catch (e) {
+//     return res.status(500).json({ message: e.message, error: true });
+//   }
+// });
 
-
-router.get('/book', CheckToken(['admin', 'user']), async (req, res) => {
+router.get('/book', async (req, res) => {
   try {
-    const dbResponse = await Book.find().populate('author');
+    const {
+      title,
+      price,
+      minprice,
+      maxprice,
+      sortby = 'title',
+      sortorder = 'asc',
+    } = req.query;
+    const query = {};
+    if (title) query.title = { $regex: title, $options: 'i' };
+    if (price) query.price = price;
+    else if (minprice && maxprice) query.price= { $gte: minprice ,$lte: maxprice};
+    else if (minprice) query.price= { $gte: minprice };
+    else if (maxprice) query.price= { $lte: maxprice };
+    const dbResponse = await Book.find(query).sort({[sortby]:sortorder})
     return res.status(200).json(dbResponse);
   } catch (e) {
     return res.status(500).json({ message: e.message, error: true });
@@ -71,11 +92,11 @@ router.delete('/book/:id', CheckToken, async (req, res) => {
   }
 });
 
-router.patch('/book/:id', CheckToken, async (req, res) => {
+router.patch('/book/:id',  async (req, res) => {
   try {
     const { id } = req.params;
     const { body } = req;
-    const dbResponse = await Book.findByIdAndUpdate(id, body);
+    const dbResponse = await Book.findByIdAndUpdate(id, body, { new: true });
     return res.status(200).json({ message: 'item updated', dbResponse });
   } catch (e) {
     return res.status(500).json({ message: e.message, error: true });

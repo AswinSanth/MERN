@@ -22,17 +22,15 @@ router
       console.log(e.message);
       return res.status(500).json({ message: e.mesage, error: true });
     }
-  }).get("/order",async(req,res)=>{
-    try{
-
-
-        const dbResponse=await Order.find().populate(["bookId","userId"]);;
-        res.status(200).json(dbResponse);
-
-    }catch (e) {
+  })
+  .get('/order', async (req, res) => {
+    try {
+      const dbResponse = await Order.find().populate(['bookId', 'userId']);
+      res.status(200).json(dbResponse);
+    } catch (e) {
       console.log(e.message);
       return res.status(500).json({ message: e.mesage, error: true });
     }
-  })
+  });
 
 module.exports = router;

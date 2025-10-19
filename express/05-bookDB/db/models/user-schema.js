@@ -18,7 +18,8 @@ const userSchema = Schema({
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
   email: { type: String },
-  address: [addressSchema],
+  // address: [addressSchema],
+  address:{ type: String },
   password: { type: String, required: true, trim: true },
   role: { type: String, enum: ['admin', 'user'] },
 });

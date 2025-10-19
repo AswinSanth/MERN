@@ -9,7 +9,8 @@ const SignUp = () => {
     email: '',
     address: '',
     password: '',
-    confirmPassword: '',
+    confirmPassword:""
+
   });
   const onChange = (e, key) => {
     setAddUser({ ...adduser, [key]: e.target.value });
@@ -21,9 +22,10 @@ const SignUp = () => {
         'http://localhost:8000/user/sign-up',
         adduser
       );
-      nav('/');
+      nav('/Home');
     } catch (e) {
-      console.error('Error fetching books:', e);
+      console.log(e)
+      console.error('Error ', e);
     }
   };
   return (
@@ -62,7 +64,7 @@ const SignUp = () => {
         <label>Address: </label>
         <input
           type="text"
-          onChange={(e) => {
+          onChange={e => {
             onChange(e, 'address');
           }}
         />
@@ -77,8 +79,8 @@ const SignUp = () => {
         <label>Password</label>
         <input
           type="text"
-          onChange={(e) => {
-            onChange(e, "password");
+          onChange={e => {
+            onChange(e, 'password');
           }}
         />
       </div>
@@ -86,8 +88,8 @@ const SignUp = () => {
         <label>Confirm Password </label>
         <input
           type="text"
-          onChange={(e) => {
-            onChange(e, "confirmPassword");
+          onChange={e => {
+            onChange(e, 'confirmPassword');
           }}
         />
       </div>
