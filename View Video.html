@@ -1,0 +1,3157 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://www.lms.in.net/Student/view_presentation/4324 -->
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical" data-boxed-layout="boxed" data-card="shadow"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Required meta tags -->
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<!--<base href="https://www.lms.in.net/">--><base href=".">
+  <!-- Favicon icon-->
+        
+        <link rel="shortcut icon" href="./View Video_files/TMZ.png">
+        
+  <!-- Core Css -->
+  <link rel="stylesheet" href="./View Video_files/styles.css">
+<link rel="stylesheet" href="./View Video_files/dataTables.bootstrap5.min.css">
+  <link href="./View Video_files/bootstrap-icons.css" rel="stylesheet">
+   <link rel="stylesheet" href="./View Video_files/bootstrap-icons(1).css">
+  <!-- jQuery -->
+  <script src="./View Video_files/jquery-3.6.0.min.js.download"></script>
+  <title>View Video</title>
+  <style>
+   .notification-badge {
+      position: absolute;
+      top: 13px;
+      right: -5px;
+      background-color: #e74a3b;
+      color: white;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: bold;
+    }
+    #notificationList {
+      border: 1px solid #ccc;
+      max-height: 300px;           /* <-- set a max-height */
+      overflow-y: auto;            /* <-- allow vertical scroll */
+      padding: 5px;
+    }
+   .notification-item {
+      border-left: 4px solid transparent;
+      transition: all 0.3s ease;
+      padding: 12px 15px;
+    }
+    
+    .notification-item:hover {
+      background-color: #f8f9fa;
+    }
+    
+    .notification-item.fee {
+      border-left-color: #e74a3b;
+    }
+    
+    .notification-item.assignment {
+      border-left-color: #f6c23e;
+    }
+    
+    .notification-item.exam {
+      border-left-color: #36b9cc;
+    }
+      .notification-item.info {
+      border-left-color: #36b9cc;
+    }
+    .notification-icon {
+      font-size: 1.3rem;
+      margin-right: 10px;
+    }
+    
+    .notification-time {
+      font-size: 0.75rem;
+      color: #6c757d;
+    }
+    
+    .empty-notifications {
+      text-align: center;
+      padding: 20px;
+      color: #6c757d;
+    }
+    
+    .notification-panel {
+      max-height: 400px;
+      overflow-y: auto;
+      width: 350px;
+    }
+    
+    .notification-panel::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    .notification-panel::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    .notification-panel::-webkit-scrollbar-thumb {
+      background: #c1c1c1;
+      border-radius: 3px;
+    }
+    
+    .notification-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #e3e6f0;
+    }
+    
+    .notification-footer {
+      text-align: center;
+      padding: 10px;
+      border-top: 1px solid #e3e6f0;
+    }
+    
+    .notification-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 5px;
+      margin-top: 10px;
+    }
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.parsley-required{
+    color:#ff0000;
+}
+   td a{
+    color: #0056b3;
+    }
+
+        
+    .brand-logo {
+  min-height: 100px;
+  
+  background-color: #FFF;
+}
+
+.mini-stat-icon i {
+  font-size: 30px;
+  width: 58px;
+  height: 58px;
+  line-height: 58px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+}
+.text-white {
+  color: #ffffff !important;
+}
+.bg-info {
+  background-color: #59c6fb !important;
+}
+.text-white {
+  color: #fff !important;
+}
+.bg-info {
+  background-color: #17a2b8 !important;
+}
+.float-right {
+  float: right !important;
+}
+  img {
+  vertical-align: middle;
+  border-style: none;
+}
+.topbarimg .topbarimg-left {
+  float: left;
+  text-align: center;
+ margin-top:0px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.topbarimg {
+  width: 100%;
+  background: var(--bs-body-bg);
+  z-index: 9;
+  padding: 0 15px;
+  margin-bottom: 24px;
+  box-shadow: 0;
+  border-radius: 0;
+}
+.topbarimg {
+  width: 100%;
+  background: #FFF;
+  z-index: 9;
+  padding: 0 20px;
+  margin-top: 12px;
+   margin-bottom: 24px;
+  box-shadow: 0;
+  border-radius: 0;
+}
+[data-bs-theme="dark"][data-color-theme="Blue_Theme"]:root .btn-primary, [data-bs-theme="light"][data-color-theme="Blue_Theme"]:root .btn-primary {
+  --bs-btn-bg: #dc0909;
+  --bs-btn-border-color: #dc0909;
+  --bs-btn-hover-bg: #dc0909;
+  --bs-btn-hover-border-color: #dc0909;
+  
+}
+.btn-check:checked + .btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check) + .btn:active {
+  color: var(--bs-btn-active-color);
+  background-color: #dc0909;
+  border-color: #dc0909;
+  box-shadow: var(--bs-btn-active-shadow);
+}
+
+
+.btn-outline-primary {
+  --bs-btn-color: #000;
+ 
+}
+.btn-info {
+     --bs-btn-bg: #dc0909;
+  --bs-btn-border-color: #dc0909;
+  --bs-btn-hover-bg: #dc0909;
+  --bs-btn-hover-border-color: #dc0909;
+}
+.nav-tabs .nav-link.active {
+  box-shadow: 0 5px 6px #dc0909;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  
+  background-color: #dc0909;
+  border-color: #dc0909;
+}
+.pagination a{
+     background-color: #dc0909;
+  border-color: #dc0909;
+   color#FFF;
+   --bs-btn-color: #fff;
+  --bs-btn-bg: #d36a1e;
+  --bs-btn-border-color: #d36a1e;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #0071ba;
+  --bs-btn-hover-border-color: #006aaf;
+  --bs-btn-focus-shadow-rgb: 38,151,224;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #006aaf;
+  --bs-btn-active-border-color: #0064a4;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #dc0909;
+  --bs-btn-disabled-border-color:#dc0909;
+}
+.sub{
+     background-color: #dc0909;
+  border-color: #dc0909;
+   color#FFF;
+   --bs-btn-color: #fff;
+  --bs-btn-bg: #d36a1e;
+  --bs-btn-border-color: #d36a1e;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #0071ba;
+  --bs-btn-hover-border-color: #006aaf;
+  --bs-btn-focus-shadow-rgb: 38,151,224;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #006aaf;
+  --bs-btn-active-border-color: #0064a4;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #dc0909;
+  --bs-btn-disabled-border-color:#dc0909;
+}
+.next{
+     background-color: #dc0909;
+  border-color: #dc0909;
+  color#FFF;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #d36a1e;
+  --bs-btn-border-color: #d36a1e;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #0071ba;
+  --bs-btn-hover-border-color: #006aaf;
+  --bs-btn-focus-shadow-rgb: 38,151,224;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #006aaf;
+  --bs-btn-active-border-color: #0064a4;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #dc0909;
+  --bs-btn-disabled-border-color:#dc0909;
+}
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #d36a1e;
+  --bs-btn-border-color: #d36a1e;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #0071ba;
+  --bs-btn-hover-border-color: #006aaf;
+  --bs-btn-focus-shadow-rgb: 38,151,224;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #006aaf;
+  --bs-btn-active-border-color: #0064a4;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #dc0909;
+  --bs-btn-disabled-border-color:#dc0909;
+}
+
+
+.left-sidebar {
+  width: 270px;
+  background-color: #000000;
+  position: fixed;
+  transition: .2s ease-in;
+   height: calc(100% + 70px);
+
+  z-index: 13;
+  box-shadow: 0 2px 6px rgba(37,83,185,.1);
+  border-radius: 1.125rem;
+}
+.sidebar-nav ul .sidebar-item .sidebar-link {
+  color: var(--bs-white);
+  white-space: nowrap;
+  line-height: 25px;
+  font-size: 15px;
+}
+[data-bs-theme="light"] .sidebar-nav ul .sidebar-item .sidebar-link {
+  color: #FFF;
+}
+.scroll-sidebar {
+
+  overflow-y: scroll;
+ 
+}
+
+element {
+}
+body .select2-container--default .select2-selection--multiple .select2-selection__choice {
+  border-radius: var(--bs-border-radius);
+
+}
+body .select2-container--classic .select2-selection--multiple .select2-selection__choice, body .select2-container--default .select2-selection--multiple .select2-selection__choice, body .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  background-color: #000000;
+
+  border-color: #000000;
+
+  color: #fff;
+
+}
+
+body .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable, body .select2-container--default .select2-results__option--selected {
+  background-color: #000000;
+  color: var(--bs-white);
+}
+ [data-bs-theme="light"][data-color-theme="Blue_Theme"]:root {
+  --bs-primary: #000000;
+  --bs-primary-rgb: 0,133,219;
+  --bs-light-primary: rgba(0, 133, 219, 0.1);
+  --bs-primary-bg-subtle: rgba(0, 133, 219, 0.1);
+  --bs-secondary: #707a82;
+  --bs-secondary-rgb: 112,122,130;
+  --bs-light-secondary: rgba(112, 122, 130, 0.1);
+  --bs-secondary-bg-subtle: rgba(112, 122, 130, 0.1);
+}
+
+#searchbar{
+    background-color:#ce5f5f;
+}
+.toast-header{
+     background-color:#ce5f5f;
+     color:#FFF;
+}
+
+.toast-header .text-primary_toast{
+color:#FFF;
+}
+#searchbar .card_body{
+    background-color:#ce5f5f;
+}
+#filterbar{
+    background-color:#ffffff;
+}
+#filterbar label{
+    color:#FFFFFF;
+}
+#filterbar .card_body{
+    background-color:#ffffff;
+}
+#month_search {
+    background-color:#ffffff;
+}
+#year_search {
+    background-color:#ffffff;
+}
+#batch_status {
+    background-color:#ffffff;
+}
+#center_search {
+    background-color:#ffffff;
+}
+#filter_search {
+    background-color:#ffffff;
+}
+#status {
+    background-color:#ffffff;
+}
+#usertype {
+    background-color:#ffffff;
+}
+#batch_search {
+    background-color:#ffffff;
+}
+#month {
+    background-color:#ffffff;
+}
+#year {
+    background-color:#ffffff;
+}
+
+#filterbar label{
+    color:#000000;
+    font-weight:700;
+}
+#month_search {
+    color:#000000;
+     border:1px solid #000000;
+}
+#year_search {
+    color:#000000;
+     border:1px solid #000000;
+}
+#batch_status {
+    color:#000000;
+     border:1px solid #000000;
+}
+#center_search {
+    color:#000000;
+     border:1px solid #000000;
+}
+#usertype {
+    color:#000000;
+     border:1px solid #000000;
+}
+#status {
+    color:#000000;
+     border:1px solid #000000;
+}
+#batch_search {
+    color:#000000;
+     border:1px solid #000000;
+}
+
+.table thead{
+    background-color:#ffffff;
+}
+
+.table th{
+    background-color:#ffffff;
+    
+}
+
+thead{
+    color:#000000;
+}
+
+th{
+    color:#000000;
+    
+}
+.table th {
+  color: #000000;
+}
+
+.table th h6 {
+  color: #000000;
+}
+    #searchbar .btn-primary{
+    color:#ffffff;
+}
+#searchbar{
+    color:#ffffff;
+}
+.text-dark {
+  --bs-text-opacity: 1;
+  color: #ffffff;
+}
+
+form .text-dark {
+  --bs-text-opacity: 1;
+  color: #ffffff;
+}
+#input-search{
+    color:#ffffff; 
+    border:1px solid #ffffff;
+    min-height: calc(1.5em + .9rem + calc(var(--bs-border-width) * 2));
+  padding: .25rem .5rem;
+  font-size: .7875rem;
+  border-radius: var(--bs-border-radius-sm);
+}
+
+
+#input-search::placeholder {
+  color:#ffffff;  /* Example color */
+  
+}
+.ti-search{
+     color:#ffffff;
+}
+#searchbar h4{
+    color:#ffffff;
+}
+
+#filterbar{
+    color:#000000;
+}
+#filterbar .form-control{
+  color:#000000;
+   border:1px solid #000000;
+}
+
+#tosearch {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  font-size: .9rem;
+  font-weight: 500;
+  line-height: 1.5;
+ color:#000000;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid #000000;
+  border-radius: .5rem;
+  box-shadow: unset;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+#fromsearch {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  font-size: .9rem;
+  font-weight: 500;
+  line-height: 1.5;
+ color:#000000;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid #000000;
+  border-radius: .5rem;
+  box-shadow: unset;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.text-dark {
+  --bs-text-opacity: 1;
+  color: #000000;
+}
+
+#filterbar h4{
+    color:#000000;
+}
+
+
+
+
+[data-bs-theme="dark"][data-color-theme="Blue_Theme"]:root #searchbar .btn-primary, [data-bs-theme="light"][data-color-theme="Blue_Theme"]:root #searchbar .btn-primary {
+  --bs-btn-bg: #dd0a0a;
+  --bs-btn-border-color: #dd0a0a;
+  --bs-btn-hover-bg: #dd0a0a;
+  --bs-btn-hover-border-color: #dd0a0a;
+   color:#ffffff;
+}
+
+#searchbar .btn-primary:hover {
+  background-color: #dd0a0a;
+   color:#ffffff;
+  border-color: #dd0a0a; /* Change border color on hover */
+}
+
+[data-bs-theme="dark"][data-color-theme="Blue_Theme"]:root #filterbarbar .btn-primary, [data-bs-theme="light"][data-color-theme="Blue_Theme"]:root #filterbarbar .btn-primary {
+  --bs-btn-bg: #dc0909;
+  --bs-btn-border-color: #dc0909;
+  --bs-btn-hover-bg: #dc0909;
+  --bs-btn-hover-border-color: #dc0909;
+   color:#000000;
+}
+
+#filterbarbar .btn-primary:hover {
+    color:#000000;
+  background-color: #dc0909;
+  border-color: #dc0909; /* Change border color on hover */
+}
+
+
+
+
+#summary {
+    font-size:15px;
+}
+.topbarimg {
+  width: 100%;
+  background: #FFF;
+  z-index: 9;
+  padding: 0 35px;
+  height:76px;
+  margin-top: 10px;
+  box-shadow: 0;
+  border-radius: 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(0, 0, 0, 0.3)!important;/* black with 50% opacity */
+  /* or use any color you like */
+  /* color: rgba(255, 0, 0, 0.7); for red with 70% opacity */
+}
+
+</style>
+</head>
+
+<body data-sidebartype="full">
+  <!-- Preloader -->  <div id="main-wrapper">
+   <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <!-- ---------------------------------- -->
+      <!-- Start Vertical Layout Sidebar -->
+      <!-- ---------------------------------- -->
+      <div class="brand-logo d-flex align-items-center justify-content-between">
+          
+        <a href="javascript:void(0)" class="text-nowrap logo-img topbarimg topbarimg-left " marked="1">
+          
+                                                <img src="./View Video_files/54ef1c0521cbacca43bf07b40f967301.png" style="max-width:100%;max-height:100%;background-color:#FFF" class="dark-logo img-responsive" alt="LMS"> 
+                                     
+          <img src="./View Video_files/54ef1c0521cbacca43bf07b40f967301.png" class="light-logo img-responsive" alt="LMS" style="display: none;">
+                                           
+        </a>
+        <a href="javascript:void(0)" class="sidebartoggler ms-auto text-decoration-none fs-5 d-block d-xl-none" marked="1">
+          <i class="ti ti-x"></i>
+        </a>
+      </div>
+     <!-- <div class="brand-logo d-flex align-items-center justify-content-between">
+       <div class="topbarimg topbarimg-left">
+                                             <br/>
+                                   <a href="https://www.lms.in.net/" class="text-nowrap logo-img" > <img src="https://www.lms.in.net/uploads/techmindz/54ef1c0521cbacca43bf07b40f967301.png" style="max-width:100%;max-height:100%;background-color:#FFF" class="dark-logo img-responsive" alt="LMS"  > </a>
+                                   
+                                                                        </div>
+        <a href="javascript:void(0)" class="sidebartoggler ms-auto text-decoration-none fs-5 d-block d-xl-none">
+          <i class="ti ti-x"></i>
+        </a>
+      </div> -->
+      <div class="scroll-sidebar simplebar-scrollable-y" data-simplebar="init"><div class="simplebar-wrapper" style="margin: 0px -16px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: 100%; overflow: hidden scroll;"><div class="simplebar-content" style="padding: 0px 16px;">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+          <ul id="sidebarnav" class="mb-0">
+
+            <!-- ============================= -->
+            <!-- Home -->
+            <!-- ============================= -->
+            <li class="nav-small-cap">
+              <iconify-icon icon="solar:menu-dots-bold-duotone" class="nav-small-cap-icon fs-5"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M7 12a2 2 0 1 1-4 0a2 2 0 0 1 4 0m14 0a2 2 0 1 1-4 0a2 2 0 0 1 4 0"></path><path fill="currentColor" d="M14 12a2 2 0 1 1-4 0a2 2 0 0 1 4 0" opacity=".5"></path></svg></template></iconify-icon>
+              <span class="hide-menu"></span>
+            </li>
+               <!--<li class="sidebar-item">
+              <a class="sidebar-link danger-hover-bg" id="dashboardlink0" href="https://www.lms.in.net/Student/dashboard"  aria-expanded="false">
+                <span class="aside-icon p-2 bg-indigo-subtle rounded-1">
+                
+                   <span class="logoicon">
+                 <img src="assets/images/dashboard_brown.png" width="25em" height="25em" alt="icon" id="dashicon" class="fb-icon" />
+                 
+                 </span>
+                </span>
+                <span class="hide-menu ps-1"> Dashboard</span>
+              </a>
+            </li>-->
+            <li class="sidebar-item">
+              <a href="https://www.lms.in.net/Student/dashboard" aria-expanded="false" id="dashboardlink" class="sidebar-link danger-hover-bg">
+                <span class="aside-icon p-2 bg-indigo-subtle rounded-1">
+                
+                   <span class="logoicon">
+                 <img src="./View Video_files/dashboard.png" id="dashicon2" width="25em" height="25em" alt="icon" class="fb-icon">
+                 
+                 </span>
+                </span>
+                <span class="hide-menu ps-1"> Dashboard</span>
+              </a>
+            </li>
+                                                                      
+                                                                                                                                                 
+               
+                        
+                                                       <li class="sidebar-item">
+                            <a href="https://www.lms.in.net/Student/list_batches" aria-expanded="false" id="batchlink" class="sidebar-link danger-hover-bg">
+                <span class="aside-icon p-2 bg-indigo-subtle rounded-1">
+                  <!-- <iconify-icon icon="solar:hand-stars-line-duotone" class="fs-6"></iconify-icon> -->
+                  
+                    <span class="logoicon">
+                 <img src="./View Video_files/Batches.png" width="25em" height="25em" alt="icon" id="batchicon" class="fb-icon">
+                  
+                 </span>
+                  
+                </span>
+                <span class="hide-menu ps-1"> Courses </span>
+                            </a>
+                        </li>
+                          <li class="sidebar-item">
+                            <a id="sessionlink" style="cursor:pointer" aria-expanded="false" class="sidebar-link has-arrow danger-hover-bg">
+                <span class="aside-icon p-2 bg-indigo-subtle rounded-1">
+                 <!-- <iconify-icon icon="solar:mailbox-line-duotone" class="fs-6"></iconify-icon> -->
+                   <span class="logoicon">
+                 <img src="./View Video_files/Sessions.png" width="25em" height="25em" alt="icon" id="sessionicon" class="fb-icon">
+                  
+                 </span>
+                </span>
+                <span class="hide-menu ps-1"> Classroom Sessions  </span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                <li class="sidebar-item">
+                                    <a href="https://www.lms.in.net/Student/sessions" class="sidebar-link">
+                    <span class="sidebar-icon"></span>
+                    <span class="hide-menu"> List of Sessions </span>
+                                    </a>
+                                </li>
+                            
+                            <li class="sidebar-item">
+                                    <a href="https://www.lms.in.net/Student/recording_session" class="sidebar-link">
+                    <span class="sidebar-icon"></span>
+                    <span class="hide-menu"> Session Recordings </span>
+                                    </a>
+                                </li>   
+                                
+                            <!--   <li class="sidebar-item">
+                                    <a href="https://www.lms.in.net/Student/list_feedbacks"class="sidebar-link">
+                    <span class="sidebar-icon"></span>
+                    <span class="hide-menu"> Comments </span>
+                                    </a>
+                                </li>-->
+                            </ul>
+                        </li>  
+                    
+                        <!--  <li class="sidebar-item">
+                            <a id="onlinesessionlink" href="https://www.lms.in.net/Student/live_session" aria-expanded="false" class="sidebar-link danger-hover-bg">
+                <span class="aside-icon p-2 bg-indigo-subtle rounded-1">
+              
+                   <span class="logoicon">
+                 <img src="assets/images/online_sessions.png" width="25em" height="25em" alt="icon" id="onlinesessionicon" class="fb-icon" />
+                  
+                 </span>
+                </span>
+                <span class="hide-menu ps-1"> Sessions Today</span>
+                            </a>
+                        </li> -->
+                   
+                           <!--    <li class="sidebar-item">
+                            <a href="https://www.lms.in.net/Student/live_session" class="waves-effect">
+                               <i class="icon-video-cam"></i> <span> Live ClassRoom </span>
+                            </a>
+                        </li> -->
+                         <li class="sidebar-item">
+                            <a id="centerlink" href="https://www.lms.in.net/Student/timetable" aria-expanded="false" class="sidebar-link danger-hover-bg">
+                <span class="aside-icon p-2 bg-indigo-subtle rounded-1">
+                  <!-- <iconify-icon icon="solar:mailbox-line-duotone" class="fs-6"></iconify-icon> -->
+                   <span class="logoicon">
+                 <img src="./View Video_files/Center.png" id="centericon" width="25em" height="25em" alt="icon" class="fb-icon">
+                  
+                 </span>
+                </span>
+                <span class="hide-menu ps-1"> Timetable</span>
+                            </a>
+                        </li>  
+                                               <li class="sidebar-item">
+                            <a id="classnotelink" href="https://www.lms.in.net/Classnotes/list_batches_student" aria-expanded="false" class="sidebar-link danger-hover-bg">
+                <span class="aside-icon p-2 bg-indigo-subtle rounded-1">
+                 <!-- <iconify-icon icon="solar:mailbox-line-duotone" class="fs-6"></iconify-icon> -->
+                  <span class="logoicon">
+                 <img src="./View Video_files/notes.png" width="25em" height="25em" alt="icon" id="notesicon" class="fb-icon">
+                  
+                 </span>
+                </span>
+                <span class="hide-menu ps-1"> Class Notes</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a id="assignlink" href="https://www.lms.in.net/Assignments/course_student_assignments" aria-expanded="false" class="sidebar-link danger-hover-bg">
+                <span class="aside-icon p-2 bg-indigo-subtle rounded-1">
+                 <!-- <iconify-icon icon="solar:file-check-line-duotone" class="fs-6"></iconify-icon> -->
+                  <span class="logoicon">
+                 <img src="./View Video_files/assignment.png" width="25em" height="25em" alt="icon" id="assignicon" class="fb-icon">
+                  
+                 </span>
+                </span>
+                <span class="hide-menu ps-1">Assignments</span>
+                            </a>
+                        </li>
+                             <li class="sidebar-item">
+                            <a id="projectlink" href="https://www.lms.in.net/Projects/course_student_projects" aria-expanded="false" class="sidebar-link danger-hover-bg">
+                <span class="aside-icon p-2 bg-indigo-subtle rounded-1">
+                 <!-- <iconify-icon icon="solar:file-line-duotone" class="fs-6"></iconify-icon> -->
+                   <span class="logoicon">
+                 <img src="./View Video_files/project.png" width="25em" height="25em" alt="icon" id="projecticon" class="fb-icon">
+                  
+                 </span>
+                </span>
+                <span class="hide-menu ps-1">Projects</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a id="examlink" href="https://www.lms.in.net/Online_exam/list_batches_student" aria-expanded="false" class="sidebar-link danger-hover-bg">
+                <span class="aside-icon p-2 bg-indigo-subtle rounded-1">
+                <!--  <iconify-icon icon="solar:file-text-line-duotone" class="fs-6"></iconify-icon>-->
+                 <span class="logoicon">
+                 <img src="./View Video_files/exam.png" width="25em" height="25em" alt="icon" id="examicon" class="fb-icon">
+                  
+                 </span>
+                </span>
+                <span class="hide-menu ps-1">Online Exams</span>
+                            </a>
+                        </li> 
+                            <li class="sidebar-item">
+                            <a id="fundlink" href="https://www.lms.in.net/Student/add_fund" aria-expanded="false" class="sidebar-link danger-hover-bg">
+                <span class="aside-icon p-2 bg-indigo-subtle rounded-1">
+                 <!-- <iconify-icon icon="solar:dollar-minimalistic-line-duotone" class="fs-6"></iconify-icon>-->
+                 
+                  <span class="logoicon">
+                 <img src="./View Video_files/fund.png" width="25em" height="25em" alt="icon" id="fundsicon" class="fb-icon">
+                  
+                 </span>
+                </span>
+                <span class="hide-menu ps-1"> Add Fund </span>
+                            </a>
+                        </li>
+                        
+                           <li class="sidebar-item">
+                            <a id="passlink" href="https://www.lms.in.net/Student/passbook" aria-expanded="false" class="sidebar-link danger-hover-bg">
+                <span class="aside-icon p-2 bg-indigo-subtle rounded-1">
+                 <!-- <iconify-icon icon="solar:dollar-minimalistic-line-duotone" class="fs-6"></iconify-icon>-->
+                  <span class="logoicon">
+                 <img src="./View Video_files/passbook.png" width="25em" height="25em" alt="icon" id="passbooksicon" class="fb-icon">
+                  
+                 </span>
+                </span>
+                <span class="hide-menu ps-1"> Payments </span>
+                            </a>
+                        </li>
+                              <li class="sidebar-item">
+                            <a id="onlinesessionlink" style="cursor:pointer" aria-expanded="false" class="sidebar-link has-arrow danger-hover-bg">
+                <span class="aside-icon p-2 bg-indigo-subtle rounded-1">
+                 <!-- <iconify-icon icon="solar:mailbox-line-duotone" class="fs-6"></iconify-icon> -->
+                   <span class="logoicon">
+                 <img src="./View Video_files/online_sessions.png" width="25em" height="25em" alt="icon" id="onlinesessionicon" class="fb-icon">
+                  
+                 </span>
+                </span>
+                <span class="hide-menu ps-1"> Feedbacks  </span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                <li class="sidebar-item">
+                                    <a href="https://www.lms.in.net/Student/list_feedbacks" class="sidebar-link">
+                    <span class="sidebar-icon"></span>
+                    <span class="hide-menu"> Comments on Batch </span>
+                                    </a>
+                                </li>
+                            
+                            <li class="sidebar-item">
+                                    <a href="https://www.lms.in.net/Student/ceo" class="sidebar-link">
+                    <span class="sidebar-icon"></span>
+                    <span class="hide-menu"> Write to CEO </span>
+                                    </a>
+                                </li>   
+                                
+                               <li class="sidebar-item">
+                                    <a href="https://www.lms.in.net/Student/list_testimonials" class="sidebar-link">
+                    <span class="sidebar-icon"></span>
+                    <span class="hide-menu"> Institute Feedbacks </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li> 
+                        
+                        <!--    <li class="sidebar-item">
+                            <a id="onlinesessionlink" href="https://www.lms.in.net/Student/ceo" aria-expanded="false" class="sidebar-link danger-hover-bg">
+                <span class="aside-icon p-2 bg-indigo-subtle rounded-1">
+              
+                   <span class="logoicon">
+                 <img src="assets/images/online_sessions.png" width="25em" height="25em" alt="icon" id="onlinesessionicon" class="fb-icon" />
+                  
+                 </span>
+                </span>
+                <span class="hide-menu ps-1"> Write to CEO</span>
+                            </a>
+                        </li>-->
+                          <li class="sidebar-item">
+                            <a id="profilelink" href="https://www.lms.in.net/Student/view_profile" aria-expanded="false" class="sidebar-link danger-hover-bg">
+                <span class="aside-icon p-2 bg-indigo-subtle rounded-1">
+                 <!-- <iconify-icon icon="solar:user-circle-line-duotone" class="fs-6"></iconify-icon> -->
+                  <span class="logoicon">
+                 <img src="./View Video_files/Profile.png" width="25em" height="25em" alt="icon" id="profileicon" class="fb-icon">
+                  
+                 </span>
+                </span>
+                <span class="hide-menu ps-1">Profile</span>
+                            </a>
+                        </li>
+                            <!-- <li class="sidebar-item">
+                            <a href="https://www.lms.in.net/Student/list_qualifications" aria-expanded="false" class="sidebar-link danger-hover-bg">
+                <span class="aside-icon p-2 bg-indigo-subtle rounded-1">
+                  <iconify-icon icon="solar:mailbox-line-duotone" class="fs-6"></iconify-icon>
+                </span>
+                <span class="hide-menu ps-1">Qualifications</span>
+                            </a>
+                        </li>
+                            <li class="sidebar-item">
+                            <a href="https://www.lms.in.net/Student/list_works" aria-expanded="false" class="sidebar-link danger-hover-bg">
+                <span class="aside-icon p-2 bg-indigo-subtle rounded-1">
+                  <iconify-icon icon="solar:mailbox-line-duotone" class="fs-6"></iconify-icon>
+                </span>
+                <span class="hide-menu ps-1">Work Experience</span>
+                            </a>
+                        </li> -->
+                                                
+                                                          
+                                                </ul>
+
+        </nav>
+        <!-- End Sidebar navigation -->
+      </div></div></div></div><div class="simplebar-placeholder" style="width: 270px; height: 695px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: visible;"><div class="simplebar-scrollbar" style="height: 517px; transform: translate3d(0px, 0px, 0px); display: block;"></div></div></div>
+
+      <div class=" fixed-profile mx-3 mt-3">
+     
+      </div>
+
+      <!-- ---------------------------------- -->
+      <!-- Start Vertical Layout Sidebar -->
+      <!-- ---------------------------------- -->
+    </aside>    <div class="page-wrapper">
+
+        <aside class="left-sidebar with-horizontal">
+        <!-- Sidebar scroll-->
+        <div>
+          <!-- Sidebar navigation-->
+          <nav id="sidebarnavh" class="sidebar-nav scroll-sidebar container-fluid">
+            <ul id="sidebarnav">
+              <!-- ============================= -->
+              <!-- Home -->
+              <!-- ============================= -->
+              <li class="nav-small-cap">
+                <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                <span class="hide-menu">Home</span>
+              </li>
+              <!-- =================== -->
+              <!-- Dashboard -->
+              <!-- =================== -->
+             
+
+           
+              
+
+         
+            
+              
+            
+        </ul></nav></div>
+      </aside>
+      <div class="body-wrapper">
+        <div class="container-fluid mw-100">
+          <!--  Header Start -->
+          <header class="topbar sticky-top shadow-sm">
+            <div class="with-vertical"><!-- ---------------------------------- -->
+              <!-- Start Vertical Layout Header -->
+              <!-- ---------------------------------- -->
+              <nav class="navbar navbar-expand-lg p-0">
+                <ul class="navbar-nav">
+                  <li class="nav-item nav-icon-hover-bg rounded-circle">
+                    <a class="nav-link sidebartoggler" id="headerCollapse" href="javascript:void(0)">
+                      <iconify-icon icon="solar:list-bold-duotone" class="fs-7"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M3.25 7A.75.75 0 0 1 4 6.25h16a.75.75 0 0 1 0 1.5H4A.75.75 0 0 1 3.25 7" clip-rule="evenodd"></path><path fill="currentColor" d="M3.25 12a.75.75 0 0 1 .75-.75h11a.75.75 0 0 1 0 1.5H4a.75.75 0 0 1-.75-.75" opacity=".7"></path><path fill="currentColor" d="M3.25 17a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5H4a.75.75 0 0 1-.75-.75" opacity=".4"></path></svg></template></iconify-icon>
+                    </a>
+                  </li>
+                </ul>
+
+           
+
+                <div class="d-block d-lg-none py-3">
+                            
+     
+         <img src="./View Video_files/TMZ.png" style="width:45px;" class="dark-logo" alt="Logo-Dark">
+          <img src="./View Video_files/TMZ.png" style="width: 45px; display: none;" class="light-logo" alt="Logo-light">
+                        </div>
+
+
+                <a class="navbar-toggler p-0 border-0" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="p-2">
+                    <i class="ti ti-dots nav-small-cap-icon fs-4 fs-7"></i>
+                  </span>
+  
+                </a>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                  <div class="d-flex align-items-center justify-content-between">
+                   <!-- <a href="javascript:void(0)" class="nav-link d-flex d-lg-none align-items-center justify-content-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobilenavbar" aria-controls="offcanvasWithBothOptions">
+                      <div class="nav-icon-hover-bg rounded-circle ">
+                        <i class="ti ti-align-justified fs-7"></i>
+                      </div>
+                    </a> -->
+                    <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-center">
+                 
+            
+      <!-- Notification Dropdown -->
+            <!-- Notification Dropdown for Horizontal Layout -->
+                  <li class="nav-item dropdown nav-icon-hover-bg rounded-circle">
+                    <a class="nav-link position-relative" href="javascript:void(0)" id="notificationDropdownHorizontal" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <iconify-icon icon="solar:bell-line-duotone" class="fs-6"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18.75 9.71v-.705C18.75 5.136 15.726 2 12 2S5.25 5.136 5.25 9.005v.705a4.4 4.4 0 0 1-.692 2.375L3.45 13.81c-1.011 1.575-.239 3.716 1.52 4.214a25.8 25.8 0 0 0 14.06 0c1.759-.498 2.531-2.639 1.52-4.213l-1.108-1.725a4.4 4.4 0 0 1-.693-2.375Z"></path><path stroke-linecap="round" d="M7.5 19c.655 1.748 2.422 3 4.5 3s3.845-1.252 4.5-3" opacity=".5"></path></g></svg></template></iconify-icon>
+                      <span class="notification-badge" id="notificationCountHorizontal" style="display: none;">0</span>
+                    </a>
+                    <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up pb-0 overflow-hidden notification-panel" aria-labelledby="notificationDropdownHorizontal">
+                      <div class="notification-header">
+                        <h3 class="mb-0 fs-5">Notifications</h3>
+                        <div>
+                          <button class="btn btn-sm btn-outline-secondary me-1" id="markAllReadHorizontal">Mark all read</button>
+                          <button class="btn btn-sm btn-outline-danger" id="clearAllHorizontal">Clear all</button>
+                        </div>
+                      </div>
+                      <div id="notificationList"><div class="empty-notifications"><p>No notifications</p></div></div>
+                    
+                    </div>
+                  </li>
+
+                      <!-- ------------------------------- -->
+                      <!-- start Messages cart Dropdown -->
+                      <!-- ------------------------------- -->
+                   
+                      <!-- ------------------------------- -->
+                      <!-- end Messages cart Dropdown -->
+                      <!-- ------------------------------- -->
+
+                      <!-- ------------------------------- -->
+                      <!-- start shortcut Dropdown -->
+                      <!-- ------------------------------- -->
+                      
+                      <!-- ------------------------------- -->
+                      <!-- end shortcut Dropdown -->
+                      <!-- ------------------------------- -->
+
+                      <!-- ------------------------------- -->
+                      <!-- start profile Dropdown -->
+                      <!-- ------------------------------- -->
+                      <li class="nav-item dropdown">
+                        <a class="nav-link position-relative ms-6" href="javascript:void(0)" id="drop1" aria-expanded="false">
+                          <div class="d-flex align-items-center flex-shrink-0">
+                            <div class="user-profile me-sm-3 me-2">
+                              
+                                                 
+     
+         <img src="./View Video_files/TMZ.png" alt="user" width="30" height="30" class="rounded-circle">
+        
+                                    </div>
+                            <span class="d-sm-none d-block"><iconify-icon icon="solar:alt-arrow-down-line-duotone"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m19 9l-7 6l-7-6"></path></svg></template></iconify-icon></span>
+
+                            <div class="d-none d-sm-block">
+                              <h6 class="fs-4 mb-1 profile-name">
+                               Aswin Santh                               </h6>
+                              <p class="fs-3 lh-base mb-0 profile-subtext">
+                                                                                    
+                                                                Student                                                                                                  
+                                                              </p>
+                            </div>
+                          </div>
+                        </a>
+                        <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop1">
+                          <div class="profile-dropdown position-relative" data-simplebar="init"><div class="simplebar-wrapper" style="margin: 0px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: auto; overflow: hidden;"><div class="simplebar-content" style="padding: 0px;">
+                            <div class="d-flex align-items-center justify-content-between pt-3 px-7">
+                              <h3 class="mb-0 fs-5">User Profile</h3>
+
+                            </div>
+
+                            <div class="d-flex align-items-center mx-7 py-9 border-bottom">
+                                      
+     
+         <img src="./View Video_files/TMZ.png" alt="user" width="45" height="45" class="rounded-circle">
+        
+                                      <div class="ms-4">
+                                <h4 class="mb-0 fs-5 fw-normal">Aswin Santh </h4>
+                                <span class="text-muted">                                                                Student                                                                                                                                                                                                                                                                                                                                                </span>
+                                <p class="text-muted mb-0 mt-1 d-flex align-items-center">
+                                  <iconify-icon icon="solar:mailbox-line-duotone" class="fs-4 me-1"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M10.5 22v-2m4 2v-2" opacity=".5"></path><path fill="currentColor" d="M11 20v.75h.75V20zm3-.75a.75.75 0 0 0 0 1.5zm3.5-14a.75.75 0 0 0 0 1.5zM7 5.25a.75.75 0 0 0 0 1.5zm2 14a.75.75 0 0 0 0 1.5zm6 1.5a.75.75 0 0 0 0-1.5zm-4.75-9.5V20h1.5v-8.75zm.75 8H4.233v1.5H11zm-8.25-1.855V11.25h-1.5v6.145zm1.483 1.855c-.715 0-1.483-.718-1.483-1.855h-1.5c0 1.74 1.231 3.355 2.983 3.355zM6.5 6.75c1.967 0 3.75 1.902 3.75 4.5h1.5c0-3.201-2.246-6-5.25-6zm0-1.5c-3.004 0-5.25 2.799-5.25 6h1.5c0-2.598 1.783-4.5 3.75-4.5zm14.75 6v6.175h1.5V11.25zm-1.457 8H14v1.5h5.793zm1.457-1.825c0 1.12-.757 1.825-1.457 1.825v1.5c1.738 0 2.957-1.601 2.957-3.325zm1.5-6.175c0-3.201-2.246-6-5.25-6v1.5c1.967 0 3.75 1.902 3.75 4.5zM7 6.75h11v-1.5H7zm2 14h6v-1.5H9z"></path><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M5 16h3"></path><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M16 9.884V5.411m0 0V2.635c0-.236.168-.439.4-.484l.486-.093a3.2 3.2 0 0 1 1.755.156l.08.03c.554.214 1.16.254 1.737.115a.44.44 0 0 1 .542.427v2.221a.51.51 0 0 1-.393.499l-.066.016a3.2 3.2 0 0 1-1.9-.125a3.2 3.2 0 0 0-1.755-.156z" opacity=".5"></path></g></svg></template></iconify-icon>
+                                  aswinsanth123@gmail.com                                </p>
+                               
+                              </div>
+                            </div>
+
+                            <div class="message-body">
+                                      
+<a href="https://www.lms.in.net/dashboard/changepassword/techmindz" class="dropdown-item px-7 d-flex align-items-center py-6">
+                                <span class="btn px-3 py-2 bg-success-subtle rounded-1 text-success shadow-none">
+                                  <iconify-icon icon="solar:shield-minimalistic-line-duotone" class="fs-7"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c-1.02 0-1.38-.158-2.101-.473C7.239 20.365 3 17.63 3 11.991v-1.574c0-3.198 0-4.797.378-5.334C3.755 4.545 5.258 4.03 8.265 3l.573-.196C10.405 2.268 11.188 2 12 2"></path><path d="M12 22c1.02 0 1.38-.158 2.101-.473c2.66-1.162 6.9-3.898 6.9-9.536v-1.574c0-3.198 0-4.797-.378-5.334c-.378-.538-1.881-1.053-4.888-2.082l-.573-.196C13.595 2.268 12.812 2 12 2" opacity=".5"></path></g></svg></template></iconify-icon>
+                                </span>
+                                <div class="w-100 ps-3 ms-1">
+                                  <h5 class="mb-0 mt-1 fs-4 fw-normal">
+                                    Change Password
+                                  </h5>
+                                 
+                                </div>
+                              </a>
+                           
+                            </div>
+
+                            <div class="py-6 px-7 mb-1">
+                              <a href="https://www.lms.in.net/dashboard/logout/techmindz" class="btn btn-primary w-100">Log Out</a>
+                            </div>
+                          </div></div></div></div><div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: hidden;"><div class="simplebar-scrollbar" style="height: 0px; display: none;"></div></div></div>
+                        </div>
+                      </li>
+                      <!-- ------------------------------- -->
+                      <!-- end profile Dropdown -->
+                      <!-- ------------------------------- -->
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+              <!-- ---------------------------------- -->
+              <!-- End Vertical Layout Header -->
+              <!-- ---------------------------------- -->
+
+              <!-- ------------------------------- -->
+              <!-- apps Dropdown in Small screen -->
+              <!-- ------------------------------- -->
+              <!--  Mobilenavbar -->
+              <div class="offcanvas dropdown-menu-nav-offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="mobilenavbar" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <nav class="sidebar-nav scroll-sidebar">
+                  <div class="offcanvas-header justify-content-between">
+                                           
+     
+         <img src="./View Video_files/TMZ.png" alt="user" width="30" height="30" class="img-fluid">
+        
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body h-n80" data-simplebar="init"><div class="simplebar-wrapper" style="margin: -16px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: 100%; overflow: hidden;"><div class="simplebar-content" style="padding: 16px;">
+                    <ul id="sidebarnav">
+                      <li class="sidebar-item">
+                        <a class="sidebar-link gap-2 has-arrow" href="javascript:void(0)" aria-expanded="false">
+                          <iconify-icon icon="solar:list-bold-duotone" class="fs-7"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M3.25 7A.75.75 0 0 1 4 6.25h16a.75.75 0 0 1 0 1.5H4A.75.75 0 0 1 3.25 7" clip-rule="evenodd"></path><path fill="currentColor" d="M3.25 12a.75.75 0 0 1 .75-.75h11a.75.75 0 0 1 0 1.5H4a.75.75 0 0 1-.75-.75" opacity=".7"></path><path fill="currentColor" d="M3.25 17a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5H4a.75.75 0 0 1-.75-.75" opacity=".4"></path></svg></template></iconify-icon>
+                          <span class="hide-menu">Apps</span>
+                        </a>
+                        <ul aria-expanded="false" class="collapse first-level my-3">
+                  
+                  
+                  
+                     
+                        
+                          <ul class="px-8 mt-6 mb-4">
+                          
+                           
+                            
+                          </ul>
+                        </ul>
+                      </li>
+                                                                          <li class="sidebar-item">
+                              <a class="sidebar-link gap-2" href="https://www.lms.in.net/Student/view_profile" aria-expanded="false">
+                          <iconify-icon icon="solar:user-circle-line-duotone" class="fs-6 text-dark"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="3" opacity=".5"></circle><circle cx="12" cy="12" r="10"></circle><path stroke-linecap="round" d="M17.97 20c-.16-2.892-1.045-5-5.97-5s-5.81 2.108-5.97 5" opacity=".5"></path></g></svg></template></iconify-icon>
+                          <span class="hide-menu">Profile</span>
+                        </a>
+                           
+                        </li>
+                                                                                                                                                     </ul>
+                  </div></div></div></div><div class="simplebar-placeholder" style="width: 285px; height: 128px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; transform: translate3d(0px, 0px, 0px); display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: hidden;"><div class="simplebar-scrollbar" style="height: 0px; display: none;"></div></div></div>
+                </nav>
+              </div>
+            </div>
+            <div class="app-header with-horizontal">
+              <nav class="navbar navbar-expand-xl container-fluid p-0">
+                <ul class="navbar-nav">
+                  <li class="nav-item d-none d-xl-block">
+                    <a href="https://www.lms.in.net/" class="text-nowrap nav-link">
+                      <img src="./View Video_files/logo-light.svg" class="dark-logo" width="180" alt="spike-img">
+                      <img src="./View Video_files/logo-dark.svg" class="light-logo" width="180" alt="spike-img" style="display: none;">
+                    </a>
+                  </li>
+                </ul>
+                <a class="navbar-toggler p-0 border-0" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="p-2">
+                    <i class="ti ti-dots fs-7"></i>
+                  </span>
+                </a>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <a href="javascript:void(0)" class="nav-link d-flex d-lg-none align-items-center justify-content-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobilenavbar" aria-controls="offcanvasWithBothOptions">
+                      <div class="nav-icon-hover-bg rounded-circle ">
+                        <i class="ti ti-align-justified fs-7"></i>
+                      </div>
+                    </a>
+                    <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-center">
+                      <li class="nav-item dropdown nav-icon-hover-bg rounded-circle d-flex d-lg-none">
+                        <a class="nav-link position-relative" href="javascript:void(0)" id="drop3" aria-expanded="false">
+                          <iconify-icon icon="solar:magnifer-linear" class="fs-7 text-dark"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11.5" cy="11.5" r="9.5"></circle><path stroke-linecap="round" d="M18.5 18.5L22 22"></path></g></svg></template></iconify-icon>
+                        </a>
+                        <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop3">
+                          <!--  Search Bar -->
+
+                          <div class="modal-header border-bottom p-3">
+                            <input type="search" class="form-control fs-3" placeholder="Try to searching ...">
+
+                          </div>
+                          <div class="message-body p-3" data-simplebar="init"><div class="simplebar-wrapper" style="margin: -16px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: auto; overflow: hidden;"><div class="simplebar-content" style="padding: 16px;">
+                            <h5 class="mb-0 fs-5 p-1">Quick Page Links</h5>
+                            <ul class="list mb-0 py-2">
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Modern</span>
+                                  <span class="fs-3 text-muted d-block">/dashboards/dashboard1</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Dashboard</span>
+                                  <span class="fs-3 text-muted d-block">/dashboards/dashboard2</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Contacts</span>
+                                  <span class="fs-3 text-muted d-block">/apps/contacts</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Posts</span>
+                                  <span class="fs-3 text-muted d-block">/apps/blog/posts</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Detail</span>
+                                  <span class="fs-3 text-muted d-block">/apps/blog/detail/streaming-video-way-before-it-was-cool-go-dark-tomorrow</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Shop</span>
+                                  <span class="fs-3 text-muted d-block">/apps/ecommerce/shop</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Modern</span>
+                                  <span class="fs-3 text-muted d-block">/dashboards/dashboard1</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Dashboard</span>
+                                  <span class="fs-3 text-muted d-block">/dashboards/dashboard2</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Contacts</span>
+                                  <span class="fs-3 text-muted d-block">/apps/contacts</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Posts</span>
+                                  <span class="fs-3 text-muted d-block">/apps/blog/posts</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Detail</span>
+                                  <span class="fs-3 text-muted d-block">/apps/blog/detail/streaming-video-way-before-it-was-cool-go-dark-tomorrow</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Shop</span>
+                                  <span class="fs-3 text-muted d-block">/apps/ecommerce/shop</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div></div></div></div><div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: hidden;"><div class="simplebar-scrollbar" style="height: 0px; display: none;"></div></div></div>
+                        </div>
+                      </li>
+                      <!-- ------------------------------- -->
+                      <!-- start language Dropdown -->
+                      <!-- ------------------------------- -->
+                      <li class="nav-item dropdown d-none d-lg-block">
+                        <a class="nav-link position-relative shadow-none" href="javascript:void(0)" id="drop3" aria-expanded="false">
+                          <form class="nav-link position-relative shadow-none">
+                            <input type="text" class="form-control rounded-3 py-2 ps-5 text-dark" placeholder="Try to searching ...">
+                            <iconify-icon icon="solar:magnifer-linear" class="text-dark position-absolute top-50 start-0 translate-middle-y text-dark ms-3"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11.5" cy="11.5" r="9.5"></circle><path stroke-linecap="round" d="M18.5 18.5L22 22"></path></g></svg></template></iconify-icon>
+                          </form>
+                        </a>
+                        <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop3">
+                          <!--  Search Bar -->
+
+                          <div class="modal-header border-bottom p-3">
+                            <input type="search" class="form-control fs-3" placeholder="Try to searching ...">
+
+                          </div>
+                          <div class="message-body p-3" data-simplebar="init"><div class="simplebar-wrapper" style="margin: -16px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: auto; overflow: hidden;"><div class="simplebar-content" style="padding: 16px;">
+                            <h5 class="mb-0 fs-5 p-1">Quick Page Links</h5>
+                            <ul class="list mb-0 py-2">
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Modern</span>
+                                  <span class="fs-3 text-muted d-block">/dashboards/dashboard1</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Dashboard</span>
+                                  <span class="fs-3 text-muted d-block">/dashboards/dashboard2</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Contacts</span>
+                                  <span class="fs-3 text-muted d-block">/apps/contacts</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Posts</span>
+                                  <span class="fs-3 text-muted d-block">/apps/blog/posts</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Detail</span>
+                                  <span class="fs-3 text-muted d-block">/apps/blog/detail/streaming-video-way-before-it-was-cool-go-dark-tomorrow</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Shop</span>
+                                  <span class="fs-3 text-muted d-block">/apps/ecommerce/shop</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Modern</span>
+                                  <span class="fs-3 text-muted d-block">/dashboards/dashboard1</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Dashboard</span>
+                                  <span class="fs-3 text-muted d-block">/dashboards/dashboard2</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Contacts</span>
+                                  <span class="fs-3 text-muted d-block">/apps/contacts</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Posts</span>
+                                  <span class="fs-3 text-muted d-block">/apps/blog/posts</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Detail</span>
+                                  <span class="fs-3 text-muted d-block">/apps/blog/detail/streaming-video-way-before-it-was-cool-go-dark-tomorrow</span>
+                                </a>
+                              </li>
+                              <li class="p-1 mb-1 bg-hover-light-black rounded">
+                                <a href="javascript:void(0)">
+                                  <span class="fs-3 text-dark d-block">Shop</span>
+                                  <span class="fs-3 text-muted d-block">/apps/ecommerce/shop</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div></div></div></div><div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: hidden;"><div class="simplebar-scrollbar" style="height: 0px; display: none;"></div></div></div>
+                        </div>
+                      </li>
+                      <!-- ------------------------------- -->
+                      <!-- end language Dropdown -->
+                      <!-- ------------------------------- -->
+
+                      <li class="nav-item nav-icon-hover-bg rounded-circle">
+                        <a class="nav-link moon dark-layout" href="javascript:void(0)" style="display: flex;">
+                          <iconify-icon icon="solar:moon-line-duotone" class="moon fs-6" style="display: flex;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m21.067 11.857l-.642-.388zm-8.924-8.924l-.388-.642zM21.25 12A9.25 9.25 0 0 1 12 21.25v1.5c5.937 0 10.75-4.813 10.75-10.75zM12 21.25A9.25 9.25 0 0 1 2.75 12h-1.5c0 5.937 4.813 10.75 10.75 10.75zM2.75 12A9.25 9.25 0 0 1 12 2.75v-1.5C6.063 1.25 1.25 6.063 1.25 12zm12.75 2.25A5.75 5.75 0 0 1 9.75 8.5h-1.5a7.25 7.25 0 0 0 7.25 7.25zm4.925-2.781A5.75 5.75 0 0 1 15.5 14.25v1.5a7.25 7.25 0 0 0 6.21-3.505zM9.75 8.5a5.75 5.75 0 0 1 2.781-4.925l-.776-1.284A7.25 7.25 0 0 0 8.25 8.5zM12 2.75a.38.38 0 0 1-.268-.118a.3.3 0 0 1-.082-.155c-.004-.031-.002-.121.105-.186l.776 1.284c.503-.304.665-.861.606-1.299c-.062-.455-.42-1.026-1.137-1.026zm9.71 9.495c-.066.107-.156.109-.187.105a.3.3 0 0 1-.155-.082a.38.38 0 0 1-.118-.268h1.5c0-.717-.571-1.075-1.026-1.137c-.438-.059-.995.103-1.299.606z"></path></svg></template></iconify-icon>
+                        </a>
+                        <a class="nav-link sun light-layout" href="javascript:void(0)" style="display: none;">
+                          <iconify-icon icon="solar:sun-2-line-duotone" class="sun fs-6" style="display: none;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"></circle><path stroke-linecap="round" d="M12 2v2m0 16v2M4 12H2m20 0h-2"></path><path stroke-linecap="round" d="m19.778 4.223l-2.222 2.031M4.222 4.223l2.222 2.031m0 11.302l-2.222 2.222m15.556-.001l-2.222-2.222" opacity=".5"></path></g></svg></template></iconify-icon>
+                        </a>
+                      </li>
+
+                      <!-- ------------------------------- -->
+                      <!-- start Messages cart Dropdown -->
+                      <!-- ------------------------------- -->
+                      <li class="nav-item dropdown nav-icon-hover-bg rounded-circle">
+                        <a class="nav-link position-relative" href="javascript:void(0)" id="drop3" aria-expanded="false">
+                          <iconify-icon icon="solar:chat-dots-line-duotone" class="fs-6"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none"><path fill="currentColor" d="m13.087 21.388l.645.382zm.542-.916l-.646-.382zm-3.258 0l-.645.382zm.542.916l.646-.382zm-8.532-5.475l.693-.287zm5.409 3.078l-.013.75zm-2.703-.372l-.287.693zm16.532-2.706l.693.287zm-5.409 3.078l-.012-.75zm2.703-.372l.287.693zm.7-15.882l-.392.64zm1.65 1.65l.64-.391zM4.388 2.738l-.392-.64zm-1.651 1.65l-.64-.391zM9.403 19.21l.377-.649zm4.33 2.56l.541-.916l-1.29-.764l-.543.916zm-4.007-.916l.542.916l1.29-.764l-.541-.916zm2.715.152a.52.52 0 0 1-.882 0l-1.291.764c.773 1.307 2.69 1.307 3.464 0zM10.5 2.75h3v-1.5h-3zm10.75 7.75v1h1.5v-1zm-18.5 1v-1h-1.5v1zm-1.5 0c0 1.155 0 2.058.05 2.787c.05.735.153 1.347.388 1.913l1.386-.574c-.147-.352-.233-.782-.278-1.441c-.046-.666-.046-1.51-.046-2.685zm6.553 6.742c-1.256-.022-1.914-.102-2.43-.316L4.8 19.313c.805.334 1.721.408 2.977.43zM1.688 16.2A5.75 5.75 0 0 0 4.8 19.312l.574-1.386a4.25 4.25 0 0 1-2.3-2.3zm19.562-4.7c0 1.175 0 2.019-.046 2.685c-.045.659-.131 1.089-.277 1.441l1.385.574c.235-.566.338-1.178.389-1.913c.05-.729.049-1.632.049-2.787zm-5.027 8.241c1.256-.021 2.172-.095 2.977-.429l-.574-1.386c-.515.214-1.173.294-2.428.316zm4.704-4.115a4.25 4.25 0 0 1-2.3 2.3l.573 1.386a5.75 5.75 0 0 0 3.112-3.112zM13.5 2.75c1.651 0 2.837 0 3.762.089c.914.087 1.495.253 1.959.537l.783-1.279c-.739-.452-1.577-.654-2.6-.752c-1.012-.096-2.282-.095-3.904-.095zm9.25 7.75c0-1.622 0-2.891-.096-3.904c-.097-1.023-.299-1.862-.751-2.6l-1.28.783c.285.464.451 1.045.538 1.96c.088.924.089 2.11.089 3.761zm-3.53-7.124a4.25 4.25 0 0 1 1.404 1.403l1.279-.783a5.75 5.75 0 0 0-1.899-1.899zM10.5 1.25c-1.622 0-2.891 0-3.904.095c-1.023.098-1.862.3-2.6.752l.783 1.28c.464-.285 1.045-.451 1.96-.538c.924-.088 2.11-.089 3.761-.089zM2.75 10.5c0-1.651 0-2.837.089-3.762c.087-.914.253-1.495.537-1.959l-1.279-.783c-.452.738-.654 1.577-.752 2.6C1.25 7.61 1.25 8.878 1.25 10.5zm1.246-8.403a5.75 5.75 0 0 0-1.899 1.899l1.28.783a4.25 4.25 0 0 1 1.402-1.403zm7.02 17.993c-.202-.343-.38-.646-.554-.884a2.2 2.2 0 0 0-.682-.645l-.754 1.297c.047.028.112.078.224.232c.121.166.258.396.476.764zm-3.24-.349c.44.008.718.014.93.037c.198.022.275.054.32.08l.754-1.297a2.2 2.2 0 0 0-.909-.274c-.298-.033-.657-.038-1.069-.045zm6.498 1.113c.218-.367.355-.598.476-.764c.112-.154.177-.204.224-.232l-.754-1.297c-.29.17-.5.395-.682.645c-.173.238-.352.54-.555.884zm1.924-2.612c-.412.007-.771.012-1.069.045c-.311.035-.616.104-.909.274l.754 1.297c.045-.026.122-.058.32-.08c.212-.023.49-.03.93-.037z"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11h.009m3.982 0H12m3.991 0H16" opacity=".5"></path></g></svg></template></iconify-icon>
+                          <div class="pulse">
+                            <span class="heartbit border-warning"></span>
+                            <span class="point text-bg-warning"></span>
+                          </div>
+                        </a>
+                        <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop3">
+                          <!--  Messages -->
+                          <div class="d-flex align-items-center py-3 px-7">
+                            <h3 class="mb-0 fs-5">Messages</h3>
+                            <span class="badge bg-info ms-3">5 new</span>
+                          </div>
+
+                          <div class="message-body" data-simplebar="init"><div class="simplebar-wrapper" style="margin: 0px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: auto; overflow: hidden;"><div class="simplebar-content" style="padding: 0px;">
+                            <a href="javascript:void(0)" class="dropdown-item px-7 d-flex align-items-center py-6">
+                              <span class="flex-shrink-0">
+                                <img src="./View Video_files/user-2.jpg" alt="user" width="45" class="rounded-circle">
+                              </span>
+                              <div class="w-100 ps-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                  <h5 class="mb-0 fs-3 fw-normal">
+                                    Roman Joined the Team!
+                                  </h5>
+                                  <span class="fs-2 text-nowrap d-block text-muted">9:08 AM</span>
+                                </div>
+                                <span class="fs-2 d-block mt-1 text-muted">Congratulate him</span>
+                              </div>
+                            </a>
+
+                            <a href="javascript:void(0)" class="dropdown-item px-7 d-flex align-items-center py-6">
+                              <span class="flex-shrink-0">
+                                <img src="./View Video_files/user-3.jpg" alt="user" width="45" class="rounded-circle">
+                              </span>
+                              <div class="w-100 ps-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                  <h5 class="mb-0 fs-3 fw-normal">
+                                    New message received
+                                  </h5>
+                                  <span class="fs-2 text-nowrap d-block text-muted">9:08 AM</span>
+                                </div>
+                                <span class="fs-2 d-block mt-1 text-muted">Salma sent you new
+                                  message</span>
+                              </div>
+                            </a>
+
+                            <a href="javascript:void(0)" class="dropdown-item px-7 d-flex align-items-center py-6">
+                              <span class="flex-shrink-0">
+                                <img src="./View Video_files/user-4.jpg" alt="user" width="45" class="rounded-circle">
+                              </span>
+                              <div class="w-100 ps-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                  <h5 class="mb-0 fs-3 fw-normal">
+                                    New Payment received
+                                  </h5>
+                                  <span class="fs-2 text-nowrap d-block text-muted">9:08 AM</span>
+                                </div>
+                                <span class="fs-2 d-block mt-1 text-muted">Check your
+                                  earnings</span>
+                              </div>
+                            </a>
+
+                            <a href="javascript:void(0)" class="dropdown-item px-7 d-flex align-items-center py-6">
+                              <span class="flex-shrink-0">
+                                <img src="./View Video_files/user-1.jpg" alt="user" width="45" class="rounded-circle">
+                              </span>
+                              <div class="w-100 ps-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                  <h5 class="mb-0 fs-3 fw-normal">
+                                    New message received
+                                  </h5>
+                                  <span class="fs-2 text-nowrap d-block text-muted">9:08 AM</span>
+                                </div>
+                                <span class="fs-2 d-block mt-1 text-muted">Salma sent you new
+                                  message</span>
+                              </div>
+                            </a>
+
+                            <a href="javascript:void(0)" class="dropdown-item px-7 d-flex align-items-center py-6">
+                              <span class="flex-shrink-0">
+                                <img src="./View Video_files/user-6.jpg" alt="user" width="45" class="rounded-circle">
+                              </span>
+                              <div class="w-100 ps-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                  <h5 class="mb-0 fs-3 fw-normal">
+                                    Roman Joined the Team!
+                                  </h5>
+                                  <span class="fs-2 text-nowrap d-block text-muted">9:08 AM</span>
+                                </div>
+                                <span class="fs-2 d-block mt-1 text-muted">Congratulate him</span>
+                              </div>
+                            </a>
+                          </div></div></div></div><div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: hidden;"><div class="simplebar-scrollbar" style="height: 0px; display: none;"></div></div></div>
+
+                          <div class="py-6 px-7 mb-1">
+                            <button class="btn btn-primary w-100">
+                              See All Messages
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- ------------------------------- -->
+                      <!-- end Messages cart Dropdown -->
+                      <!-- ------------------------------- -->
+
+                      <!-- ------------------------------- -->
+                      <!-- start shortcut Dropdown -->
+                      <!-- ------------------------------- -->
+                      <li class="nav-item dropdown nav-icon-hover-bg rounded-circle">
+                        <a class="nav-link position-relative" href="javascript:void(0)" id="drop2" aria-expanded="false">
+                          <iconify-icon icon="solar:widget-add-line-duotone" class="fs-6"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M14.5 6.5h3m0 0h3m-3 0v3m0-3v-3"></path><path d="M2.5 6.5c0-1.886 0-2.828.586-3.414S4.614 2.5 6.5 2.5s2.828 0 3.414.586s.586 1.528.586 3.414s0 2.828-.586 3.414s-1.528.586-3.414.586s-2.828 0-3.414-.586S2.5 8.386 2.5 6.5Zm11 11c0-1.886 0-2.828.586-3.414s1.528-.586 3.414-.586s2.828 0 3.414.586s.586 1.528.586 3.414s0 2.828-.586 3.414s-1.528.586-3.414.586s-2.828 0-3.414-.586s-.586-1.528-.586-3.414Z"></path><path d="M2.5 17.5c0-1.886 0-2.828.586-3.414S4.614 13.5 6.5 13.5s2.828 0 3.414.586s.586 1.528.586 3.414s0 2.828-.586 3.414s-1.528.586-3.414.586s-2.828 0-3.414-.586S2.5 19.386 2.5 17.5Z" opacity=".5"></path></g></svg></template></iconify-icon>
+                        </a>
+                        <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up pb-0 overflow-hidden" aria-labelledby="drop2">
+                          <!--  Shortcuts -->
+                          <div class="d-flex align-items-center py-3 px-7 gap-6">
+                            <h3 class="mb-0 fs-5">Shortcuts</h3>
+                          </div>
+
+                          <div class="row gx-0">
+                            <div class="col-6">
+                              <a href="https://www.lms.in.net/dark/app-invoice.html" class="dropdown-item px-7 border-top border-bottom border-end py-6 d-flex flex-column gap-2 justify-content-center text-center">
+                                <div class="bg-secondary-subtle rounded-3 m-auto round d-flex align-items-center justify-content-center">
+                                  <iconify-icon icon="solar:checklist-minimalistic-bold-duotone" class="fs-7 text-secondary"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12" opacity=".5"></path><path fill="currentColor" d="M10.543 7.517a.75.75 0 1 0-1.086-1.034l-2.314 2.43l-.6-.63a.75.75 0 1 0-1.086 1.034l1.143 1.2a.75.75 0 0 0 1.086 0zM13 8.25a.75.75 0 0 0 0 1.5h5a.75.75 0 0 0 0-1.5zm-2.457 6.267a.75.75 0 1 0-1.086-1.034l-2.314 2.43l-.6-.63a.75.75 0 1 0-1.086 1.034l1.143 1.2a.75.75 0 0 0 1.086 0zM13 15.25a.75.75 0 0 0 0 1.5h5a.75.75 0 0 0 0-1.5z"></path></svg></template></iconify-icon>
+                                </div>
+
+                                <h6 class="mb-0 fs-4">Invoice</h6>
+                                <span class="d-block text-body-color fs-3">Get latest invoice</span>
+                              </a>
+                            </div>
+                            <div class="col-6">
+                              <a href="https://www.lms.in.net/dark/app-chat.html" class="dropdown-item px-7 border-top border-bottom py-6 d-flex flex-column gap-2 justify-content-center text-center">
+                                <div class="bg-primary-subtle rounded-3 m-auto round d-flex align-items-center justify-content-center">
+                                  <iconify-icon icon="solar:chat-square-call-bold-duotone" class="fs-7 text-primary"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m13.629 20.472l-.542.916c-.483.816-1.69.816-2.174 0l-.542-.916c-.42-.71-.63-1.066-.968-1.262c-.338-.197-.763-.204-1.613-.219c-1.256-.021-2.043-.098-2.703-.372a5 5 0 0 1-2.706-2.706C2 14.995 2 13.83 2 11.5v-1c0-3.273 0-4.91.737-6.112a5 5 0 0 1 1.65-1.651C5.59 2 7.228 2 10.5 2h3c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C22 5.59 22 7.228 22 10.5v1c0 2.33 0 3.495-.38 4.413a5 5 0 0 1-2.707 2.706c-.66.274-1.447.35-2.703.372c-.85.015-1.275.022-1.613.219c-.338.196-.548.551-.968 1.262" opacity=".5"></path><path fill="currentColor" d="M12 6.25a.75.75 0 0 1 .75.75v8a.75.75 0 0 1-1.5 0V7a.75.75 0 0 1 .75-.75m-4 2a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0V9A.75.75 0 0 1 8 8.25m8 0a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75"></path></svg></template></iconify-icon>
+                                </div>
+                                <h6 class="mb-0 fs-4">Chat</h6>
+                                <span class="d-block text-body-color fs-3">New messages</span>
+                              </a>
+                            </div>
+                            <div class="col-6">
+                              <a href="https://www.lms.in.net/dark/app-contact2.html" class="dropdown-item px-7 border-bottom border-end py-6 d-flex flex-column gap-2 justify-content-center text-center">
+                                <div class="bg-info-subtle rounded-3 m-auto round d-flex align-items-center justify-content-center">
+                                  <iconify-icon icon="solar:phone-calling-rounded-bold-duotone" class="fs-7 text-info"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m10.038 5.316l.649 1.163c.585 1.05.35 2.426-.572 3.349c0 0-1.12 1.119.91 3.148c2.027 2.027 3.146.91 3.147.91c.923-.923 2.3-1.158 3.349-.573l1.163.65c1.585.884 1.772 3.106.379 4.5c-.837.836-1.863 1.488-2.996 1.53c-1.908.073-5.149-.41-8.4-3.66c-3.25-3.251-3.733-6.492-3.66-8.4c.043-1.133.694-2.159 1.53-2.996c1.394-1.393 3.616-1.206 4.5.38" opacity=".5"></path><path fill="currentColor" d="M13.26 1.88a.75.75 0 0 1 .861-.62c.025.005.107.02.15.03q.129.027.352.09c.297.087.712.23 1.21.458c.996.457 2.321 1.256 3.697 2.631c1.376 1.376 2.175 2.702 2.632 3.698c.228.498.37.912.457 1.21a6 6 0 0 1 .113.454l.005.031a.765.765 0 0 1-.617.878a.75.75 0 0 1-.86-.617a3 3 0 0 0-.081-.327a7.4 7.4 0 0 0-.38-1.004c-.39-.85-1.092-2.024-2.33-3.262s-2.411-1.939-3.262-2.329a7.4 7.4 0 0 0-1.003-.38a6 6 0 0 0-.318-.08a.76.76 0 0 1-.626-.861"></path><path fill="currentColor" fill-rule="evenodd" d="M13.486 5.33a.75.75 0 0 1 .927-.516l-.206.721l.206-.72h.003l.003.001l.008.002l.02.006l.056.02q.067.023.177.07c.146.062.345.158.59.303c.489.29 1.157.77 1.942 1.556c.785.785 1.266 1.453 1.556 1.942c.145.245.241.444.303.59a3 3 0 0 1 .09.233l.005.02l.003.008v.003l.001.001s0 .002-.72.208l.72-.206a.75.75 0 0 1-1.439.422l-.003-.01l-.035-.088a4 4 0 0 0-.216-.417c-.223-.376-.626-.946-1.326-1.646s-1.269-1.102-1.646-1.325a4 4 0 0 0-.504-.25l-.01-.004a.75.75 0 0 1-.505-.925" clip-rule="evenodd"></path></svg></template></iconify-icon>
+                                </div>
+                                <h6 class="mb-0 fs-4">Contact</h6>
+                                <span class="d-block text-body-color fs-3">2 Unsaved Contacts</span>
+                              </a>
+                            </div>
+                            <div class="col-6">
+                              <a href="https://www.lms.in.net/dark/app-email.html" class="dropdown-item px-7 border-bottom py-6 d-flex flex-column gap-2 justify-content-center text-center">
+                                <div class="bg-danger-subtle rounded-3 m-auto round d-flex align-items-center justify-content-center">
+                                  <iconify-icon icon="solar:mailbox-bold-duotone" class="fs-7 text-danger"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M2 11.25C2 8.35 4.015 6 6.5 6S11 8.35 11 11.25V20H4.233C3 20 2 18.834 2 17.395z" opacity=".5"></path><path fill="currentColor" d="M11 11.25V20h8.793C21.012 20 22 18.847 22 17.425V11.25C22 8.35 19.985 6 17.5 6h-11C8.985 6 11 8.35 11 11.25" opacity=".8"></path><path fill="currentColor" d="M9.5 20v2a.75.75 0 0 0 1.5 0v-2zm5.5 0h-1.5v2a.75.75 0 0 0 1.5 0z"></path><path fill="currentColor" fill-rule="evenodd" d="M4.25 16a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H5a.75.75 0 0 1-.75-.75m13.135-9.415l.256-.052a2.2 2.2 0 0 1 1.24.115c.69.277 1.446.328 2.165.148l.061-.015c.524-.131.893-.618.893-1.178v-2.13c0-.738-.664-1.282-1.355-1.109c-.396.1-.812.071-1.193-.081l-.073-.03a3.5 3.5 0 0 0-2-.185l-.449.09c-.54.108-.93.6-.93 1.17v6.953c0 .397.31.719.692.719a.706.706 0 0 0 .693-.72z" clip-rule="evenodd"></path></svg></template></iconify-icon>
+                                </div>
+                                <h6 class="mb-0 fs-4">Email</h6>
+                                <span class="d-block text-body-color fs-3">Get new emails</span>
+                              </a>
+                            </div>
+                            <div class="col-6">
+                              <a href="https://www.lms.in.net/dark/page-user-profile.html" class="dropdown-item px-7 border-end py-6 d-flex flex-column gap-2 justify-content-center text-center">
+                                <div class="bg-warning-subtle rounded-3 m-auto round d-flex align-items-center justify-content-center">
+                                  <iconify-icon icon="solar:shield-user-bold-duotone" class="fs-7 text-warning"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M3 10.417c0-3.198 0-4.797.378-5.335c.377-.537 1.88-1.052 4.887-2.081l.573-.196C10.405 2.268 11.188 2 12 2s1.595.268 3.162.805l.573.196c3.007 1.029 4.51 1.544 4.887 2.081C21 5.62 21 7.22 21 10.417v1.574c0 5.638-4.239 8.375-6.899 9.536C13.38 21.842 13.02 22 12 22s-1.38-.158-2.101-.473C7.239 20.365 3 17.63 3 11.991z" opacity=".5"></path><path fill="currentColor" d="M14 9a2 2 0 1 1-4 0a2 2 0 0 1 4 0m-2 8c4 0 4-.895 4-2s-1.79-2-4-2s-4 .895-4 2s0 2 4 2"></path></svg></template></iconify-icon>
+                                </div>
+                                <h6 class="mb-0 fs-4">Profile</h6>
+                                <span class="d-block text-body-color fs-3">More information</span>
+                              </a>
+                            </div>
+                            <div class="col-6">
+                              <a href="https://www.lms.in.net/dark/app-calendar.html" class="dropdown-item px-7 py-6 d-flex flex-column gap-2 justify-content-center text-center">
+                                <div class="bg-success-subtle rounded-3 m-auto round d-flex align-items-center justify-content-center">
+                                  <iconify-icon icon="solar:calendar-mark-bold-duotone" class="fs-7 text-success"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M6.96 2c.418 0 .756.31.756.692V4.09c.67-.012 1.422-.012 2.268-.012h4.032c.846 0 1.597 0 2.268.012V2.692c0-.382.338-.692.756-.692s.756.31.756.692V4.15c1.45.106 2.403.368 3.103 1.008c.7.641.985 1.513 1.101 2.842v1H2V8c.116-1.329.401-2.2 1.101-2.842c.7-.64 1.652-.902 3.103-1.008V2.692c0-.382.339-.692.756-.692"></path><path fill="currentColor" d="M22 14v-2c0-.839-.013-2.335-.026-3H2.006c-.013.665 0 2.161 0 3v2c0 3.771 0 5.657 1.17 6.828C4.349 22 6.234 22 10.004 22h4c3.77 0 5.654 0 6.826-1.172S22 17.771 22 14" opacity=".5"></path><path fill="currentColor" d="M18 16.5a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0"></path></svg></template></iconify-icon>
+                                </div>
+                                <h6 class="mb-0 fs-4">Calendar</h6>
+                                <span class="d-block text-body-color fs-3">Get dates</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- ------------------------------- -->
+                      <!-- end shortcut Dropdown -->
+                      <!-- ------------------------------- -->
+
+                      <!-- ------------------------------- -->
+                      <!-- start profile Dropdown -->
+                      <!-- ------------------------------- -->
+                      <li class="nav-item dropdown">
+                        <a class="nav-link position-relative ms-6" href="javascript:void(0)" id="drop1" aria-expanded="false">
+                          <div class="d-flex align-items-center flex-shrink-0">
+                            <div class="user-profile me-sm-3 me-2">
+                             
+                                      
+     
+         <img src="./View Video_files/TMZ.png" alt="user" width="30" height="30" class="rounded-circle">
+        
+                                    </div>
+                            
+                            <span class="d-sm-none d-block"><iconify-icon icon="solar:alt-arrow-down-line-duotone"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m19 9l-7 6l-7-6"></path></svg></template></iconify-icon></span>
+
+                            <div class="d-none d-sm-block">
+                              <h6 class="fs-4 mb-1 profile-name">
+                               Aswin Santh                               </h6>
+                              <p class="fs-3 lh-base mb-0 profile-subtext">
+                                                                                                                               Student                                                                 
+                                                                                                    
+                                                              </p>
+                            </div>
+                          </div>
+                        </a>
+                        <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop1">
+                          <div class="profile-dropdown position-relative" data-simplebar="init"><div class="simplebar-wrapper" style="margin: 0px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: auto; overflow: hidden;"><div class="simplebar-content" style="padding: 0px;">
+                            <div class="d-flex align-items-center justify-content-between pt-3 px-7">
+                              <h3 class="mb-0 fs-5">User Profile</h3>
+
+                            </div>
+
+                            <div class="d-flex align-items-center mx-7 py-9 border-bottom">
+                                        
+     
+         <img src="./View Video_files/TMZ.png" alt="user" width="45" height="45" class="rounded-circle">
+        
+                                      <div class="ms-4">
+                                <h4 class="mb-0 fs-5 fw-normal">Mike Nielsen</h4>
+                                <span class="text-muted">super admin</span>
+                                <p class="text-muted mb-0 mt-1 d-flex align-items-center">
+                                  <iconify-icon icon="solar:mailbox-line-duotone" class="fs-4 me-1"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M10.5 22v-2m4 2v-2" opacity=".5"></path><path fill="currentColor" d="M11 20v.75h.75V20zm3-.75a.75.75 0 0 0 0 1.5zm3.5-14a.75.75 0 0 0 0 1.5zM7 5.25a.75.75 0 0 0 0 1.5zm2 14a.75.75 0 0 0 0 1.5zm6 1.5a.75.75 0 0 0 0-1.5zm-4.75-9.5V20h1.5v-8.75zm.75 8H4.233v1.5H11zm-8.25-1.855V11.25h-1.5v6.145zm1.483 1.855c-.715 0-1.483-.718-1.483-1.855h-1.5c0 1.74 1.231 3.355 2.983 3.355zM6.5 6.75c1.967 0 3.75 1.902 3.75 4.5h1.5c0-3.201-2.246-6-5.25-6zm0-1.5c-3.004 0-5.25 2.799-5.25 6h1.5c0-2.598 1.783-4.5 3.75-4.5zm14.75 6v6.175h1.5V11.25zm-1.457 8H14v1.5h5.793zm1.457-1.825c0 1.12-.757 1.825-1.457 1.825v1.5c1.738 0 2.957-1.601 2.957-3.325zm1.5-6.175c0-3.201-2.246-6-5.25-6v1.5c1.967 0 3.75 1.902 3.75 4.5zM7 6.75h11v-1.5H7zm2 14h6v-1.5H9z"></path><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M5 16h3"></path><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M16 9.884V5.411m0 0V2.635c0-.236.168-.439.4-.484l.486-.093a3.2 3.2 0 0 1 1.755.156l.08.03c.554.214 1.16.254 1.737.115a.44.44 0 0 1 .542.427v2.221a.51.51 0 0 1-.393.499l-.066.016a3.2 3.2 0 0 1-1.9-.125a3.2 3.2 0 0 0-1.755-.156z" opacity=".5"></path></g></svg></template></iconify-icon>
+                                  infoxxxc@spike.com
+                                </p>
+                              </div>
+                            </div>
+
+                            <div class="message-body">
+                              <a href="https://www.lms.in.net/dark/page-user-profile.html" class="dropdown-item px-7 d-flex align-items-center py-6">
+                                <span class="btn px-3 py-2 bg-info-subtle rounded-1 text-info shadow-none">
+                                  <iconify-icon icon="solar:wallet-2-line-duotone" class="fs-7"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 15V9"></path><path stroke-width="1.5" d="M20.833 9h-2.602C16.446 9 15 10.343 15 12s1.447 3 3.23 3h2.603c.084 0 .125 0 .16-.002c.54-.033.97-.432 1.005-.933c.002-.032.002-.071.002-.148v-3.834c0-.077 0-.116-.002-.148c-.036-.501-.465-.9-1.005-.933C20.959 9 20.918 9 20.834 9Z"></path><path stroke-width="1.5" d="M20.965 9c-.078-1.872-.328-3.02-1.137-3.828C18.657 4 16.771 4 13 4h-3C6.229 4 4.343 4 3.172 5.172S2 8.229 2 12s0 5.657 1.172 6.828S6.229 20 10 20h3c3.771 0 5.657 0 6.828-1.172c.809-.808 1.06-1.956 1.137-3.828" opacity=".5"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.991 12H18" opacity=".5"></path></g></svg></template></iconify-icon>
+                                </span>
+                                <div class="w-100 ps-3 ms-1">
+                                  <h5 class="mb-0 mt-1 fs-4 fw-normal">
+                                    My Profile
+                                  </h5>
+                                  <span class="fs-3 d-block mt-1 text-muted">Account Settings</span>
+                                </div>
+                              </a>
+
+                              <a href="https://www.lms.in.net/dark/app-email.html" class="dropdown-item px-7 d-flex align-items-center py-6">
+                                <span class="btn px-3 py-2 bg-success-subtle rounded-1 text-success shadow-none">
+                                  <iconify-icon icon="solar:shield-minimalistic-line-duotone" class="fs-7"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c-1.02 0-1.38-.158-2.101-.473C7.239 20.365 3 17.63 3 11.991v-1.574c0-3.198 0-4.797.378-5.334C3.755 4.545 5.258 4.03 8.265 3l.573-.196C10.405 2.268 11.188 2 12 2"></path><path d="M12 22c1.02 0 1.38-.158 2.101-.473c2.66-1.162 6.9-3.898 6.9-9.536v-1.574c0-3.198 0-4.797-.378-5.334c-.378-.538-1.881-1.053-4.888-2.082l-.573-.196C13.595 2.268 12.812 2 12 2" opacity=".5"></path></g></svg></template></iconify-icon>
+                                </span>
+                                <div class="w-100 ps-3 ms-1">
+                                  <h5 class="mb-0 mt-1 fs-4 fw-normal">My Inbox</h5>
+                                  <span class="fs-3 d-block mt-1 text-muted">Messages &amp; Emails</span>
+                                </div>
+                              </a>
+
+                              <a href="https://www.lms.in.net/dark/app-notes.html" class="dropdown-item px-7 d-flex align-items-center py-6">
+                                <span class="btn px-3 py-2 bg-danger-subtle rounded-1 text-danger shadow-none">
+                                  <iconify-icon icon="solar:card-2-line-duotone" class="fs-7"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-3.771 0-5.657 1.172-6.828S6.229 4 10 4h4c3.771 0 5.657 0 6.828 1.172S22 8.229 22 12s0 5.657-1.172 6.828S17.771 20 14 20h-4c-3.771 0-5.657 0-6.828-1.172S2 15.771 2 12Z"></path><path stroke-linecap="round" d="M10 16.5H6m2-3H6M2 10h20" opacity=".5"></path><path d="M14 15c0-.943 0-1.414.293-1.707S15.057 13 16 13s1.414 0 1.707.293S18 14.057 18 15s0 1.414-.293 1.707S16.943 17 16 17s-1.414 0-1.707-.293S14 15.943 14 15Z" opacity=".5"></path></g></svg></template></iconify-icon>
+                                </span>
+                                <div class="w-100 ps-3 ms-1">
+                                  <h5 class="mb-0 mt-1 fs-4 fw-normal">My Task</h5>
+                                  <span class="fs-3 d-block mt-1 text-muted">To-do and Daily
+                                    Tasks</span>
+                                </div>
+                              </a>
+                            </div>
+
+                            <div class="py-6 px-7 mb-1">
+                              <a href="https://www.lms.in.net/dashboard/logout/techmindz" class="btn btn-primary w-100">Log Out</a>
+                            </div>
+                          </div></div></div></div><div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: hidden;"><div class="simplebar-scrollbar" style="height: 0px; display: none;"></div></div></div>
+                        </div>
+                      </li>
+                      <!-- ------------------------------- -->
+                      <!-- end profile Dropdown -->
+                      <!-- ------------------------------- -->
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </header><link rel="stylesheet" href="./View Video_files/plyr.css">
+
+       <!-- Start content -->
+          <div class="card card-body py-3" id="searchbar">
+             <div class="row align-items-center">
+                  <div class="col-md-6 col-xl-5">
+                   <h4 class="fs-6 mb-0">View Video</h4>   
+                </div>
+                <div class="col-md-4 col-xl-2">
+                
+                
+                </div>
+                <div class="col-md-1 col-xl-5 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0">
+                  <button onclick="goBack()" type="button" class="btn btn-primary waves-effect waves-light">Back</button>
+               
+                </div>
+              </div>
+            </div>
+          <div class="card">
+            <div class="card-body">
+ 
+             <iframe id="videoFrame" allow="autoplay; encrypted-media" width="100%" height="800" style=" display: flex;" src="./View Video_files/index.html" title="Presentation">
+</iframe>
+  
+  
+                            </div>
+                            
+                        
+                      
+                        </div>
+
+                    </div>
+                   </div>
+                 
+        
+<script>
+  function handleColorTheme(e) {
+    document.documentElement.setAttribute("data-color-theme", e);
+  }
+ 
+     // Optional: Detect back-forward cache and reload
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted || (performance.getEntriesByType("navigation")[0]?.type === "back_forward")) {
+                console.log("Page loaded from bfcache, reloading...");
+                window.location.reload();
+            }
+        });
+
+        // Go back function with cache busting
+        function goBack() {
+            window.history.back();
+        }
+</script>
+   <!-- <button class="btn btn-primary p-3 rounded-circle d-flex align-items-center justify-content-center customizer-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+      <i class="ti ti-settings fs-7"></i>
+    </button>-->
+
+    <div class="offcanvas customizer offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="d-flex align-items-center justify-content-between p-3 border-bottom">
+        <h4 class="offcanvas-title fw-semibold" id="offcanvasExampleLabel">
+          Settings
+        </h4>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body h-n80 simplebar-scrollable-y" data-simplebar="init"><div class="simplebar-wrapper" style="margin: -16px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: 100%; overflow: hidden scroll;"><div class="simplebar-content" style="padding: 16px;">
+        <h6 class="fw-semibold fs-4 mb-2">Theme</h6>
+
+        <div class="d-flex flex-row gap-3 customizer-box" role="group">
+          <input type="radio" class="btn-check light-layout" name="theme-layout" id="light-layout" autocomplete="off">
+          <label class="btn p-9 btn-outline-primary" for="light-layout">
+            <i class="icon ti ti-brightness-up fs-7 me-2"></i>Light
+          </label>
+
+          <input type="radio" class="btn-check dark-layout" name="theme-layout" id="dark-layout" autocomplete="off">
+          <label class="btn p-9 btn-outline-primary" for="dark-layout">
+            <i class="icon ti ti-moon fs-7 me-2"></i>Dark
+          </label>
+        </div>
+
+        <h6 class="mt-5 fw-semibold fs-4 mb-2">Theme Direction</h6>
+        <div class="d-flex flex-row gap-3 customizer-box" role="group">
+          <input type="radio" class="btn-check" name="direction-l" id="ltr-layout" autocomplete="off">
+          <label class="btn p-9 btn-outline-primary" for="ltr-layout">
+            <i class="icon ti ti-text-direction-ltr fs-7 me-2"></i>LTR
+          </label>
+
+          <input type="radio" class="btn-check" name="direction-l" id="rtl-layout" autocomplete="off">
+          <label class="btn p-9 btn-outline-primary" for="rtl-layout">
+            <i class="icon ti ti-text-direction-rtl fs-7 me-2"></i>RTL
+          </label>
+        </div>
+
+        <h6 class="mt-5 fw-semibold fs-4 mb-2">Theme Colors</h6>
+
+        <div class="d-flex flex-row flex-wrap gap-3 customizer-box color-pallete" role="group">
+          <input type="radio" class="btn-check" name="color-theme-layout" id="Blue_Theme" autocomplete="off">
+          <label class="btn p-9 btn-outline-primary d-flex align-items-center justify-content-center" onclick="handleColorTheme(&#39;Blue_Theme&#39;)" for="Blue_Theme" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="BLUE_THEME">
+            <div class="color-box rounded-circle d-flex align-items-center justify-content-center skin-1">
+              <i class="ti ti-check text-white d-flex icon fs-5"></i>
+            </div>
+          </label>
+
+          <input type="radio" class="btn-check" name="color-theme-layout" id="Aqua_Theme" autocomplete="off">
+          <label class="btn p-9 btn-outline-primary d-flex align-items-center justify-content-center" onclick="handleColorTheme(&#39;Aqua_Theme&#39;)" for="Aqua_Theme" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="AQUA_THEME">
+            <div class="color-box rounded-circle d-flex align-items-center justify-content-center skin-2">
+              <i class="ti ti-check text-white d-flex icon fs-5"></i>
+            </div>
+          </label>
+
+          <input type="radio" class="btn-check" name="color-theme-layout" id="Purple_Theme" autocomplete="off">
+          <label class="btn p-9 btn-outline-primary d-flex align-items-center justify-content-center" onclick="handleColorTheme(&#39;Purple_Theme&#39;)" for="Purple_Theme" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="PURPLE_THEME">
+            <div class="color-box rounded-circle d-flex align-items-center justify-content-center skin-3">
+              <i class="ti ti-check text-white d-flex icon fs-5"></i>
+            </div>
+          </label>
+
+          <input type="radio" class="btn-check" name="color-theme-layout" id="green-theme-layout" autocomplete="off">
+          <label class="btn p-9 btn-outline-primary d-flex align-items-center justify-content-center" onclick="handleColorTheme(&#39;Green_Theme&#39;)" for="green-theme-layout" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="GREEN_THEME">
+            <div class="color-box rounded-circle d-flex align-items-center justify-content-center skin-4">
+              <i class="ti ti-check text-white d-flex icon fs-5"></i>
+            </div>
+          </label>
+
+          <input type="radio" class="btn-check" name="color-theme-layout" id="cyan-theme-layout" autocomplete="off">
+          <label class="btn p-9 btn-outline-primary d-flex align-items-center justify-content-center" onclick="handleColorTheme(&#39;Cyan_Theme&#39;)" for="cyan-theme-layout" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="CYAN_THEME">
+            <div class="color-box rounded-circle d-flex align-items-center justify-content-center skin-5">
+              <i class="ti ti-check text-white d-flex icon fs-5"></i>
+            </div>
+          </label>
+
+          <input type="radio" class="btn-check" name="color-theme-layout" id="orange-theme-layout" autocomplete="off">
+          <label class="btn p-9 btn-outline-primary d-flex align-items-center justify-content-center" onclick="handleColorTheme(&#39;Orange_Theme&#39;)" for="orange-theme-layout" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="ORANGE_THEME">
+            <div class="color-box rounded-circle d-flex align-items-center justify-content-center skin-6">
+              <i class="ti ti-check text-white d-flex icon fs-5"></i>
+            </div>
+          </label>
+        </div>
+
+        <h6 class="mt-5 fw-semibold fs-4 mb-2">Layout Type</h6>
+        <div class="d-flex flex-row gap-3 customizer-box" role="group">
+          <div>
+            <input type="radio" class="btn-check" name="page-layout" id="vertical-layout" autocomplete="off">
+            <label class="btn p-9 btn-outline-primary" for="vertical-layout">
+              <i class="icon ti ti-layout-sidebar-right fs-7 me-2"></i>Vertical
+            </label>
+          </div>
+          <div>
+            <input type="radio" class="btn-check" name="page-layout" id="horizontal-layout" autocomplete="off">
+            <label class="btn p-9 btn-outline-primary" for="horizontal-layout">
+              <i class="icon ti ti-layout-navbar fs-7 me-2"></i>Horizontal
+            </label>
+          </div>
+        </div>
+
+        <h6 class="mt-5 fw-semibold fs-4 mb-2">Container Option</h6>
+
+        <div class="d-flex flex-row gap-3 customizer-box" role="group">
+          <input type="radio" class="btn-check" name="layout" id="boxed-layout" autocomplete="off">
+          <label class="btn p-9 btn-outline-primary" for="boxed-layout">
+            <i class="icon ti ti-layout-distribute-vertical fs-7 me-2"></i>Boxed
+          </label>
+
+          <input type="radio" class="btn-check" name="layout" id="full-layout" autocomplete="off">
+          <label class="btn p-9 btn-outline-primary" for="full-layout">
+            <i class="icon ti ti-layout-distribute-horizontal fs-7 me-2"></i>Full
+          </label>
+        </div>
+
+        <h6 class="fw-semibold fs-4 mb-2 mt-5">Sidebar Type</h6>
+        <div class="d-flex flex-row gap-3 customizer-box" role="group">
+          <a href="javascript:void(0)" class="fullsidebar">
+            <input type="radio" class="btn-check" name="sidebar-type" id="full-sidebar" autocomplete="off">
+            <label class="btn p-9 btn-outline-primary" for="full-sidebar">
+              <i class="icon ti ti-layout-sidebar-right fs-7 me-2"></i>Full
+            </label>
+          </a>
+          <div>
+            <input type="radio" class="btn-check " name="sidebar-type" id="mini-sidebar" autocomplete="off">
+            <label class="btn p-9 btn-outline-primary" for="mini-sidebar">
+              <i class="icon ti ti-layout-sidebar fs-7 me-2"></i>Collapse
+            </label>
+          </div>
+        </div>
+
+        <h6 class="mt-5 fw-semibold fs-4 mb-2">Card With</h6>
+
+        <div class="d-flex flex-row gap-3 customizer-box" role="group">
+          <input type="radio" class="btn-check" name="card-layout" id="card-with-border" autocomplete="off">
+          <label class="btn p-9 btn-outline-primary" for="card-with-border">
+            <i class="icon ti ti-border-outer fs-7 me-2"></i>Border
+          </label>
+
+          <input type="radio" class="btn-check" name="card-layout" id="card-without-border" autocomplete="off">
+          <label class="btn p-9 btn-outline-primary" for="card-without-border">
+            <i class="icon ti ti-border-none fs-7 me-2"></i>Shadow
+          </label>
+        </div>
+      </div></div></div></div><div class="simplebar-placeholder" style="width: 320px; height: 1053px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; transform: translate3d(0px, 0px, 0px); display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: visible;"><div class="simplebar-scrollbar" style="height: 418px; transform: translate3d(0px, 0px, 0px); display: block;"></div></div></div>
+    </div>
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  </div>
+     <script src="./View Video_files/jquery.min.js.download"></script>
+  <script src="./View Video_files/vendor.min.js.download"></script>
+  <!-- Import Js Files -->
+ <script src="./View Video_files/bootstrap.bundle.min.js.download"></script>
+  <script src="./View Video_files/simplebar.min.js.download"></script>
+  
+  <script src="./View Video_files/app.dark.init.js.download"></script>
+  <script src="./View Video_files/theme.js.download"></script>
+  <script src="./View Video_files/app.min.js.download"></script>
+  <script src="./View Video_files/sidebarmenu.js.download"></script>
+  <script src="./View Video_files/feather.min.js.download"></script>
+
+  <!-- solar icons -->
+  <script src="./View Video_files/iconify-icon.min.js.download"></script>
+  <script src="./View Video_files/jquery-jvectormap.min.js.download"></script>
+  
+  <script src="./View Video_files/jquery-jvectormap-us-aea-en.js.download"></script>
+  <script src="./View Video_files/jquery.dataTables.min.js.download"></script>
+                          
+  <script>
+      $("document").ready(function(){ 
+         
+         
+              if($('#teacherulink').hasClass('active')){
+           
+                $("#teacheruicon").attr('src',function(index, attr){
+        return attr.replace("Teachers2.png", "teacher_brown2.png");
+      
+                });    
+          }
+          else{
+                $("#teacheruicon").attr('src',function(index, attr){
+                    
+        return attr.replace("teacher_brown2.png","Teachers2.png");}); 
+        $("#teacheruicon").mouseenter(function(){     
+            
+            $(this).attr('src',function(index, attr){
+        return attr.replace("Teachers2.png", "teacher_brown2.png");
+    });      
+        });     
+        
+        $("#teacherulink").mouseleave(function(){  
+            
+            $(this).attr('src',function(index, attr){
+        return attr.replace("teacher_brown2.png","Teachers2.png");});      
+        }); 
+        
+          $("#teacherulink").mouseenter(function(){       
+            $("#teacheruicon").attr('src',function(index, attr){
+        return attr.replace("Teachers2.png", "teacher_brown2.png");
+    });      
+        });     
+        
+        $("#teacheruicon").mouseleave(function(){       
+            $("#teacheruicon").attr('src',function(index, attr){
+        return attr.replace("teacher_brown2.png","Teachers2.png");});      
+        }); 
+          }
+          if($('#teacherlink').hasClass('active')){
+           
+                $("#teachericon").attr('src',function(index, attr){
+        return attr.replace("Teachers.png", "teacher_brown.png");
+      
+                });    
+          }
+          else{
+                $("#teachericon").attr('src',function(index, attr){
+                    
+        return attr.replace("teacher_brown.png","Teachers.png");}); 
+        $("#teachericon").mouseenter(function(){     
+            
+            $(this).attr('src',function(index, attr){
+        return attr.replace("Teachers.png", "teacher_brown.png");
+    });      
+        });     
+        
+        $("#teachericon").mouseleave(function(){  
+            
+            $(this).attr('src',function(index, attr){
+        return attr.replace("teacher_brown.png","Teachers.png");});      
+        }); 
+        
+          $("#teacherlink").mouseenter(function(){       
+            $("#teachericon").attr('src',function(index, attr){
+        return attr.replace("Teachers.png", "teacher_brown.png");
+    });      
+        });     
+        
+        $("#teacherlink").mouseleave(function(){       
+            $("#teachericon").attr('src',function(index, attr){
+        return attr.replace("teacher_brown.png","Teachers.png");});      
+        }); 
+          }
+       
+       
+          if($('#adminlink').hasClass('active')){
+           
+                $("#adminicon").attr('src',function(index, attr){
+        return attr.replace("Teachers.png", "teacher_brown.png");
+      
+                });    
+          }
+          else{
+                $("#adminicon").attr('src',function(index, attr){
+                    
+        return attr.replace("teacher_brown.png","Teachers.png");}); 
+        $("#adminicon").mouseenter(function(){     
+            
+            $(this).attr('src',function(index, attr){
+        return attr.replace("Teachers.png", "teacher_brown.png");
+    });      
+        });     
+        
+        $("#adminicon").mouseleave(function(){  
+            
+            $(this).attr('src',function(index, attr){
+        return attr.replace("teacher_brown.png","Teachers.png");});      
+        }); 
+        
+          $("#adminlink").mouseenter(function(){       
+            $("#adminicon").attr('src',function(index, attr){
+        return attr.replace("Teachers.png", "teacher_brown.png");
+    });      
+        });     
+        
+        $("#adminlink").mouseleave(function(){       
+            $("#adminicon").attr('src',function(index, attr){
+        return attr.replace("teacher_brown.png","Teachers.png");});      
+        }); 
+          }
+          
+           if($('#studentlink').hasClass('active')){
+            
+                $("#studenticon").attr('src',function(index, attr){
+        return attr.replace("Students.png", "student_brown.png");
+                });    
+          }
+          else{
+             
+                $("#studenticon").attr('src',function(index, attr){
+        return attr.replace("student_brown.png","Students.png");}); 
+        $("#studenticon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("Students.png", "student_brown.png");
+    });      
+        });     
+        $("#studenticon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("student_brown.png","Students.png");});      
+        }); 
+        
+             $("#studentlink").mouseenter(function(){       
+            $("#studenticon").attr('src',function(index, attr){
+        return attr.replace("Students.png", "student_brown.png");
+    });      
+        });     
+        
+        $("#studentlink").mouseleave(function(){       
+            $("#studenticon").attr('src',function(index, attr){
+        return attr.replace("student_brown.png","Students.png");});      
+        }); 
+          }
+         
+       if($('#centerlink').hasClass('active')){
+              
+                $("#centericon").attr('src',function(index, attr){
+        return attr.replace("Center.png", "center_brown.png");
+                });    
+          }
+          else{
+                $("#centericon").attr('src',function(index, attr){
+        return attr.replace("center_brown.png","Center.png");}); 
+        $("#centericon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("Center.png", "center_brown.png");
+    });      
+        });     
+        $("#centericon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("center_brown.png","Center.png");});      
+        }); 
+        
+                $("#centerlink").mouseenter(function(){       
+            $("#centericon").attr('src',function(index, attr){
+        return attr.replace("Center.png", "center_brown.png");
+    });      
+        });     
+        
+        $("#centerlink").mouseleave(function(){       
+            $("#centericon").attr('src',function(index, attr){
+        return attr.replace("center_brown.png","Center.png");});      
+        }); 
+        
+          } 
+          
+          
+           if($('#centertlink').hasClass('active')){
+              
+                $("#centerticon").attr('src',function(index, attr){
+        return attr.replace("Center.png", "center_brown.png");
+                });    
+          }
+          else{
+                $("#centerticon").attr('src',function(index, attr){
+        return attr.replace("center_brown.png","Center.png");}); 
+        $("#centerticon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("Center.png", "center_brown.png");
+    });      
+        });     
+        $("#centerticon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("center_brown.png","Center.png");});      
+        }); 
+        
+                $("#centertlink").mouseenter(function(){       
+            $("#centerticon").attr('src',function(index, attr){
+        return attr.replace("Center.png", "center_brown.png");
+    });      
+        });     
+        
+        $("#centertlink").mouseleave(function(){       
+            $("#centerticon").attr('src',function(index, attr){
+        return attr.replace("center_brown.png","Center.png");});      
+        }); 
+        
+          } 
+          if($('#courselink').hasClass('active')){
+                 
+                $("#courseicon").attr('src',function(index, attr){
+        return attr.replace("Courses.png", "course_brown.png");
+                });    
+          }
+          else{
+                $("#courseicon").attr('src',function(index, attr){
+                      
+        return attr.replace("course_brown.png","Courses.png");}); 
+        $("#courseicon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("Courses.png", "course_brown.png");
+    });      
+        });     
+        $("#courseicon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("center_brown.png","Center.png");});      
+        }); 
+        
+                $("#courselink").mouseenter(function(){       
+            $("#courseicon").attr('src',function(index, attr){
+        return attr.replace("Courses.png", "course_brown.png");
+    });      
+        });     
+        
+        $("#courselink").mouseleave(function(){       
+            $("#courseicon").attr('src',function(index, attr){
+        return attr.replace("course_brown.png","Courses.png");});      
+        }); 
+        
+          }  
+          
+          
+             if($('#lessonlink').hasClass('active')){
+              
+                $("#lessonicon").attr('src',function(index, attr){
+        return attr.replace("Lesson_Plans.png", "lesson_plan_brown.png");
+                });    
+          }
+          else{
+                $("#lessonicon").attr('src',function(index, attr){
+        return attr.replace("lesson_plan_brown.png","Lesson_Plans.png");}); 
+        $("#lessonicon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("Lesson_Plans.png", "lesson_plan_brown.png");
+    });      
+        });     
+        $("#lessonicon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("lesson_plan_brown.png","Lesson_Plans.png");});      
+        }); 
+        
+                $("#lessonlink").mouseenter(function(){       
+            $("#lessonicon").attr('src',function(index, attr){
+        return attr.replace("Lesson_Plans.png", "lesson_plan_brown.png");
+    });      
+        });     
+        
+        $("#lessonlink").mouseleave(function(){       
+            $("#lessonicon").attr('src',function(index, attr){
+        return attr.replace("lesson_plan_brown.png","Lesson_Plans.png");});      
+        }); 
+        
+          } 
+          
+               if($('#batchlink').hasClass('active')){
+              
+                $("#batchicon").attr('src',function(index, attr){
+        return attr.replace("Batches.png", "batch_brown.png");
+                });    
+          }
+          else{
+                $("#batchicon").attr('src',function(index, attr){
+        return attr.replace("batch_brown.png","Batches.png");}); 
+        $("#batchicon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("Batches.png", "batch_brown.png");
+    });      
+        });     
+        $("#batchicon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("batch_brown.png","Batches.png");});      
+        }); 
+        
+                $("#batchlink").mouseenter(function(){       
+            $("#batchicon").attr('src',function(index, attr){
+        return attr.replace("Batches.png", "batch_brown.png");
+    });      
+        });     
+        
+        $("#batchlink").mouseleave(function(){       
+            $("#batchicon").attr('src',function(index, attr){
+        return attr.replace("batch_brown.png","Batches.png");});      
+        }); 
+        
+          }   
+          
+              if($('#batchlinkg').hasClass('active')){
+              
+                $("#batchicong").attr('src',function(index, attr){
+        return attr.replace("Batches.png", "batch_brown.png");
+                });    
+          }
+          else{
+                $("#batchicong").attr('src',function(index, attr){
+        return attr.replace("batch_brown.png","Batches.png");}); 
+        $("#batchicong").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("Batches.png", "batch_brown.png");
+    });      
+        });     
+        $("#batchicong").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("batch_brown.png","Batches.png");});      
+        }); 
+        
+                $("#batchlinkg").mouseenter(function(){       
+            $("#batchicong").attr('src',function(index, attr){
+        return attr.replace("Batches.png", "batch_brown.png");
+    });      
+        });     
+        
+        $("#batchlinkg").mouseleave(function(){       
+            $("#batchicong").attr('src',function(index, attr){
+        return attr.replace("batch_brown.png","Batches.png");});      
+        }); 
+        
+          } 
+          
+             if($('#batchlinks').hasClass('active')){
+              
+                $("#batchicons").attr('src',function(index, attr){
+        return attr.replace("Batches.png", "batch_brown.png");
+                });    
+          }
+          else{
+                $("#batchicons").attr('src',function(index, attr){
+        return attr.replace("batch_brown.png","Batches.png");}); 
+        $("#batchicons").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("Batches.png", "batch_brown.png");
+    });      
+        });     
+        $("#batchicons").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("batch_brown.png","Batches.png");});      
+        }); 
+        
+                $("#batchlinks").mouseenter(function(){       
+            $("#batchicons").attr('src',function(index, attr){
+        return attr.replace("Batches.png", "batch_brown.png");
+    });      
+        });     
+        
+        $("#batchlinks").mouseleave(function(){       
+            $("#batchicons").attr('src',function(index, attr){
+        return attr.replace("batch_brown.png","Batches.png");});      
+        }); 
+        
+          } 
+          
+                  if($('#sessionlink').hasClass('active')){
+                  
+                $("#sessionicon").attr('src',function(index, attr){
+        return attr.replace("Sessions.png", "session_brown.png");
+                });    
+          }
+          else{
+                $("#sessionicon").attr('src',function(index, attr){
+                     
+        return attr.replace("session_brown.png","Sessions.png");}); 
+        $("#sessionicon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("Sessions.png", "session_brown.png");
+    });      
+        });     
+        $("#sessionicon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("session_brown.png","Sessions.png");});      
+        }); 
+        
+                $("#sessionlink").mouseenter(function(){       
+            $("#sessionicon").attr('src',function(index, attr){
+        return attr.replace("Sessions.png", "session_brown.png");
+    });      
+        });     
+        
+        $("#sessionlink").mouseleave(function(){       
+            $("#sessionicon").attr('src',function(index, attr){
+        return attr.replace("session_brown.png","Sessions.png");});      
+        }); 
+        
+          } 
+          
+                 if($('#feelink').hasClass('active')){
+             
+                $("#feeicon").attr('src',function(index, attr){
+        return attr.replace("Fee.png", "fee_brown.png");
+                });    
+          }
+          else{
+            
+                $("#feeicon").attr('src',function(index, attr){
+        return attr.replace("fee_brown.png","Fee.png");}); 
+        $("#feeicon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("Fee.png", "fee_brown.png");
+    });      
+        });     
+        $("#feeicon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("fee_brown.png","Fee.png");});      
+        }); 
+        
+                $("#feelink").mouseenter(function(){       
+            $("#feeicon").attr('src',function(index, attr){
+        return attr.replace("Fee.png", "fee_brown.png");
+    });      
+        });     
+        
+        $("#feelink").mouseleave(function(){       
+            $("#feeicon").attr('src',function(index, attr){
+        return attr.replace("fee_brown.png","Fee.png");});      
+        }); 
+        
+          } 
+          
+                     if($('#profilelink').hasClass('active')){
+              
+                $("#profileicon").attr('src',function(index, attr){
+        return attr.replace("Profile.png", "profile_brown.png");
+                });    
+          }
+          else{
+                $("#profileicon").attr('src',function(index, attr){
+                   
+        return attr.replace("profile_brown.png","Profile.png");}); 
+        $("#profileicon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("Profile.png", "profile_brown.png");
+    });      
+        });     
+        $("#profileicon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("profile_brown.png","Profile.png");});      
+        }); 
+        
+                $("#profilelink").mouseenter(function(){  
+                   
+            $("#profileicon").attr('src',function(index, attr){
+        return attr.replace("Profile.png", "profile_brown.png");
+    });      
+        });     
+        
+        $("#profilelink").mouseleave(function(){       
+            $("#profileicon").attr('src',function(index, attr){
+        return attr.replace("profile_brown.png","Profile.png");});      
+        }); 
+        
+          } 
+          
+                   if($('#passlink').hasClass('active')){
+             
+                $("#passbooksicon").attr('src',function(index, attr){
+        return attr.replace("passbook.png", "passbook_brown.png");
+                });    
+          }
+          else{
+              
+                $("#passbooksicon").attr('src',function(index, attr){
+        return attr.replace("passbook_brown.png","passbook.png");}); 
+        $("#passbooksicon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("passbook.png", "passbook_brown.png");
+    });      
+        });     
+        $("#passbooksicon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("passbook_brown.png","passbook.png");});      
+        }); 
+        
+                $("#passlink").mouseenter(function(){       
+            $("#passbooksicon").attr('src',function(index, attr){
+        return attr.replace("passbook.png", "passbook_brown.png");
+    });      
+        });     
+        
+        $("#passlink").mouseleave(function(){       
+            $("#passbooksicon").attr('src',function(index, attr){
+        return attr.replace("passbook_brown.png","passbook.png");});      
+        }); 
+        
+          }
+          
+  if($('#fundlink').hasClass('active')){
+              
+                $("#fundsicon").attr('src',function(index, attr){
+        return attr.replace("fund.png", "fund_brown.png");
+                });    
+          }
+          else{
+             
+                $("#fundsicon").attr('src',function(index, attr){
+        return attr.replace("fund_brown.png","fund.png");}); 
+        $("#fundsicon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("fund.png", "fund_brown.png");
+    });      
+        });     
+        $("#fundsicon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("fund_brown.png","fund.png");});      
+        }); 
+        
+                $("#fundlink").mouseenter(function(){       
+            $("#fundsicon").attr('src',function(index, attr){
+        return attr.replace("fund.png", "fund_brown.png");
+    });      
+        });     
+        
+        $("#fundlink").mouseleave(function(){       
+            $("#fundsicon").attr('src',function(index, attr){
+        return attr.replace("fund_brown.png","fund.png");});      
+        }); 
+        
+          }
+          
+           if($('#onlinesessionlink').hasClass('active')){
+             
+                $("#onlinesessionicon").attr('src',function(index, attr){
+        return attr.replace("online_sessions.png", "online_sessions_brown.png");
+                });    
+          }
+          else{
+              
+                $("#onlinesessionicon").attr('src',function(index, attr){
+        return attr.replace("online_sessions_brown.png","online_sessions.png");}); 
+        $("#onlinesessionicon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("online_sessions.png", "online_sessions_brown.png");
+    });      
+        });     
+        $("#onlinesessionicon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("online_sessions_brown.png","online_sessions.png");});      
+        }); 
+        
+                $("#onlinesessionlink").mouseenter(function(){       
+            $("#onlinesessionicon").attr('src',function(index, attr){
+        return attr.replace("online_sessions.png", "online_sessions_brown.png");
+    });      
+        });     
+        
+        $("#onlinesessionlink").mouseleave(function(){       
+            $("#onlinesessionicon").attr('src',function(index, attr){
+        return attr.replace("online_sessions_brown.png","online_sessions.png");});      
+        }); 
+        
+          }
+          
+           if($('#classnotelink').hasClass('active')){
+             
+                $("#notesicon").attr('src',function(index, attr){
+        return attr.replace("notes.png", "notes_brown.png");
+                });    
+          }
+          else{
+             
+                $("#notesicon").attr('src',function(index, attr){
+        return attr.replace("notes_brown.png","notes.png");}); 
+        $("#notesicon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("notes.png", "notes_brown.png");
+    });      
+        });     
+        $("#notesicon").mouseleave(function(){ 
+            
+            $(this).attr('src',function(index, attr){
+        return attr.replace("notes_brown.png","notes.png");});      
+        }); 
+        
+                $("#classnotelink").mouseenter(function(){       
+            $("#notesicon").attr('src',function(index, attr){
+        return attr.replace("notes.png", "notes_brown.png");
+    });      
+        });     
+        
+        $("#classnotelink").mouseleave(function(){       
+            $("#notesicon").attr('src',function(index, attr){
+        return attr.replace("notes_brown.png","notes.png");});      
+        }); 
+        
+          }
+          
+                 if($('#assignlink').hasClass('active')){
+             
+                $("#assignicon").attr('src',function(index, attr){
+        return attr.replace("assignment.png", "assignment_brown.png");
+                });    
+          }
+          else{
+                $("#assignicon").attr('src',function(index, attr){
+                    
+        return attr.replace("assignment_brown.png","assignment.png");}); 
+        $("#assignicon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("assignment.png", "assignment_brown.png");
+    });      
+        });     
+        $("#assignicon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("assignment_brown.png","assignment.png");});      
+        }); 
+        
+                $("#assignlink").mouseenter(function(){       
+            $("#assignicon").attr('src',function(index, attr){
+        return attr.replace("assignment.png", "assignment_brown.png");
+    });      
+        });     
+        
+        $("#assignlink").mouseleave(function(){       
+            $("#assignicon").attr('src',function(index, attr){
+        return attr.replace("assignment_brown.png","assignment.png");});      
+        }); 
+        
+          }
+          
+          
+               if($('#assignlink2').hasClass('active')){
+             
+                $("#assignicon2").attr('src',function(index, attr){
+        return attr.replace("assignment.png", "assignment_brown.png");
+                });    
+          }
+          else{
+                $("#assignicon2").attr('src',function(index, attr){
+                    
+        return attr.replace("assignment_brown.png","assignment.png");}); 
+        $("#assignicon2").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("assignment.png", "assignment_brown.png");
+    });      
+        });     
+        $("#assignicon2").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("assignment_brown.png","assignment.png");});      
+        }); 
+        
+                $("#assignlink2").mouseenter(function(){       
+            $("#assignicon2").attr('src',function(index, attr){
+        return attr.replace("assignment.png", "assignment_brown.png");
+    });      
+        });     
+        
+        $("#assignlink2").mouseleave(function(){       
+            $("#assignicon2").attr('src',function(index, attr){
+        return attr.replace("assignment_brown.png","assignment.png");});      
+        }); 
+        
+          }
+          
+                   if($('#projectlink').hasClass('active')){
+              
+                $("#projecticon").attr('src',function(index, attr){
+        return attr.replace("project.png", "project_brown.png");
+                });    
+          }
+          else{
+                $("#projecticon").attr('src',function(index, attr){
+        return attr.replace("project_brown.png","project.png");}); 
+        $("#projecticon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("project.png", "project_brown.png");
+    });      
+        });     
+        $("#projecticon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("project_brown.png","project.png");});      
+        }); 
+        
+                $("#projectlink").mouseenter(function(){       
+            $("#projecticon").attr('src',function(index, attr){
+        return attr.replace("project.png", "project_brown.png");
+    });      
+        });     
+        
+        $("#projectlink").mouseleave(function(){       
+            $("#projecticon").attr('src',function(index, attr){
+        return attr.replace("project_brown.png","project.png");});      
+        }); 
+        
+          }  
+          
+                           if($('#examlink').hasClass('active')){
+              
+                $("#examicon").attr('src',function(index, attr){
+        return attr.replace("exam.png", "exam_brown.png");
+                });    
+          }
+          else{
+                $("#examicon").attr('src',function(index, attr){
+        return attr.replace("exam_brown.png","exam.png");}); 
+        $("#examicon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("exam.png", "exam_brown.png");
+    });      
+        });     
+        $("#examicon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("exam_brown.png","exam.png");});      
+        }); 
+        
+                $("#examlink").mouseenter(function(){       
+            $("#examicon").attr('src',function(index, attr){
+        return attr.replace("exam.png", "exam_brown.png");
+    });      
+        });     
+        
+        $("#examlink").mouseleave(function(){       
+            $("#examicon").attr('src',function(index, attr){
+        return attr.replace("exam_brown.png","exam.png");});      
+        }); 
+        
+          }
+          
+          
+          if($('#examlink2').hasClass('active')){
+              
+                $("#examicon2").attr('src',function(index, attr){
+        return attr.replace("exam.png", "exam_brown.png");
+                });    
+          }
+          else{
+                $("#examicon2").attr('src',function(index, attr){
+        return attr.replace("exam_brown.png","exam.png");}); 
+        $("#examicon2").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("exam.png", "exam_brown.png");
+    });      
+        });     
+        $("#examicon2").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("exam_brown.png","exam.png");});      
+        }); 
+        
+                $("#examlink2").mouseenter(function(){       
+            $("#examicon2").attr('src',function(index, attr){
+        return attr.replace("exam.png", "exam_brown.png");
+    });      
+        });     
+        
+        $("#examlink2").mouseleave(function(){       
+            $("#examicon2").attr('src',function(index, attr){
+        return attr.replace("exam_brown.png","exam.png");});      
+        }); 
+        
+          }
+          
+                         if($('#accountlink').hasClass('active')){
+              
+                $("#accounticon").attr('src',function(index, attr){
+        return attr.replace("accounts.png", "accounts_brown.png");
+                });    
+          }
+          else{
+                $("#accounticon").attr('src',function(index, attr){
+        return attr.replace("accounts_brown.png","accounts.png");}); 
+        $("#accounticon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("accounts.png", "accounts_brown.png");
+    });      
+        });     
+        $("#accounticon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("accounts_brown.png","accounts.png");});      
+        }); 
+        
+                $("#accountlink").mouseenter(function(){       
+            $("#accounticon").attr('src',function(index, attr){
+        return attr.replace("accounts.png", "accounts_brown.png");
+    });      
+        });     
+        
+        $("#accountlink").mouseleave(function(){       
+            $("#accounticon").attr('src',function(index, attr){
+        return attr.replace("accounts_brown.png","accounts.png");});      
+        }); 
+        
+          }
+          
+          
+          
+          if($('#accountlink2').hasClass('active')){
+              
+                $("#accounticon2").attr('src',function(index, attr){
+        return attr.replace("accounts.png", "accounts_brown.png");
+                });    
+          }
+          else{
+                $("#accounticon2").attr('src',function(index, attr){
+        return attr.replace("accounts_brown.png","accounts.png");}); 
+        $("#accounticon2").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("accounts.png", "accounts_brown.png");
+    });      
+        });     
+        $("#accounticon2").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("accounts_brown.png","accounts.png");});      
+        }); 
+        
+                $("#accountlink2").mouseenter(function(){       
+            $("#accounticon2").attr('src',function(index, attr){
+        return attr.replace("accounts.png", "accounts_brown.png");
+    });      
+        });     
+        
+        $("#accountlink2").mouseleave(function(){       
+            $("#accounticon2").attr('src',function(index, attr){
+        return attr.replace("accounts_brown.png","accounts.png");});      
+        }); 
+        
+          }
+          
+                                if($('#certificatelink').hasClass('active')){
+              
+                $("#certicon").attr('src',function(index, attr){
+        return attr.replace("Certificate.png", "Certificate_brown.png");
+                });    
+          }
+          else{
+                $("#certicon").attr('src',function(index, attr){
+        return attr.replace("Certificate_brown.png","Certificate.png");}); 
+        $("#certicon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("Certificate.png", "Certificate_brown.png");
+    });      
+        });     
+        $("#certicon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("Certificate_brown.png","Certificate.png");});      
+        }); 
+        
+                $("#certificatelink").mouseenter(function(){       
+            $("#certicon").attr('src',function(index, attr){
+        return attr.replace("Certificate.png", "Certificate_brown.png");
+    });      
+        });     
+        
+        $("#certificatelink").mouseleave(function(){       
+            $("#certicon").attr('src',function(index, attr){
+        return attr.replace("Certificate_brown.png","Certificate.png");});      
+        }); 
+        
+          }
+                
+                             if($('#reportlink').hasClass('active')){
+              
+                $("#repicon").attr('src',function(index, attr){
+        return attr.replace("business-report.png", "report_brown.png");
+                });    
+          }
+          else{
+                $("#repicon").attr('src',function(index, attr){
+        return attr.replace("report_brown.png","business-report.png");}); 
+        $("#repicon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("business-report.png", "report_brown.png");
+    });      
+        });     
+        $("#repicon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("report_brown.png","business-report.png");});      
+        }); 
+        
+                $("#reportlink").mouseenter(function(){       
+            $("#repicon").attr('src',function(index, attr){
+        return attr.replace("business-report.png", "report_brown.png");
+    });      
+        });     
+        
+        $("#reportlink").mouseleave(function(){       
+            $("#repicon").attr('src',function(index, attr){
+        return attr.replace("report_brown.png","business-report.png");});      
+        }); 
+        
+          }
+          
+          if($('#dashboardlink').hasClass('active')){
+        
+                $("#dashicon2").attr('src',function(index, attr){
+        return attr.replace("dashboard.png", "dashboard_brown.png");
+                });    
+          }
+          else{
+                $("#dashicon2").attr('src',function(index, attr){
+        return attr.replace("dashboard_brown.png","dashboard.png");}); 
+        $("#dashicon2").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("dashboard.png", "dashboard_brown.png");
+    });      
+        });     
+        $("#dashicon2").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("dashboard_brown.png","dashboard.png");});      
+        }); 
+        
+                $("#dashboardlink").mouseenter(function(){       
+            $("#dashicon2").attr('src',function(index, attr){
+        return attr.replace("dashboard.png", "dashboard_brown.png");
+    });      
+        });     
+        
+        $("#dashboardlink").mouseleave(function(){       
+            $("#dashicon2").attr('src',function(index, attr){
+        return attr.replace("dashboard_brown.png","dashboard.png");});      
+        }); 
+        
+          }
+          
+        if($('#settinglink').hasClass('active')){
+        
+                $("#settingicon").attr('src',function(index, attr){
+        return attr.replace("settings.png", "settings_brown.png");
+                });    
+          }
+          else{
+                $("#settingicon").attr('src',function(index, attr){
+        return attr.replace("settings_brown.png","settings.png");}); 
+        $("#settingicon").mouseenter(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("settings.png", "settings_brown.png");
+    });      
+        });     
+        $("#settingicon").mouseleave(function(){       
+            $(this).attr('src',function(index, attr){
+        return attr.replace("settings_brown.png","settings.png");});      
+        }); 
+        
+                $("#settinglink").mouseenter(function(){       
+            $("#settingicon").attr('src',function(index, attr){
+        return attr.replace("settings.png", "settings_brown.png");
+    });      
+        });     
+        
+        $("#settinglink").mouseleave(function(){       
+            $("#settingicon").attr('src',function(index, attr){
+        return attr.replace("settings_brown.png","settings.png");});      
+        }); 
+        
+          }  
+        
+    });
+    
+   
+   
+    
+  </script>
+
+<!--<script type='text/javascript'>
+
+       
+        (() => {
+            if (window.localStorage) {
+
+               
+                if (!localStorage.getItem('reload')) {
+                    localStorage['reload'] = true;
+                    window.location.reload();
+                } else {
+
+                  
+                    localStorage.removeItem('reload');
+                }
+            }
+        })(); 
+    </script> -->
+    
+       <!-- Toast Container -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080">
+    <div id="liveToast" class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body" id="toastMessage">
+          <!-- Toast message goes here -->
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+    <!-- Bootstrap JS Bundle -->
+  
+    <script src="./View Video_files/bootstrap.bundle.min(1).js.download"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('notificationList');
+    if (!container) {
+      console.log('Notification script skipped (no #notificationList found).');
+      return;
+    }
+
+    let notifications = [];
+    let localNotifications = []; 
+    const notificationTemplates = {
+      fee: { icon: '', class: 'fee', color: 'text-danger' },
+      assignment: { icon: '', class: 'assignment', color: 'text-warning' },
+      exam: { icon: '', class: 'exam', color: 'text-info' },
+      project: { icon: '', class: 'project', color: 'text-warning' },
+     info: { icon: '', class: 'info', color: 'text-info' }
+    };
+  // Optional: load local notifications from storage
+    // localNotifications = JSON.parse(localStorage.getItem('localNotifications') || '[]');
+
+    function getAllNotifications() {
+      const all = [...localNotifications];
+      notifications.forEach(serverNotif => {
+        if (!all.some(n => n.id === serverNotif.id)) {
+          all.push(serverNotif);
+        }
+      });
+      return all;
+    }
+    function updateNotificationCount() {
+      const all = getAllNotifications();
+      const unreadCount = all.filter(n => !n.read).length;
+      const badges = document.querySelectorAll('.notification-badge');
+      badges.forEach(badge => {
+        badge.textContent = unreadCount;
+        badge.style.display = unreadCount > 0 ? 'flex' : 'none';
+      });
+    }
+
+    function formatTimeAgo(timestamp) {
+      const now = new Date();
+      const past = new Date(timestamp);
+      const diff = Math.floor((now - past) / 1000);
+      if (diff < 60) return 'Just now';
+      if (diff < 3600) return Math.floor(diff / 60) + ' minute(s) ago';
+      if (diff < 86400) return Math.floor(diff / 3600) + ' hour(s) ago';
+      return Math.floor(diff / 86400) + ' day(s) ago';
+    }
+
+    function renderNotifications() {
+      const allNotifications = getAllNotifications();
+      if (allNotifications.length === 0) {
+        container.innerHTML = `<div class="empty-notifications"><p>No notifications</p></div>`;
+        return;
+      }
+
+      let html = '';
+      allNotifications.forEach(n => {
+        const template = notificationTemplates[n.type] || {};
+        const timeAgo = formatTimeAgo(n.timestamp);
+   
+          html += `
+              <div class="notification-item ${template.class} ${n.read ? 'read' : 'new'}" data-id="${n.id}" >
+                <div class="d-flex align-items-start">
+                  <iconify-icon icon="${template.icon}" class="notification-icon ${template.color}"></iconify-icon>
+                  <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-start">
+                      <h6 class="mb-1">${n.title}</h6>
+                      <small class="notification-time">${timeAgo}</small>
+                    </div>
+                    <p class="mb-2 fs-3">${n.message}</p>
+                    <div class="notification-actions">
+                      ${!n.read ? 
+                        `<button class="btn btn-sm btn-outline-success mark-read-btn" data-id="${n.id}">Mark Read</button>` : 
+                        ''
+                      }
+                      <button class="btn btn-sm btn-outline-danger delete-btn" data-id="${n.id}">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `;
+      });
+
+      container.innerHTML = html;
+
+      container.querySelectorAll('.mark-read-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+          const id = parseInt(this.closest('.notification-item').dataset.id);
+          markAsRead(id);
+        });
+      });
+
+      container.querySelectorAll('.delete-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+          const id = parseInt(this.closest('.notification-item').dataset.id);
+          deleteNotification(id);
+        });
+      });
+    }
+
+    function markAsRead(id) {
+      const all = getAllNotifications();
+      const notif = all.find(n => n.id === id);
+      if (notif) notif.read = true;
+      updateNotificationCount();
+      renderNotifications();
+
+      const isServerNotification = notifications.some(n => n.id === id);
+      if (isServerNotification) {
+        fetch('notifications/mark_read/' + id, { method: 'POST' })
+          .then(resp => resp.json())
+          .then(data => console.log('mark_read response', data))
+          .catch(err => console.error('mark_read error', err));
+      }
+    }
+
+ function deleteNotification(id) {
+  console.log('deleteNotification called with id =', id);
+   localNotifications = localNotifications.filter(n => n.id !== id);
+  notifications = notifications.filter(n => n.id !== id);
+  updateNotificationCount();
+  renderNotifications();
+
+        fetch('notifications/mark_read/' + id, { method: 'POST' })
+          .then(resp => resp.json())
+          .then(data => console.log('mark_read response', data))
+          .catch(err => console.error('mark_read error', err));
+ 
+  // ❌ Removed server call
+  // fetch('notifications/delete_notification/' + id, { method: 'POST' })
+  //   .then(resp => resp.json())
+  //   .then(data => console.log('delete response', data))
+  //   .catch(err => console.error('delete error', err));
+}
+function clearLocalNotifications() {
+  localNotifications = [];  // Clear local notifications array
+  updateNotificationCount(); // Update the notification count
+  renderNotifications(); // Re-render the notifications list
+  console.log('Local notifications cleared.');
+}
+function addLocalNotification({ id, type, title, message }) {
+  localNotifications.push({
+    id,
+    type,
+    title,
+    message,
+    timestamp: new Date().toISOString(),
+    read: false
+  });
+  updateNotificationCount();
+  renderNotifications();
+}
+    function fetchFromServer() {
+              console.log('Fetching notifications...');
+      fetch('notifications/fetch', {
+        method: 'GET',
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(resp => {
+          console.log('fetchFromServer → got response, status', resp.status);
+          return resp.json();
+        })
+        .then(data => {
+             console.log('fetchFromServer → data from server:', data);
+          if (!Array.isArray(data)) {
+            console.error('Expected an array, got:', data);
+            return;
+          }
+          data.forEach(n => {
+            if (!notifications.some(x => x.id === n.id)) {
+              notifications.push({
+                id: n.id,
+                type: n.type,
+                title: n.title,
+                message: n.message,
+                timestamp: n.timestamp,
+                read: n.read
+              });
+            }
+          });
+
+          updateNotificationCount();
+          renderNotifications();
+        })
+        .catch(err => {
+          console.error('Fetch error:', err);
+        });
+    }
+
+    // Defer fetch using requestIdleCallback (or fallback to setTimeout)
+  // Initial deferred fetch
+const startFetch = () => {
+     clearLocalNotifications();
+  fetchFromServer();
+  setInterval(fetchFromServer, 15 * 60 * 1000); // fetch every 15 minutes
+};
+
+if ('requestIdleCallback' in window) {
+  requestIdleCallback(startFetch);
+} else {
+  setTimeout(startFetch, 1000);
+}
+
+document.getElementById('markAllRead')?.addEventListener('click', () => {
+      const all = getAllNotifications();
+      all.forEach(n => n.read = true);
+      updateNotificationCount();
+      renderNotifications();
+
+      fetch('notifications/mark_all_read', { method: 'POST' })
+        .then(resp => resp.json())
+        .then(data => console.log('mark_all_read response', data))
+        .catch(err => console.error('mark_all_read error', err));
+    });
+    // Mark all as read
+    document.getElementById('markAllReadHorizontal')?.addEventListener('click', () => {
+       const all = getAllNotifications();
+      all.forEach(n => n.read = true);
+      updateNotificationCount();
+      renderNotifications();
+
+      fetch('notifications/mark_all_read', { method: 'POST' })
+        .then(resp => resp.json())
+        .then(data => console.log('mark_all_read response', data))
+        .catch(err => console.error('mark_all_read error', err));
+    });
+
+    // Clear all (local only)
+    document.getElementById('clearAllHorizontal')?.addEventListener('click', () => {
+          if (confirm('Do you want to clear all notifications?')) {
+               localNotifications = [];
+      notifications = [];
+      updateNotificationCount();
+      renderNotifications();
+       fetch('notifications/mark_all_read', { method: 'POST' })
+        .then(resp => resp.json())
+        .then(data => console.log('mark_all_read response', data))
+        .catch(err => console.error('mark_all_read error', err));
+      console.log('All notifications cleared locally');
+          }
+    });
+  });
+
+      
+  
+
+</script>
+ 
+<script>
+   
+$(document).ready(function() {
+
+   
+$('#datatable').DataTable({
+    aaSorting: [[4, 'desc']]
+});
+
+
+
+});
+
+
+</script>   
+
+  
+ 
+</body></html>

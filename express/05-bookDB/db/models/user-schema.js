@@ -24,6 +24,6 @@ const userSchema = Schema({
   role: { type: String, enum: ['admin', 'user'] },
 });
 
-const User = model('users', userSchema);
+  const User = model('users', userSchema);
 
-module.exports = User;
+  module.exports = User;

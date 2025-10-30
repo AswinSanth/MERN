@@ -167,7 +167,7 @@ router
       return res.status(200).json({ message: 'Address deleted' });
     } catch (e) {
       console.log(e.message);
-      return res.status(500).json({ message: e.mesage, error: true });
+      return res.status(500).json({ message: e.message, error: true });
     }
   });
 

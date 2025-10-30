@@ -52,10 +52,11 @@ router.get('/book', async (req, res) => {
     const query = {};
     if (title) query.title = { $regex: title, $options: 'i' };
     if (price) query.price = price;
-    else if (minprice && maxprice) query.price= { $gte: minprice ,$lte: maxprice};
-    else if (minprice) query.price= { $gte: minprice };
-    else if (maxprice) query.price= { $lte: maxprice };
-    const dbResponse = await Book.find(query).sort({[sortby]:sortorder})
+    else if (minprice && maxprice)
+      query.price = { $gte: minprice, $lte: maxprice };
+    else if (minprice) query.price = { $gte: minprice };
+    else if (maxprice) query.price = { $lte: maxprice };
+    const dbResponse = await Book.find(query).sort({ [sortby]: sortorder });
     return res.status(200).json(dbResponse);
   } catch (e) {
     return res.status(500).json({ message: e.message, error: true });
@@ -92,7 +93,7 @@ router.delete('/book/:id', CheckToken, async (req, res) => {
   }
 });
 
-router.patch('/book/:id',  async (req, res) => {
+router.patch('/book/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const { body } = req;
