@@ -1,0 +1,83 @@
+.edit {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.edit h1 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.editinput {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.editimg {
+  width: 100px;
+}
+
+.editinput label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.editinput input {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.editinput input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.addbtn {
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.addbtn:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.addbtn:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 600px) {
+  .edit {
+    padding: 25px 20px;
+    margin: 30px 10px;
+  }
+
+  .edit h1 {
+    font-size: 20px;
+  }
+}

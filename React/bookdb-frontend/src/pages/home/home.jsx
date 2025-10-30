@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import Container from '../../components/container/container';
 import './home.css';
-import axios from 'axios';
+import axios, { formToJSON } from 'axios';
 import Navbar from '../../components/navbar/navbar';
+import axios from ".."
 
 const Home = () => {
   const [books, setBooks] = useState([]);

@@ -48,6 +48,8 @@ router.get('/book', async (req, res) => {
       maxprice,
       sortby = 'title',
       sortorder = 'asc',
+      page = 1,
+      limit = 10,
     } = req.query;
     const query = {};
     if (title) query.title = { $regex: title, $options: 'i' };
@@ -56,7 +58,11 @@ router.get('/book', async (req, res) => {
       query.price = { $gte: minprice, $lte: maxprice };
     else if (minprice) query.price = { $gte: minprice };
     else if (maxprice) query.price = { $lte: maxprice };
-    const dbResponse = await Book.find(query).sort({ [sortby]: sortorder });
+    const dbResponse = await Book.find(query)
+      .sort({ [sortby]: sortorder })
+      .limit(limit)
+      .skip((page - 1) * limit);
+
     return res.status(200).json(dbResponse);
   } catch (e) {
     return res.status(500).json({ message: e.message, error: true });

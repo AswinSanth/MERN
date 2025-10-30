@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const User = require('../DB/models/user-schema');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
-require("dotenv")
+require('dotenv').config();
 router
   .get('/user', async (req, res) => {
     try {
@@ -13,16 +13,25 @@ router
       return res.status(400).json({ message: e.message, error: true });
     }
   })
+  .get('/user/:id', async (req, res) => {
+    try {
+      const { id } = req.params;
+      const user = await User.findById(id);
+      return res.status(200).json(user);
+    } catch (e) {
+      return res.status(400).json({ message: e.message, error: true });
+    }
+  })
   .post('/user/signUp', async (req, res) => {
     try {
-      const { email, password, confrimPassword } = req.body;
+      const { email, password, confirmPassword } = req.body;
 
       console.log(req.body);
       const user = await User.findOne({ email });
       if (user) {
         return res.status(400).json({ message: 'Email Already Taken' });
       }
-      if (password != confrimPassword) {
+      if (password != confirmPassword) {
         return res.status(400).json({ message: "Passwords doesn't Match" });
       }
 
@@ -50,16 +59,15 @@ router
       if (!isMatching) {
         return res.status(400).json({ message: 'Email or password Incorrect' });
       }
-      
+
       const token = jwt.sign(
         {
-          id: user,
+          id: user._id,
         },
         process.env.SECRET_KEY,
         { expiresIn: '1h' }
       );
-      return res.status(200).json({ message: 'loggged In', token });
-
+      return res.status(200).json({ message: 'loggged In', token, user });
     } catch (e) {
       return res.status(400).json({ message: e.message, error: true });
     }

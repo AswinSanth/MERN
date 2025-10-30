@@ -1,0 +1,72 @@
+
+.home-navbar {
+  display: flex;
+  justify-content: space-between; /* Pushes logo left, links right */
+  align-items: center;
+  padding: 18px 5%; /* Vertical padding and 5% horizontal padding */
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+
+  /* Sticky top */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it stays on top of other content */
+}
+
+/* Logo styling */
+.navbar-logo a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* Container for the navigation links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Space between each link */
+}
+
+/* Default style for all links in the navbar */
+.navbar-links a {
+  text-decoration: none;
+  color: #555555; /* Medium gray for text */
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect for standard links */
+.navbar-links a:hover {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+/* --- Button Styling --- */
+
+/* Special "Add Product" button */
+.navbar-links .add-product-btn {
+  background-color: #f0f0f0;
+  color: #333333;
+  border: 1px solid #ddd;
+  font-weight: bold;
+}
+
+.navbar-links .add-product-btn:hover {
+  background-color: #e5e5e5;
+}
+
+/* Special "Cart" button */
+.navbar-links .cart-btn {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.navbar-links .cart-btn:hover {
+  background-color: #333333; /* Darken on hover */
+}

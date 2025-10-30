@@ -1,0 +1,259 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-home {
+  font-family: Arial, sans-serif;
+}
+
+/* 1. HERO (TOP-SIDE) */
+.top-side-hero {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://images.unsplash.com/photo-1558002038-1055907df827?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzOTAwNXwwfDF8c2VhcmNofDE4fHxsaXZpbmclMjByb29tJTIwYnV5aW5nJTIwcHJvZHVjdHN8ZW58MHx8fHwxNzI5ODc4OTEzfDA&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center/cover;
+  /* Dark overlay to make text readable */
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 100px; /* Big "Shop" text */
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+}
+
+.hero-search {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  padding: 8px 12px;
+  width: 500px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.hero-search .search-icon {
+  color: #555;
+  margin-right: 8px;
+}
+
+.hero-search input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.hero-search button {
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* 2. BOTTOM-SIDE (Layout) */
+.bottom-side-content {
+  display: grid;
+  /* Sidebar: 250px wide, Content: takes remaining space */
+  grid-template-columns: 250px 1fr;
+  gap: 30px;
+  padding: 40px 5%; /* Add padding to the sides */
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* 3. SIDEBAR (LEFT) */
+.sidebar h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+.sidebar h3:first-child {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar li a {
+  text-decoration: none;
+  color: #555;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+.sidebar li a:hover {
+  background: #f0f0f0;
+  color: #000;
+}
+
+.sidebar li.active a {
+  background: #eee;
+  color: #000;
+  font-weight: bold;
+}
+
+/* 4. PRODUCT CONTENT (RIGHT) */
+.cards {
+  display: grid;
+  /* Create a responsive grid:
+     - auto-fill: As many columns as fit
+     - minmax(280px, 1fr): Each column is at least 280px wide and can grow
+  */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* 5. PRODUCT CARD */
+.product-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: left;
+  position: relative;
+  background: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-category {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #f0f0f0;
+  color: #555;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Makes images square */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.card-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.card-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.card-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.card-buttons button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.card-buttons .add-cart-btn {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+}
+.card-buttons .add-cart-btn:hover {
+  background: #f9f9f9;
+}
+
+.card-buttons .buy-now-btn {
+  background: #000;
+  color: #fff;
+}
+.card-buttons .buy-now-btn:hover {
+  background: #333;
+}
+
+/* 6. PAGINATION */
+
+
+
+/* Use this className in your Cart.js:
+  <button className="delete-btn">Delete</button>
+*/
+
+.delete-btn {
+  width: 80%;
+  background-color: #ff4d4d; /* Red background */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-left: auto; /* Pushes the button to the far right */
+}
+
+.delete-btn:hover {
+  background-color: #cc0000; /* Darker red on hover */
+}
