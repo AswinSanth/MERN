@@ -71,5 +71,25 @@ router
     } catch (e) {
       return res.status(400).json({ message: e.message, error: true });
     }
+  })
+  .patch('/user/update/:id', async (req, res) => {
+    try {
+      const { id } = req.params;
+      const updates = req.body;
+
+      const updatedUser = await User.findByIdAndUpdate(id, updates);
+
+      if (!updatedUser) {
+        return res.status(404).json({ message: 'User not found' });
+      }
+
+      return res.status(200).json({
+        message: 'User profile updated successfully',
+        user: updatedUser,
+      });
+    } catch (error) {
+      return res.status(400).json({ message: error.message, error: true });
+    }
   });
+
 module.exports = router;

@@ -9,6 +9,7 @@ import PrivateRoute from '../components/PrivateRoute';
 import AddProduct from '../pages/add-product-page/addproduct';
 import Product from '../pages/product-page/product';
 import Order from '../pages/order-page/order';
+import Profile from '../pages/profile-page/profile';
 
 const App = () => {
   return (
@@ -25,6 +26,8 @@ const App = () => {
         <Route path="/Product/:id" element={<Product />} />
         <Route path="/EditProduct/:id" element={<AddProduct />} />
         <Route path="/Order" element={<Order />} />
+        <Route path="/Profile/:userId" element={<Profile />} />
+
         {/* </Route> */}
       </Routes>
     </div>

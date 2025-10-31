@@ -170,7 +170,7 @@ const SignUp = () => {
         <label>Email:</label>
         <input type="email" onChange={e => onChange(e, 'email')} />
       </div>
-
+{/* 
       <h4>Address</h4>
       <div className="address-section">
         <input placeholder="Full Name" onChange={e => onAddressChange(e, 'fullname')} />
@@ -179,7 +179,7 @@ const SignUp = () => {
         <input placeholder="City" onChange={e => onAddressChange(e, 'city')} />
         <input placeholder="State" onChange={e => onAddressChange(e, 'state')} />
         <input placeholder="Pincode" onChange={e => onAddressChange(e, 'pincode')} />
-      </div>
+      </div> */}
 
       <div className="inputfields">
         <label>Password:</label>

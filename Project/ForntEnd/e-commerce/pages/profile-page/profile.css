@@ -1,0 +1,67 @@
+.profile-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .profile-container h2 {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  
+  .form-group input {
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .address-fieldset {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* This spaces out the fields inside the fieldset */
+  }
+  
+  .address-fieldset legend {
+    padding: 0 8px;
+    font-weight: 600;
+  }
+  
+  .save-btn {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+  }
+  
+  .save-btn:hover {
+    background-color: #333;
+  }
