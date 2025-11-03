@@ -22,6 +22,7 @@ router.post('/cart/add', async (req, res) => {
     let total = 0;
     for (const item of cart.items) {
       const p = await Product.findById(item.product);
+      console.log(p);
       total += Number(p.price) * item.quantity;
     }
 

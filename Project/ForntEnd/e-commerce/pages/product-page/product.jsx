@@ -78,17 +78,21 @@ const Product = () => {
           </div>
 
           <p className="product-card-price">${product.price}</p>
-
           <div className="card-buttons">
+            {product.sellerId!=userId?(
+            <>
             <button
               className="add-cart-btn"
               onClick={() => handleAddToCart(product._id)}
-            >
+              >
               Add to Cart
             </button>
+           
             <button className="buy-now-btn" onClick={handleBuyNow}>
               Buy Now
             </button>
+              </>):(<>
+              
             <button
               className="product-delete-btn"
               onClick={() => handleDeleteproduct(product._id)}
@@ -101,6 +105,7 @@ const Product = () => {
             >
               Edit Product
             </button>
+            </>)}
           </div>
         </div>
       </div>

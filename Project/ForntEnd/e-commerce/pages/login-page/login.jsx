@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './login.css';
 import axios from 'axios';
-import { useNavigate } from 'react-router';
+import { useNavigate,Link } from 'react-router';
 const Login = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({
@@ -23,6 +23,20 @@ const Login = () => {
       navigate('/Home');
     } catch (e) {
       console.log(e);
+    }
+  };
+  const handleForgotPassword = async () => {
+    if (!form.email) {
+      alert('Please enter your email first');
+      return;
+    }
+
+    try {
+      const res = await axios.post('http://localhost:8000/user/forgot', { email: form.email });
+      alert('Password reset link sent to your email');
+    } catch (err) {
+      console.error(err);
+      alert('Error sending reset link. Please try again.');
     }
   };
 
@@ -53,6 +67,13 @@ const Login = () => {
 
       <div className="btn-area">
         <button onClick={handleSubmit}>Login</button>
+        <p>
+          Forgot Password  <span
+            onClick={handleForgotPassword}
+            style={{ color: 'blue', cursor: 'pointer', textDecoration: 'underline' }}
+          >
+            Click here    </span>
+        </p>
       </div>
     </div>
   );

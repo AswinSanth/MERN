@@ -1,9 +1,8 @@
+
 import { useState, useEffect } from 'react';
 import HomeNavbar from '../../components/home-nav/home-nav';
 import axios from 'axios';
-
 import './home.css';
-
 import { FaSearch } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
@@ -24,9 +23,10 @@ const Home = () => {
       console.error('Error fetching products', e);
     }
   };
+
   const addToCart = async productId => {
+    console.log(userId, productId);
     try {
-      console.log(userId);
       const response = await axios.post('http://localhost:8000/cart/add', {
         userId,
         productId,
@@ -42,108 +42,121 @@ const Home = () => {
   useEffect(() => {
     getProducts();
   }, []);
+
   const handleSearch = () => {
     getProducts({ title: search });
   };
+
   const onCategory = cat => {
     setCategory(cat);
-    if (cat == 'All Product') {
+    if (cat === 'All Product') {
       getProducts();
     } else {
       getProducts({ category: cat });
     }
   };
+
   const handleSort = async sortype => {
     getProducts({ sort: sortype });
   };
-  
 
-  const catArr = ['All Product', 'Music', 'Home', 'Phone'];
+  const categories = ['All Product', 'Music', 'Home', 'Phone'];
+
   return (
-    <div className="main-home">
+    <div className="home">
       <HomeNavbar />
 
-      <div className="top-side-hero">
-        <div className="hero-background"></div>
-        <div className="hero-content">
+      
+      <div className="home__hero">
+        <div className="home__hero-bg"></div>
+        <div className="home__hero-content">
           <h1>Shop</h1>
           <p>Give All You Need</p>
-          <div className="hero-search">
-            <FaSearch className="search-icon" />
+          <div className="home__search-bar">
+            <FaSearch className="home__search-icon" />
             <input
               type="text"
               placeholder="Search on Stuffsus"
               value={search}
               onChange={e => setSearch(e.target.value)}
             />
-
             <button onClick={handleSearch}>Search</button>
           </div>
         </div>
       </div>
 
-      <div className="bottom-side-content">
-        <div className="sidebar">
+     
+      <div className="home__content">
+    
+        <aside className="home__sidebar">
           <h3>Category</h3>
           <ul>
-            {catArr.map(catItems => (
+            {categories.map(cat => (
               <li
-                className={category === catItems ? 'active' : ''}
-                onClick={() => onCategory(catItems)}
+                key={cat}
+                className={`home__sidebar-item ${
+                  category === cat ? 'home__sidebar-item--active' : ''
+                }`}
+                onClick={() => onCategory(cat)}
               >
-                <a>{catItems}</a>
+                <a>{cat}</a>
               </li>
             ))}
           </ul>
+
           <h3>Filters</h3>
           <ul>
-            <li onClick={() => handleSort('lowToHigh')}>
+            <li
+              className="home__sidebar-item"
+              onClick={() => handleSort('lowToHigh')}
+            >
               <a>Price: Low to High</a>
             </li>
-            <li onClick={() => handleSort('highToLow')}>
+            <li
+              className="home__sidebar-item"
+              onClick={() => handleSort('highToLow')}
+            >
               <a>Price: High to Low</a>
             </li>
           </ul>
-        </div>
+        </aside>
 
-        <div className="product-content">
-          <div className="cards">
+     
+        <div className="home__products">
+          <div className="home__product-grid">
             {product.map(item => (
               <div
-                className="product-card"
-                onClick={() => {
-                  navigate(`/Product/${item._id}`);
-                }}
+                className="home__product-card"
+                onClick={() => navigate(`/Product/${item._id}`)}
                 key={item._id || item.id}
               >
-                <span className="card-category">{item.category}</span>
-                <img src={item.image} alt={item.title} />
-                <h4>{item.title}</h4>
+                <span className="home__product-category">{item.category}</span>
+                <img
+                  className="home__product-image"
+                  src={item.image}
+                  alt={item.title}
+                />
+                <h4 className="home__product-title">{item.title}</h4>
 
-                <div className="card-rating">
+                <div className="home__product-rating">
                   <span>⭐ {item.rating || 5.0}</span>
                   <span>({item.reviews || 0} Reviews)</span>
                 </div>
 
-                <p className="card-price">${item.price}</p>
+                <p className="home__product-price">${item.price}</p>
 
-                <div className="card-buttons">
+                <div className="home__product-actions">
                   <button
                     onClick={e => {
                       e.stopPropagation();
+                      console.log(item._id)
                       addToCart(item._id);
                     }}
-                    className="add-cart-btn"
+                    className="home__btn home__btn--cart"
                   >
                     Add to Cart
                   </button>
-                  <button
-                    className="buy-now-btn"
-                    
-                 
-                  >
-                    Buy Now
-                  </button>
+                  <button className="home__btn home__btn--buy">Buy Now</button>
                 </div>
               </div>
             ))}

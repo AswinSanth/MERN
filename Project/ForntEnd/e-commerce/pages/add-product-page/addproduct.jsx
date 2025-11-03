@@ -6,6 +6,7 @@ import axios from 'axios';
 const AddProduct = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const userId = localStorage.getItem("userId");
   const [addProduct, setAddProduct] = useState({
     title: '',
     description: '',
@@ -13,6 +14,7 @@ const AddProduct = () => {
     image: '',
     inStock: '',
     category: '',
+    sellerId: userId,
   });
   const handlesubmit = async () => {
     if (id) {
@@ -61,7 +63,12 @@ const AddProduct = () => {
     formData.append('img', e.target.files[0]);
     const response = await axios.post(
       'http://localhost:8000/product/imageUpload',
-      formData
+      formData,
+      {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      }
     );
     console.log(response.data.url);
     setAddProduct({ ...addProduct, image: response.data.url });
@@ -97,7 +104,7 @@ const AddProduct = () => {
       <div className="editinput">
         <label>Description</label>
         <input
-         value={addProduct.description}
+          value={addProduct.description}
           type="text"
           onChange={e => {
             onChange(e, 'description');

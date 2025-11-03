@@ -1,54 +1,51 @@
 * {
   font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
 }
 
-.navbar {
+
+.nav {
   background-color: white;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  border-radius: 0px 0px 20px 20px;
+  /* border-radius: 0px 0px 20px 20px; */
   margin: 0 auto;
   height: 70px;
-}
+  padding: 0 1.5rem;
+} 
 
-.nav-logo {
+
+.logo {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #6d28d9;
+  color: #000000;
 }
 
-.logo {
+.logo-icon {
   height: 32px;
   width: 32px;
   margin-right: 0.5rem;
 }
-.flex {
+
+.menu {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
-.m-1 {
-  margin: 10px;
-}
-.menu {
+
+.nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 2.5rem; 
+  list-style-type: none; 
 }
-.menu.active {
-  color: #6d28d9;
-  font-weight: 600;
-  border-bottom-color: #6a21df;
-}
-.menu:hover {
-  color: #f366fb;
-  border-bottom-color: #bf50e8;
-}
-.menu {
+
+.nav-link {
   text-decoration: none;
   color: #4b5563;
   font-weight: 500;
@@ -56,55 +53,40 @@
   padding: 0.5rem 0;
   border-bottom: 2px solid transparent;
   transition: color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-link:active {
+  color: #000000;
+  font-weight: 600;
 }
 
 .nav-link:hover {
-  color: #111827;
+  color: #000000;
+  border-bottom-color: #080608;
 }
 
-.nav-link.active {
-  color: #6d28d9;
-  font-weight: 600;
-  border-bottom-color: #6d28d9;
-}
-
-.nav-actions {
+.btns {
   display: flex;
   align-items: center;
   gap: 1.25rem;
 }
 
-.signup {
-    margin: 20px;
- 
-}
-
-.nav-icon-btn:hover {
-  color: #111827;
-}
-
-
-
-
-/* CSS */
 .button-50 {
-   margin: 20px;
-
   appearance: button;
   background-color: #000;
   background-image: none;
   border: 1px solid #000;
   border-radius: 4px;
-  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
- 
   overflow: visible;
   padding: 12px 40px;
   text-align: center;
@@ -139,4 +121,3 @@
     padding: 12px 50px;
   }
 }
-

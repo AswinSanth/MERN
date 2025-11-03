@@ -4,17 +4,19 @@ import './navbar.css';
 const Navbar = () => {
   const navigate = useNavigate();
   return (
-    <div className="navbar">
-      <div className="main-head flex m-1">
-        <img src="/logo.svg" alt="logo" className="logo" />
+    <div className="nav">
+      <div className="logo">
+        <img src="/logo.svg" alt="logo" className="logo-icon" />
         <h2>Stuffus</h2>
       </div>
       <div className="menu">
-        <p>Home</p>
-        <p>about</p>
-        <p>shop</p>
+        <ul className='nav-links'>
+          <li className='nav-link'>Home</li>
+          <li className='nav-link' >about</li>
+          <li className='nav-link'>shop</li>
+        </ul>
       </div>
-      <div className="signup-btn m-1"></div>
+      <div className="btns"></div>
       <button
         onClick={() => {
           navigate('/SignUp');

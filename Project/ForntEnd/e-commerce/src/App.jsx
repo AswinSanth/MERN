@@ -10,6 +10,7 @@ import AddProduct from '../pages/add-product-page/addproduct';
 import Product from '../pages/product-page/product';
 import Order from '../pages/order-page/order';
 import Profile from '../pages/profile-page/profile';
+import Reset from '../pages/forget-password/forget-pass';
 
 const App = () => {
   return (
@@ -17,7 +18,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/Login" element={<Login />} />  
+        <Route path="/Reset/:id" element={<Reset />} />
+
+        
+
         {/* 
         <Route element={<PrivateRoute />}> */}
         <Route path="/Home" element={<Home />} />
@@ -27,7 +32,7 @@ const App = () => {
         <Route path="/EditProduct/:id" element={<AddProduct />} />
         <Route path="/Order" element={<Order />} />
         <Route path="/Profile/:userId" element={<Profile />} />
-
+      
         {/* </Route> */}
       </Routes>
     </div>

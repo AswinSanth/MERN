@@ -8,11 +8,9 @@ const productSchema = Schema({
   inStock: { type: String },
   image: {
     type: String,
-    default: 'http://localhost:8000/images/1j6s9nkygmgsz8szb-no-image.png',
+    // default: 'http://localhost:8000/images/1j6s9nkygmgsz8szb-no-image.png',
   },
-  address:{
-    
-  }
+  sellerId:{type:Schema.Types.ObjectId,ref:"users"}
 });
 
 const Product = model('products', productSchema);
