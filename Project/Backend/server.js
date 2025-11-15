@@ -15,6 +15,10 @@ const cartRoutes = require('./routes/cart-routes');
 app.use(cartRoutes);
 const orderRoutes = require('./routes/order-routes');
 app.use(orderRoutes);
+const wishlistRoutes = require('./routes/wishlist-routes');
+app.use(wishlistRoutes);
+const ReviewRoutes = require('./routes/review-routes');
+app.use(ReviewRoutes);
 
 app.listen(8000, () => {
   console.log('App is running');

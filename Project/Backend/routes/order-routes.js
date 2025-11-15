@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.post('/order/add', async (req, res) => {
   try {
-    const { userId, productId, quantity, type, shippingAddress } = req.body;
+    const { userId, productId, quantity, type, shippingAddress,paymentMode} = req.body;
 
     const user = await User.findById(userId);
     if (!user) return res.status(404).json({ message: 'User Not Found' });
@@ -54,6 +54,7 @@ router.post('/order/add', async (req, res) => {
       totalItems,
       address: finalAddress,
       status: 'Pending',
+      paymentMode,
     });
     res
       .status(200)
@@ -76,9 +77,11 @@ router.delete('/order/delete/:id', async (req, res) => {
 router.get('/order/:userId', async (req, res) => {
   try {
     const { userId } = req.params;
+    console.log(userId)
     const orders = await Order.find({ userId })
       .populate('products.productId', 'title price image')
-      .sort({ createdAt: -1 }); // latest first
+      .sort({ createdAt: -1 });
+      console.log("Orders found:", orders.length);
 
     if (!orders || orders.length === 0)
       return res.status(404).json({ message: 'No orders found' });

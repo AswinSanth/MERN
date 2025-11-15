@@ -2,12 +2,13 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import './order.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Order = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // get values from navigation
   const { userId, product, orderType, cartItems } = location.state || {};
 
   const [user, setUser] = useState(null);
@@ -19,9 +20,11 @@ const Order = () => {
     city: '',
     state: '',
     pincode: '',
+    
   });
 
-  // 🧠 Fetch the user using ID from backend
+  const [paymentMode, setPaymentMode] = useState('Cash on Delivery');
+
   useEffect(() => {
     const fetchUser = async () => {
       if (!userId) return;
@@ -38,7 +41,7 @@ const Order = () => {
   const handlePlaceOrder = async () => {
     try {
       if (!user || !orderType) {
-        alert('Missing user or order details!');
+        toast.error('Missing user or order details!',{ position: 'top-center' });
         return;
       }
 
@@ -53,14 +56,14 @@ const Order = () => {
       };
       console.log(payload);
       await axios.post('http://localhost:8000/order/add', payload);
-      alert('Order placed successfully!');
+      toast.success('Order placed successfully!', { position: 'top-center' });
       navigate('/Home');
     } catch (e) {
       console.log(e);
     }
   };
 
-  // Show loading while fetching user
+  
   if (!user) {
     return <h3>Loading user details...</h3>;
   }
@@ -130,10 +133,44 @@ const Order = () => {
           />
         </div>
       )}
+       <div className="payment-section">
+        <h3>Payment Method</h3>
+        <label>
+          <input
+            type="radio"
+            value="Cash on Delivery"
+            checked={paymentMode === 'Cash on Delivery'}
+            onChange={e => setPaymentMode(e.target.value)}
+          />
+          Cash on Delivery
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            value="UPI"
+            checked={paymentMode === 'UPI'}
+            onChange={e => setPaymentMode(e.target.value)}
+          />
+          UPI / Wallet
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            value="Card Payment"
+            checked={paymentMode === 'Card Payment'}
+            onChange={e => setPaymentMode(e.target.value)}
+          />
+          Credit / Debit Card
+        </label>
+      </div>
+      
 
       <button className="place-order-btn" onClick={handlePlaceOrder}>
         Place Order
       </button>
+      <ToastContainer />
     </div>
   );
 };

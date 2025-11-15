@@ -6,15 +6,20 @@ import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
   const [cart, setCart] = useState(null);
-  // const {userId} = useParams();
+  const [empty, setempty] = useState(false);
   const navigate = useNavigate();
 
   const userId = localStorage.getItem('userId');
   const getCartItems = async () => {
     try {
       const response = await axios.get(`http://localhost:8000/cart/${userId}`);
-
       setCart(response.data);
+      if (!response.data.items || response.data.items.length === 0) {
+        setempty(true);
+        setCart({ items: [], totalPrice: 0 });
+      } else {
+        setempty(false);
+      }
     } catch (e) {
       console.log(e);
     }
@@ -55,11 +60,12 @@ const Cart = () => {
       </div>
     );
   }
+    
   return (
     <div className="cart">
       <HomeNavbar />
       <div className="cart-main">
-        <h1 className="cart-title">Your Cart</h1>
+        <h1 className="cart-title">{empty?"Cart is Empty":"Your Cart"}</h1>
         <div className="art-items">
           {console.log(cart)}
           {cart.items.map(item => (

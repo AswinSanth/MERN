@@ -1,0 +1,93 @@
+.footer {
+    font-family: "Poppins", sans-serif;
+    background-color: #111;
+    color: white;
+  }
+  
+  .contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    color: black;
+    padding: 4rem 6rem;
+  }
+  
+  .contact-left .small-text {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: gray;
+  }
+  
+  .contact-heading {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  
+  .contact-heading span {
+    border-bottom: 3px solid #c6ff00;
+  }
+  
+  .contact-btn button {
+    background: #c6ff00;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  
+  .footer-bottom {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    padding: 3rem 6rem;
+    background-color: #111;
+    gap: 2rem;
+  }
+  
+  .footer-column h3,
+  .footer-column h4 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .footer-logo {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  .footer-column a {
+    color: #bbb;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.4rem;
+    transition: color 0.2s;
+  }
+  
+  .footer-column a:hover {
+    color: #c6ff00;
+  }
+  
+  .footer-column p {
+    color: #bbb;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    font-size: 1.3rem;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #c6ff00;
+  }
+  

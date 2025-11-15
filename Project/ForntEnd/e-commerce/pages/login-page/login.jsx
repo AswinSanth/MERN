@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './login.css';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate,Link } from 'react-router';
 const Login = () => {
   const navigate = useNavigate();
@@ -27,26 +29,27 @@ const Login = () => {
   };
   const handleForgotPassword = async () => {
     if (!form.email) {
-      alert('Please enter your email first');
+      // alert('Please enter your email first');
+      toast.error('Please enter your email first',{ position: 'top-center' });
       return;
     }
 
     try {
       const res = await axios.post('http://localhost:8000/user/forgot', { email: form.email });
-      alert('Password reset link sent to your email');
+      toast.success('Password reset link sent to your email',{ position: 'top-center' });
     } catch (err) {
       console.error(err);
-      alert('Error sending reset link. Please try again.');
+      toast.error('Error sending reset link. Please try again.',{ position: 'top-center' });
     }
   };
 
   return (
-    <div className="signuppage">
-      <div className="head">
+    <div className="signup-page">
+      <div className="signup-container">
         <h2>Login</h2>
-      </div>
+      
 
-      <div className="inputfields">
+      <div className="signup-input-group">
         <label>Email: </label>
         <input
           type="email"
@@ -55,26 +58,28 @@ const Login = () => {
           }}
         />
       </div>
-      <div className="inputfields">
+      <div className="signup-input-group">
         <label>Password: </label>
         <input
-          type="text"
+          type="password"
           onChange={e => {
             onChange(e, 'password');
           }}
         />
       </div>
 
-      <div className="btn-area">
+      <div className="signup-btn-area">
         <button onClick={handleSubmit}>Login</button>
-        <p>
-          Forgot Password  <span
+        <p className="signup-login-text">
+          Forgot Password  <span className='clickhere'
             onClick={handleForgotPassword}
             style={{ color: 'blue', cursor: 'pointer', textDecoration: 'underline' }}
           >
             Click here    </span>
         </p>
+        </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

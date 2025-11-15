@@ -13,22 +13,22 @@ router
         sort,
         sortby = 'title',
         sortorder = 'asc',
-        minprice,
-        maxprice,
+        minPrice,
+        maxPrice,
         category,
       } = req.query;
       const query = {};
       if (title) query.title = { $regex: title, $options: 'i' };
-      if (category) query.category = { $in: category };
+      if (category) query.category = category;
       if (price) query.price = price;
-      else if (minprice && maxprice) {
-        query.price = { $gte: minprice, $lte: maxprice };
-      } else if (minprice) query.price = { $gte: minprice };
-      else if (minprice) query.price = { $gte: maxprice };
+      else if (minPrice && maxPrice) {
+        query.price = { $gte: minPrice, $lte: maxPrice };
+      } else if (minPrice) query.price = { $gte: minPrice };
+      else if (maxPrice) query.price = { $gte: maxPrice };
 
       let sortOptions = {};
       if (sort == 'lowToHigh') sortOptions.price = 1;
-      else if (sort == 'hightoLow') sortOptions.price = -1;
+      else if (sort == 'highToLow') sortOptions.price = -1;
       else sortOptions[sortby || 'title'] = sortorder === 'desc' ? -1 : 1;
 
       const response = await Product.find(query).sort(sortOptions);

@@ -11,6 +11,7 @@ import Product from '../pages/product-page/product';
 import Order from '../pages/order-page/order';
 import Profile from '../pages/profile-page/profile';
 import Reset from '../pages/forget-password/forget-pass';
+import MyOrder from '../pages/my Orders/myOrder-page';
 
 const App = () => {
   return (
@@ -23,8 +24,8 @@ const App = () => {
 
         
 
-        {/* 
-        <Route element={<PrivateRoute />}> */}
+        
+        <Route element={<PrivateRoute />}>
         <Route path="/Home" element={<Home />} />
         <Route path="/Cart/:id" element={<Cart />} />
         <Route path="/AddProduct" element={<AddProduct />} />
@@ -32,8 +33,9 @@ const App = () => {
         <Route path="/EditProduct/:id" element={<AddProduct />} />
         <Route path="/Order" element={<Order />} />
         <Route path="/Profile/:userId" element={<Profile />} />
+        <Route path="/MyOrder" element={<MyOrder/>} />
       
-        {/* </Route> */}
+        </Route>
       </Routes>
     </div>
   );

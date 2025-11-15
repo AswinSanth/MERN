@@ -41,7 +41,7 @@
     padding: 16px;
     display: flex;
     flex-direction: column;
-    gap: 16px; /* This spaces out the fields inside the fieldset */
+    gap: 16px;
   }
   
   .address-fieldset legend {

@@ -3,6 +3,9 @@ import './navbar.css';
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const handleAboutClick = () => {
+    navigate('/#footer');
+  };
   return (
     <div className="nav">
       <div className="logo">
@@ -10,10 +13,21 @@ const Navbar = () => {
         <h2>Stuffus</h2>
       </div>
       <div className="menu">
-        <ul className='nav-links'>
-          <li className='nav-link'>Home</li>
-          <li className='nav-link' >about</li>
-          <li className='nav-link'>shop</li>
+        <ul className="nav-links">
+          <li className="nav-link"
+           onClick={() => {
+            navigate('/');
+          }}>Home</li>
+          <li className="nav-link"
+           onClick={handleAboutClick}>About</li>
+          <li
+            className="nav-link"
+            onClick={() => {
+              navigate('/SignUp');
+            }}
+          >
+            Shop
+          </li>
         </ul>
       </div>
       <div className="btns"></div>

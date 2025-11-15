@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './profile.css';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Profile = () => {
   const { userId } = useParams();
@@ -22,7 +24,7 @@ const Profile = () => {
     },
   });
 
-  // Fetch user data
+ 
   const fetchUser = async () => {
     try {
       const response = await axios.get(`http://localhost:8000/user/${userId}`);
@@ -30,7 +32,7 @@ const Profile = () => {
     } catch (e) {
       console.log(e);
     } finally {
-      setIsLoading(false); // ✅ stop loading after fetch
+      setIsLoading(false); 
     }
   };
 
@@ -38,7 +40,6 @@ const Profile = () => {
     fetchUser();
   }, [userId]);
 
-  // Handle general input change
   const handleChange = e => {
     const { name, value } = e.target;
     setFormData(prevData => ({
@@ -47,7 +48,6 @@ const Profile = () => {
     }));
   };
 
-  // Handle nested address input
   const handleAddressChange = e => {
     const { name, value } = e.target;
     setFormData(prevData => ({
@@ -59,20 +59,20 @@ const Profile = () => {
     }));
   };
 
-  // Submit form
+  
   const handleSubmit = async e => {
     e.preventDefault();
     try {
       await axios.patch(`http://localhost:8000/user/update/${userId}`, formData);
-      alert('Profile updated successfully!');
+      toast.success('Profile updated successfully!',{ position: 'top-center' });
       navigate('/Home');
     } catch (error) {
       console.error('Error updating user:', error);
-      alert('Failed to update profile');
+      toast.error('Failed to update profile',{ position: 'top-center' });
     }
   };
 
-  // ✅ Move render logic outside handleSubmit
+
   if (isLoading) {
     return <div>Loading profile...</div>;
   }
@@ -190,6 +190,7 @@ const Profile = () => {
           Save Changes
         </button>
       </form>
+      <ToastContainer />
     </div>
   );
 };

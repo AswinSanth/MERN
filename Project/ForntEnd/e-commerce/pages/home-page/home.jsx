@@ -1,10 +1,12 @@
-
 import { useState, useEffect } from 'react';
 import HomeNavbar from '../../components/home-nav/home-nav';
 import axios from 'axios';
 import './home.css';
 import { FaSearch } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import PriceRange from '../../components/range/range';
 
 const Home = () => {
   const [product, setProduct] = useState([]);
@@ -32,10 +34,10 @@ const Home = () => {
         productId,
         quantity: 1,
       });
-      alert('Product added to cart');
+      toast.success('Product added to cart', { position: 'top-center' });
     } catch (e) {
       console.log(e);
-      alert('Failed to add to cart');
+      toast.error('Failed to add to cart', { position: 'top-center' });
     }
   };
 
@@ -55,18 +57,20 @@ const Home = () => {
       getProducts({ category: cat });
     }
   };
+  const handlePriceFilter = (min, max) => {
+    getProducts({ minPrice: min, maxPrice: max });
+  };
 
   const handleSort = async sortype => {
     getProducts({ sort: sortype });
   };
 
-  const categories = ['All Product', 'Music', 'Home', 'Phone'];
+  const categories = ['All Product', 'Music', 'Home', 'Phone', 'Fashion'];
 
   return (
     <div className="home">
       <HomeNavbar />
 
-      
       <div className="home__hero">
         <div className="home__hero-bg"></div>
         <div className="home__hero-content">
@@ -76,7 +80,7 @@ const Home = () => {
             <FaSearch className="home__search-icon" />
             <input
               type="text"
-              placeholder="Search on Stuffsus"
+              placeholder="Search on Stuffus"
               value={search}
               onChange={e => setSearch(e.target.value)}
             />
@@ -85,9 +89,7 @@ const Home = () => {
         </div>
       </div>
 
-     
       <div className="home__content">
-    
         <aside className="home__sidebar">
           <h3>Category</h3>
           <ul>
@@ -119,9 +121,9 @@ const Home = () => {
               <a>Price: High to Low</a>
             </li>
           </ul>
+          <PriceRange onFilter={handlePriceFilter} />
         </aside>
 
-     
         <div className="home__products">
           <div className="home__product-grid">
             {product.map(item => (
@@ -149,7 +151,7 @@ const Home = () => {
                   <button
                     onClick={e => {
                       e.stopPropagation();
-                      console.log(item._id)
+                      console.log(item._id);
                       addToCart(item._id);
                     }}
                     className="home__btn home__btn--cart"
@@ -163,6 +165,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

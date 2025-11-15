@@ -1,16 +1,19 @@
-*{
+* {
   margin: 0;
   padding: 0;
+
 }
 
-.Main {
+.Main 
+{
+  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif;
   background-color: #f8f9fa;
-  background-image: url("/newcover.svg");
+  /* background-image: url("/newcover.svg"); */
   background-size: cover;
   background-position: center;
 }
@@ -38,6 +41,10 @@
   margin-bottom: 2.5rem;
   max-width: 600px;
   line-height: 1.6;
+}
+.hero-content {
+  background-color: #f8f9fa;
+  padding: 4rem 2rem;
 }
 
 .cta-button {
@@ -69,4 +76,42 @@
   .hero-content p {
     font-size: 1.1rem;
   }
+}
+.mySwiper {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 2rem;
+}
+ 
+.category-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.catergory-card {
+  flex: 1 1 250px;
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  
+}
+
+
+.catergory-card img {
+  width: 100%; 
+  height: auto;
+  display: block;
+  
+  transition: transform 0.3s ease-in-out; 
+}
+
+.catergory-card:hover img {
+  transform: scale(1.05); 
+}
+
+.deal{
+  margin-top: 30px;
 }

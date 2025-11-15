@@ -8,7 +8,6 @@
   font-family: Arial, sans-serif;
 }
 
-/* === HERO SECTION === */
 .home__hero {
   position: relative;
   height: 400px;
@@ -25,7 +24,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('https://images.unsplash.com/photo-1558002038-1055907df827?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzOTAwNXwwfDF8c2VhcmNofDE4fHxsaXZpbmclMjByb29tJTIwYnV5aW5nJTIwcHJvZHVjdHN8ZW58MHx8fHwxNzI5ODc4OTEzfDA&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center/cover;
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
   z-index: 1;
@@ -80,17 +78,16 @@
   font-weight: bold;
 }
 
-/* === MAIN CONTENT === */
 .home__content {
   display: grid;
-  grid-template-columns: 180px 1fr; /* reduced sidebar width */
+  grid-template-columns: 180px 1fr; 
   gap: 25px;
   padding: 30px 4%;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-/* === SIDEBAR === */
+
 .home__sidebar h3 {
   font-size: 1rem;
   margin-bottom: 12px;
@@ -127,7 +124,6 @@
   font-weight: bold;
 }
 
-/* === PRODUCTS SECTION === */
 .home__products {
   display: flex;
   flex-direction: column;
@@ -135,12 +131,11 @@
 
 .home__product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); /* smaller cards */
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); 
   gap: 20px;
 }
 
-/* === PRODUCT CARD === */
-.home__product-card {
+/* .home__product-card {
   border: 1px solid #eee;
   border-radius: 10px;
   padding: 12px;
@@ -149,6 +144,21 @@
   background: #fff;
   transition: box-shadow 0.3s ease, transform 0.2s;
   cursor: pointer;
+} */
+.home__product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 100%; 
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: left;
+  background: #fff;
+  transition: box-shadow 0.3s ease, transform 0.2s;
+  cursor: pointer;
+  position: relative;
+  
 }
 
 .home__product-card:hover {
@@ -156,7 +166,6 @@
   transform: translateY(-3px);
 }
 
-/* Category Tag – top-right corner */
 .home__product-category {
   position: absolute;
   top: 10px;
@@ -171,8 +180,8 @@
 
 .home__product-image {
   width: 100%;
-  height: 180px; /* reduced height */
-  object-fit: cover;
+  height: 180px;
+  object-fit: contain;
   border-radius: 8px;
   margin-bottom: 10px;
 }
@@ -234,3 +243,53 @@
 .home__btn--buy:hover {
   background: #333;
 }
+.range-wrapper {
+  margin-top: 15px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.range-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 12px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.range-sub {
+  font-size: 0.85rem;
+  font-weight: normal;
+  color: #555;
+}
+
+.range-track {
+  height: 6px;
+  width: 100%;
+  border-radius: 3px;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.range-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: #000;
+  border: 2px solid #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  cursor: grab;
+  transition: all 0.2s ease;
+}
+
+.range-thumb:active {
+  transform: scale(1.1);
+  cursor: grabbing;
+}
+

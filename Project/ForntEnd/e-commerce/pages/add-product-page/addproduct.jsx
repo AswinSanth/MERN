@@ -75,7 +75,7 @@ const AddProduct = () => {
   };
   return (
     <div className="edit">
-      <h1>{!id ? 'AddBook ' : 'Edit Dook Details'}</h1>
+      <h1>{!id ? 'Add Product ' : 'Edit  Product'}</h1>
       <div className="editinput">
         <label>Title</label>
         <input
